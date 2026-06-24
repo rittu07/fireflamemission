@@ -4,6 +4,29 @@ import React from "react";
 import { useLanguage } from "@/components/LanguageContext";
 import { contentData } from "@/data/contentData";
 
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 15 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1] as const,
+    },
+  },
+};
+
 export const Statistics: React.FC = () => {
   const { language, t } = useLanguage();
 
@@ -13,11 +36,18 @@ export const Statistics: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(rgba(176,141,87,0.05)_1px,transparent_0)] [background-size:20px_20px] pointer-events-none opacity-25"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-brand-gold/20">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-y md:divide-y-0 md:divide-x divide-brand-gold/20"
+        >
           
           {contentData.statistics.map((stat, idx) => (
-            <div
+            <motion.div
               key={idx}
+              variants={itemVariants}
               className="flex flex-col items-center justify-center text-center p-4 md:p-2 pt-6 md:pt-2 first:pt-4"
             >
               {/* Stat Value */}
@@ -29,10 +59,10 @@ export const Statistics: React.FC = () => {
               <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-cream/80 font-medium max-w-[150px] leading-relaxed">
                 {t(stat.label)}
               </div>
-            </div>
+            </motion.div>
           ))}
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
 import { contentData } from "@/data/contentData";
 import { Quote } from "lucide-react";
 import { getAssetPath } from "@/utils/paths";
+import { motion } from "framer-motion";
 
 interface AboutProps {
   showReadMoreButton?: boolean;
@@ -21,7 +22,13 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
       <div className="max-w-5xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="text-xs uppercase tracking-[0.25em] font-serif-cinzel text-brand-gold font-semibold block mb-2">
             {language === "en" ? "Who We Are" : "எங்களைப் பற்றி"}
           </span>
@@ -29,13 +36,19 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
             {language === "en" ? about.title.en : about.title.ta}
           </h2>
           <OrnamentalSeparator />
-        </div>
+        </motion.div>
 
         {/* Split Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           
           {/* Left: Founder Portrait */}
-          <div className="md:col-span-5 flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
+            className="md:col-span-5 flex flex-col items-center"
+          >
             <div className="relative p-2.5 border border-brand-gold/40 bg-brand-parchment shadow-xl max-w-sm w-full gold-glow">
               <div className="absolute inset-[5px] border border-brand-gold/25 pointer-events-none"></div>
               
@@ -58,10 +71,16 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Biography details */}
-          <div className="md:col-span-7 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const, delay: 0.1 }}
+            className="md:col-span-7 space-y-6"
+          >
             <h3 className="text-xl sm:text-2xl font-serif-cinzel font-bold text-brand-brown border-b border-brand-gold/15 pb-2">
               {language === "en" ? "Our Spiritual Foundation" : "எங்கள் ஆவிக்குரிய அடித்தளம்"}
             </h3>
@@ -100,7 +119,7 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
               </div>
             )}
 
-          </div>
+          </motion.div>
 
         </div>
 

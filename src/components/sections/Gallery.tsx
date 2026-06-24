@@ -32,20 +32,20 @@ export const Gallery: React.FC<GalleryProps> = ({
   const galleryItems = [
     {
       id: 1,
-      titleEN: "Ministry Outreach Campaign",
-      titleTA: "ஊழியப் பரப்புரை இயக்கம்",
-      descEN: "Spreading the message of faith and hope in rural communities.",
-      descTA: "கிராமப்புற மக்களிடம் விசுவாசம் மற்றும் நம்பிக்கையின் செய்தியை பரப்புதல்.",
-      imageUrl: "/gallery/gallery-1.jpeg",
+      titleEN: "Ministry Team Fellowship",
+      titleTA: "ஊழியக் குழு ஐக்கியம்",
+      descEN: "Pastors and team members gathered for fellowship and strategic planning.",
+      descTA: "ஐக்கியத்திற்காகவும் திட்டமிடலுக்காகவும் கூடிய போதகர்களும் ஊழியக் குழுவினரும்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002341.png",
       span: "md:col-span-2 md:row-span-2"
     },
     {
       id: 2,
-      titleEN: "Prayer and Revival Assembly",
-      titleTA: "ஜெப மற்றும் எழுப்புதல் கூட்டம்",
-      descEN: "Believers gathered together in faith under the leadership of Rev. V. Jeromias.",
-      descTA: "போதகர் வி. ஜெரோமியாஸ் அவர்களின் தலைமையின் கீழ் விசுவாசிகள் கூடிய ஜெபக் கூட்டம்.",
-      imageUrl: "/gallery/gallery-2.jpeg",
+      titleEN: "Women's Prayer Fellowship",
+      titleTA: "சகோதரிகள் ஜெபக் கூடுகை",
+      descEN: "Sisters gathered in faith for prayer and Bible study.",
+      descTA: "ஜெபத்திற்காகவும் வேதாகமப் படிப்பிற்காகவும் விசுவாசத்துடன் கூடிய சகோதரிகள்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002422.png",
       span: "md:col-span-1 md:row-span-1"
     },
     {
@@ -54,53 +54,278 @@ export const Gallery: React.FC<GalleryProps> = ({
       titleTA: "சுவிசேஷ இலக்கிய விநியோகம்",
       descEN: "Distributing free Bibles and promise tracts to families.",
       descTA: "குடும்பங்களுக்கு இலவச வேதாகமங்கள் மற்றும் வாக்குத்தத்த அட்டைகளை விநியோகித்தல்.",
-      imageUrl: "/gallery/gallery-3.jpeg",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002434.png",
       span: "md:col-span-1 md:row-span-2"
     },
     {
       id: 4,
-      titleEN: "Community Outreach Service",
-      titleTA: "சமூக சுவிசேஷப் பணி",
-      descEN: "Serving the local communities and sharing God's grace.",
-      descTA: "உள்ளூர் மக்களுக்குச் சேவை செய்து தேவனுடைய கிருபையைப் பகிர்ந்து கொள்ளுதல்.",
-      imageUrl: "/gallery/gallery-4.jpeg",
-      span: "md:col-span-1 md:row-span-1"
-    },
-    {
-      id: 5,
-      titleEN: "Ministry Fellowship Assembly",
-      titleTA: "ஊழிய ஐக்கியக் கூட்டம்",
-      descEN: "Pastors and leaders uniting in prayer for the nation.",
-      descTA: "தேசத்திற்காக ஜெபிக்க போதகர்களும் தலைவர்களும் ஒன்றிணைந்த ஐக்கியம்.",
-      imageUrl: "/gallery/gallery-5.jpeg",
-      span: "md:col-span-2 md:row-span-1"
-    },
-    {
-      id: 6,
       titleEN: "Rural Mission Campaign",
       titleTA: "கிராமப்புற மிஷனரி ஊழியம்",
       descEN: "Reaching out to border areas with the message of salvation.",
       descTA: "எல்லைப் பகுதிகளில் இரட்சிப்பின் செய்தியைக் கொண்டு சேர்த்தல்.",
-      imageUrl: "/gallery/gallery-6.jpeg",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002446.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 5,
+      titleEN: "Prayer and Revival Assembly",
+      titleTA: "ஜெப மற்றும் எழுப்புதல் கூட்டம்",
+      descEN: "Believers gathered together in faith under the leadership of the ministry.",
+      descTA: "மிஷன் தலைமையின் கீழ் விசுவாசிகள் கூடிய ஜெபக் கூட்டம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002458.png",
+      span: "md:col-span-2 md:row-span-1"
+    },
+    {
+      id: 6,
+      titleEN: "Youth Camp Gathering",
+      titleTA: "இளைஞர் முகாம் கூடுகை",
+      descEN: "Nurturing the next generation in spiritual truth and leadership.",
+      descTA: "அடுத்த தலைமுறையை ஆவிக்குரிய சத்தியத்திலும் தலைமைத்துவத்திலும் வளர்த்தல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002506.png",
       span: "md:col-span-1 md:row-span-1"
     },
     {
       id: 7,
-      titleEN: "Youth & Children Ministry",
-      titleTA: "இளைஞர் மற்றும் சிறுவர் ஊழியம்",
-      descEN: "Nurturing the next generation in spiritual truth.",
-      descTA: "அடுத்த தலைமுறையை ஆவிக்குரிய சத்தியத்தில் வளர்த்தல்.",
-      imageUrl: "/gallery/gallery-7.jpeg",
-      span: "md:col-span-1 md:row-span-1"
-    },
-    {
-      id: 8,
       titleEN: "Praise & Worship Service",
       titleTA: "துதி மற்றும் ஆராதனை வழிபாடு",
       descEN: "A glorious time of worshiping the Lord in spirit and truth.",
       descTA: "ஆவியோடும் உண்மையோடும் கர்த்தரை ஆராதிக்கும் நேரம்.",
-      imageUrl: "/gallery/gallery-8.jpeg",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002516.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 8,
+      titleEN: "Children's Bible School",
+      titleTA: "சிறுவர் வேதாகமப் பள்ளி",
+      descEN: "Helping children build their lives on the word of God.",
+      descTA: "குழந்தைகள் தங்கள் வாழ்க்கையை தேவனுடைய வார்த்தையின் மேல் கட்டியெழுப்ப உதவுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002528.png",
       span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 9,
+      titleEN: "Community Outreach Service",
+      titleTA: "சமூக சுவிசேஷப் பணி",
+      descEN: "Serving local communities and sharing God's grace.",
+      descTA: "உள்ளூர் மக்களுக்குச் சேவை செய்து தேவனுடைய கிருபையைப் பகிர்ந்து கொள்ளுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002538.png",
+      span: "md:col-span-2 md:row-span-2"
+    },
+    {
+      id: 10,
+      titleEN: "Ministry Fellowship Assembly",
+      titleTA: "ஊழிய ஐக்கியக் கூட்டம்",
+      descEN: "Pastors and leaders uniting in prayer for the nation.",
+      descTA: "தேசத்திற்காக ஜெபிக்க போதகர்களும் தலைவர்களும் ஒன்றிணைந்த ஐக்கியம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002553.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 11,
+      titleEN: "House Prayer Gathering",
+      titleTA: "வீட்டு ஜெபக் கூடுகை",
+      descEN: "Small group fellowships praying for families and communities.",
+      descTA: "குடும்பங்களுக்காகவும் சமூகங்களுக்காகவும் ஜெபிக்கும் சிறிய குழு ஐக்கியம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002601.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 12,
+      titleEN: "Divine Healing Service",
+      titleTA: "தேவ சுகமளிக்கும் கூடுகை",
+      descEN: "Praying for the sick and witnessing the power of faith.",
+      descTA: "வியாதியஸ்தர்களுக்காக ஜெபித்து, விசுவாசத்தின் வல்லமையை சாட்சியாகக் காணுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002609.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 13,
+      titleEN: "Annual Ministry Conference",
+      titleTA: "வருடாந்திர ஊழிய மாநாடு",
+      descEN: "Annual gathering of ministers to celebrate God's faithfulness.",
+      descTA: "தேவனுடைய உண்மையுள்ள தன்மையைக் கொண்டாட ஊழியர்களின் வருடாந்திரக் கூடுகை.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002618.png",
+      span: "md:col-span-2 md:row-span-1"
+    },
+    {
+      id: 14,
+      titleEN: "Bible Distribution Drive",
+      titleTA: "வேதாகம விநியோக இயக்கம்",
+      descEN: "Providing copies of God's Word to seekers in remote villages.",
+      descTA: "தொலைதூர கிராமங்களில் உள்ள தேடுபவர்களுக்கு தேவனுடைய வார்த்தையின் பிரதிகளை வழங்குதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002625.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 15,
+      titleEN: "Spiritual Guidance Session",
+      titleTA: "ஆவிக்குரிய வழிகாட்டுதல்",
+      descEN: "Counseling and mentoring individuals in their faith journey.",
+      descTA: "விசுவாசப் பயணத்தில் தனிநபர்களுக்கு ஆலோசனை மற்றும் வழிகாட்டுதல் வழங்குதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002635.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 16,
+      titleEN: "Gospel Preaching Campaign",
+      titleTA: "சுவிசேஷப் பிரசங்க இயக்கம்",
+      descEN: "Proclaiming the good news in public squares and streets.",
+      descTA: "பொது சதுக்கங்களிலும் தெருக்களிலும் நற்செய்தியை அறிவித்தல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002646.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 17,
+      titleEN: "Believers Fellowship Meeting",
+      titleTA: "விசுவாசிகள் ஐக்கியக் கூட்டம்",
+      descEN: "Strengthening the bond of faith among local believers.",
+      descTA: "உள்ளூர் விசுவாசிகள் மத்தியில் விசுவாசத்தின் பிணைப்பை பலப்படுத்துதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002654.png",
+      span: "md:col-span-2 md:row-span-2"
+    },
+    {
+      id: 18,
+      titleEN: "Special Revival Service",
+      titleTA: "சிறப்பு எழுப்புதல் ஆராதனை",
+      descEN: "A season of refreshing and spiritual awakening for all.",
+      descTA: "அனைவருக்கும் புத்துணர்ச்சி மற்றும் ஆவிக்குரிய விழிப்புணர்வின் காலம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002702.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 19,
+      titleEN: "Devotional Worship Gathering",
+      titleTA: "பக்தி ஆராதனை கூடுகை",
+      descEN: "Solemn time of prayer, praise, and sharing the scripture.",
+      descTA: "ஜெபம், துதி மற்றும் வேதத்தைப் பகிர்ந்துகொள்ளும் நேரம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002710.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 20,
+      titleEN: "Sunday School Gathering",
+      titleTA: "ஞாயிறு பள்ளி கூடுகை",
+      descEN: "Teaching scripture lessons and songs to young kids.",
+      descTA: "சிறு குழந்தைகளுக்கு வேதப் பாடங்களையும் பாடல்களையும் கற்பித்தல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002716.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 21,
+      titleEN: "Leadership Seminar",
+      titleTA: "தலைமைத்துவ கருத்தரங்கம்",
+      descEN: "Equipping church leaders for effective ministry service.",
+      descTA: "சபை தலைவர்களை பயனுள்ள ஊழியப் பணிக்கு ஆயத்தப்படுத்துதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002722.png",
+      span: "md:col-span-2 md:row-span-1"
+    },
+    {
+      id: 22,
+      titleEN: "Pastors Fellowship Meeting",
+      titleTA: "போதகர்கள் ஐக்கியக் கூட்டம்",
+      descEN: "Cooperation and mutual encouragement among regional pastors.",
+      descTA: "வட்டார போதகர்களுக்கு இடையே ஒத்துழைப்பு மற்றும் பரஸ்பர ஊக்கம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002728.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 23,
+      titleEN: "Village Outreach Campaign",
+      titleTA: "கிராமப்புற சுவிசேஷப் பணி",
+      descEN: "Sharing the word of hope with unreached rural communities.",
+      descTA: "அடையப்படாத கிராமப்புற மக்களுக்கு நம்பிக்கையின் வார்த்தையைப் பகிர்ந்து கொள்ளுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002734.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 24,
+      titleEN: "Holy Scripture Reading",
+      titleTA: "திருமறை வாசிப்பு",
+      descEN: "Deep study and reflection on God's holy word.",
+      descTA: "தேவனுடைய பரிசுத்த வார்த்தையைப் பற்றிய ஆழமான ஆய்வு மற்றும் தியானம்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002741.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 25,
+      titleEN: "Mission Outreach Service",
+      titleTA: "மிஷனரி ஊழியப் பணி",
+      descEN: "Sending out teams to serve in frontier mission fields.",
+      descTA: "எல்லைப்புற மிஷனரி களங்களில் சேவை செய்ய குழுக்களை அனுப்புதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002753.png",
+      span: "md:col-span-2 md:row-span-2"
+    },
+    {
+      id: 26,
+      titleEN: "Faith Assembly Meeting",
+      titleTA: "விசுவாசக் கூடுகை",
+      descEN: "Sharing testimonies of miracles and answered prayers.",
+      descTA: "அற்புதம் மற்றும் பதில் கிடைத்த ஜெபங்களின் சாட்சிகளைப் பகிர்ந்து கொள்ளுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002804.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 27,
+      titleEN: "Prayer Support Ministry",
+      titleTA: "ஜெப உதவி ஊழியம்",
+      descEN: "Dedicated intercessors praying for global needs.",
+      descTA: "உலகளாவிய தேவைகளுக்காக ஜெபிக்கும் அர்ப்பணிக்கப்பட்ட ஜெபவீரர்கள்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002811.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 28,
+      titleEN: "Rural Worship Fellowship",
+      titleTA: "கிராமப்புற ஆராதனை ஐக்கியம்",
+      descEN: "A vibrant congregation praising God in a rural center.",
+      descTA: "கிராமப்புற மையத்தில் தேவனைத் துதிக்கும் துடிப்பான சபை.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002819.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 29,
+      titleEN: "Ministry Dedication",
+      titleTA: "ஊழியப் பிரதிஷ்டை கூடுகை",
+      descEN: "Dedication of new leaders for missionary endeavors.",
+      descTA: "மிஷனரி முயற்சிகளுக்காக புதிய தலைவர்களை அர்ப்பணித்தல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002827.png",
+      span: "md:col-span-2 md:row-span-1"
+    },
+    {
+      id: 30,
+      titleEN: "Devotional Music Service",
+      titleTA: "பக்தி பாடல் ஆராதனை",
+      descEN: "Singing traditional hymns and praises together.",
+      descTA: "பாரம்பரிய கீர்த்தனைகள் மற்றும் துதிகளை இணைந்து பாடுதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002837.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 31,
+      titleEN: "Gospel Tracts Distribution",
+      titleTA: "சுவிசேஷப் பத்திரிக்கை விநியோகம்",
+      descEN: "Handing out message tracts in local neighborhoods.",
+      descTA: "உள்ளூர் சுற்றுப்புறங்களில் செய்தி தாள்களை விநியோகித்தல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002845.png",
+      span: "md:col-span-1 md:row-span-1"
+    },
+    {
+      id: 32,
+      titleEN: "Annual Thanksgiving Service",
+      titleTA: "வருடாந்திர நன்றி ஆராதனை",
+      descEN: "Giving thanks for another year of blessings and fruitfulness.",
+      descTA: "ஆசீர்வாதங்கள் மற்றும் பலன்களின் மற்றொரு ஆண்டிற்காக நன்றி செலுத்துதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002852.png",
+      span: "md:col-span-1 md:row-span-2"
+    },
+    {
+      id: 33,
+      titleEN: "Gospel Literature Ministry",
+      titleTA: "சுவிசேஷ இலக்கிய ஊழியம்",
+      descEN: "Spreading the truth through printed media and books.",
+      descTA: "அச்சிடப்பட்ட ஊடகங்கள் மற்றும் புத்தகங்கள் மூலம் சத்தியத்தைப் பரப்புதல்.",
+      imageUrl: "/gallery/Screenshot 2026-06-22 002859.png",
+      span: "md:col-span-1 md:row-span-1"
     }
   ];
 
@@ -145,6 +370,7 @@ export const Gallery: React.FC<GalleryProps> = ({
                 <img
                   src={getAssetPath(item.imageUrl)}
                   alt={language === "en" ? item.titleEN : item.titleTA}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover filter sepia-[0.2] contrast-[1.05] group-hover:scale-[1.04] group-hover:sepia-[0.05] transition-all duration-500 transform-gpu"
                 />
                 

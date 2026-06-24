@@ -2,14 +2,36 @@
 
 import React from "react";
 import { useLanguage } from "@/components/LanguageContext";
-import { contentData, MinistryItem } from "@/data/contentData";
+import { contentData } from "@/data/contentData";
 import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
 import { PaperCard } from "@/components/PaperCard";
 import { BookOpen, Flame, Compass, Users, Baby, Heart, TrendingUp, Sparkles, BookCheck, Share2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface MinistriesProps {
   limit?: number;
 }
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 25 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.16, 1, 0.3, 1] as const,
+    },
+  },
+};
 
 export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
   const { language, t } = useLanguage();
@@ -50,7 +72,13 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
       <div className="max-w-6xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <span className="text-xs uppercase tracking-[0.25em] font-serif-cinzel text-brand-gold font-semibold block mb-2">
             {language === "en" ? "Divisions" : "பிரிவுகள்"}
           </span>
@@ -58,42 +86,50 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
             {language === "en" ? "Our Ministries" : "எங்கள் ஊழியங்கள்"}
           </h2>
           <OrnamentalSeparator />
-        </div>
+        </motion.div>
 
         {/* Ministries Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
           {displayed.map((min) => (
-            <PaperCard key={min.id} className="h-full text-center flex flex-col items-center justify-between p-8">
-              
-              <div className="flex flex-col items-center">
-                {/* Gold Engraved Circular Emblem */}
-                <div className="w-16 h-16 rounded-full border border-brand-gold/40 flex items-center justify-center mb-6 bg-brand-parchment/50 relative gold-glow">
-                  <div className="absolute inset-[3px] border border-brand-gold/15 rounded-full"></div>
-                  {renderIcon(min.iconName)}
+            <motion.div key={min.id} variants={cardVariants} className="h-full">
+              <PaperCard className="h-full text-center flex flex-col items-center justify-between p-8">
+                
+                <div className="flex flex-col items-center">
+                  {/* Gold Engraved Circular Emblem */}
+                  <div className="w-16 h-16 rounded-full border border-brand-gold/40 flex items-center justify-center mb-6 bg-brand-parchment/50 relative gold-glow">
+                    <div className="absolute inset-[3px] border border-brand-gold/15 rounded-full"></div>
+                    {renderIcon(min.iconName)}
+                  </div>
+
+                  {/* Tamil Name subtitle */}
+                  <span className="text-[10px] tracking-[0.15em] uppercase font-serif-cinzel text-brand-gold font-bold block mb-2">
+                    {min.tamilName}
+                  </span>
+
+                  {/* English / Active Name */}
+                  <h3 className="text-lg font-serif-cinzel font-bold text-brand-brown mb-4">
+                    {t(min.title)}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-serif-eb">
+                    {t(min.description)}
+                  </p>
                 </div>
 
-                {/* Tamil Name subtitle */}
-                <span className="text-[10px] tracking-[0.15em] uppercase font-serif-cinzel text-brand-gold font-bold block mb-2">
-                  {min.tamilName}
-                </span>
+                {/* Decorative flourish line at card bottom */}
+                <div className="w-12 h-[1px] bg-brand-gold/20 mt-6 mx-auto"></div>
 
-                {/* English / Active Name */}
-                <h3 className="text-lg font-serif-cinzel font-bold text-brand-brown mb-4">
-                  {t(min.title)}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-serif-eb">
-                  {t(min.description)}
-                </p>
-              </div>
-
-              {/* Decorative flourish line at card bottom */}
-              <div className="w-12 h-[1px] bg-brand-gold/20 mt-6 mx-auto"></div>
-
-            </PaperCard>
+              </PaperCard>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
