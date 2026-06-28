@@ -239,7 +239,7 @@ export const Navbar: React.FC = () => {
                   onClick={() => setDonateModalOpen(false)}
                   className="w-full py-2.5 border border-brand-gold bg-brand-brown text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors"
                 >
-                  {language === "en" ? "Close Dialog" : "சாளரத்தை மூடுக"}
+                  {language === "en" ? "Close" : "மூடுக"}
                 </button>
 
               </div>

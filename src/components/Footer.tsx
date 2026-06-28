@@ -111,15 +111,19 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-xs font-serif-eb text-brand-cream/80">
               <li className="flex gap-2 items-start">
                 <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
-                <span>36/1, Fire Flame Ellam, Hosur - 635109, Tamil Nadu</span>
+                <span>{language === "en" ? contentData.general.address.en : contentData.general.address.ta}</span>
               </li>
               <li className="flex gap-2 items-center">
                 <Phone className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-                <span>+91 94421 93236</span>
+                <a href={`tel:${contentData.general.phone1.replace(/\s+/g, "")}`} className="hover:text-brand-gold transition-colors">
+                  {contentData.general.phone1}
+                </a>
               </li>
               <li className="flex gap-2 items-center">
                 <Mail className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-                <span>info@fireflamemission.org</span>
+                <a href={`mailto:${contentData.general.email}`} className="hover:text-brand-gold transition-colors">
+                  {contentData.general.email}
+                </a>
               </li>
             </ul>
           </div>

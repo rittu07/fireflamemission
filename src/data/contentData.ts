@@ -167,7 +167,7 @@ export const contentData = {
       category: { en: "Evangelism", ta: "சுவிசேஷம்" },
       pages: 48,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20book%20Akkini%20Mugam"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20the%20book%20Akkini%20Mugam"
     },
     {
       id: "jeba-mugam",
@@ -180,7 +180,7 @@ export const contentData = {
       category: { en: "Prayer", ta: "ஜெப ஊழியம்" },
       pages: 64,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20book%20Jeba%20Mugam"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20the%20book%20Jeba%20Mugam"
     },
     {
       id: "daily-confession",
@@ -193,7 +193,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 32,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20Daily%20Confession%20Prayer%20book"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20the%20Daily%20Confession%20Prayer%20book"
     },
     {
       id: "holy-bible",
@@ -206,7 +206,7 @@ export const contentData = {
       category: { en: "Scripture", ta: "வேதாகமம்" },
       pages: 1200,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20Holy%20Bible"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20the%20Holy%20Bible"
     },
     {
       id: "rebuilding-family-altar",
@@ -219,7 +219,7 @@ export const contentData = {
       category: { en: "Prayer", ta: "ஜெப ஊழியம்" },
       pages: 80,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Rebuilding%20the%20Family%20Altar"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Rebuilding%20the%20Family%20Altar"
     },
     {
       id: "spiritual-authority",
@@ -232,7 +232,7 @@ export const contentData = {
       category: { en: "Spiritual Warfare", ta: "ஆவிக்குரிய யுத்தம்" },
       pages: 72,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Spiritual%20Authority"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Spiritual%20Authority"
     },
     {
       id: "walking-by-faith",
@@ -245,7 +245,7 @@ export const contentData = {
       category: { en: "Faith", ta: "விசுவாசம்" },
       pages: 56,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Walking%20by%20Faith"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Walking%20by%20Faith"
     },
     {
       id: "power-of-fasting",
@@ -258,7 +258,7 @@ export const contentData = {
       category: { en: "Prayer", ta: "ஜெப ஊழியம்" },
       pages: 96,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Power%20of%20Fasting"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Power%20of%20Fasting"
     },
     {
       id: "apostolic-model",
@@ -271,7 +271,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 88,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Apostolic%20Model"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Apostolic%20Model"
     },
     {
       id: "shield-of-faith",
@@ -284,7 +284,7 @@ export const contentData = {
       category: { en: "Spiritual Warfare", ta: "ஆவிக்குரிய யுத்தம்" },
       pages: 64,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Shield%20of%20Faith"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Shield%20of%20Faith"
     },
     {
       id: "streams-of-blessing",
@@ -297,7 +297,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 48,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Streams%20of%20Blessing"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Streams%20of%20Blessing"
     },
     {
       id: "preparing-harvest",
@@ -310,7 +310,7 @@ export const contentData = {
       category: { en: "Evangelism", ta: "சுவிசேஷம்" },
       pages: 112,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Preparing%20for%20the%20Harvest"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Preparing%20for%20the%20Harvest"
     },
     {
       id: "voice-of-god",
@@ -323,7 +323,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 80,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Voice%20of%20God"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Voice%20of%20God"
     },
     {
       id: "prevailing-prayer",
@@ -336,7 +336,7 @@ export const contentData = {
       category: { en: "Prayer", ta: "ஜெப ஊழியம்" },
       pages: 104,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Prevailing%20Prayer"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Prevailing%20Prayer"
     },
     {
       id: "walking-holiness",
@@ -349,7 +349,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 90,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Walking%20in%20Holiness"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Walking%20in%20Holiness"
     },
     {
       id: "armor-of-light",
@@ -362,7 +362,7 @@ export const contentData = {
       category: { en: "Spiritual Warfare", ta: "ஆவிக்குரிய யுத்தம்" },
       pages: 60,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Armor%20of%20Light"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Armor%20of%20Light"
     },
     {
       id: "overcoming-temptation",
@@ -375,7 +375,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 68,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Overcoming%20Temptation"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Overcoming%20Temptation"
     },
     {
       id: "sound-doctrine",
@@ -388,7 +388,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 120,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Sound%20Doctrine"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Sound%20Doctrine"
     },
     {
       id: "joy-of-lord",
@@ -401,7 +401,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 40,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Joy%20of%20the%20Lord"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Joy%20of%20the%20Lord"
     },
     {
       id: "standing-gap",
@@ -414,7 +414,7 @@ export const contentData = {
       category: { en: "Prayer", ta: "ஜெப ஊழியம்" },
       pages: 76,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Standing%20in%20the%20Gap"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Standing%20in%20the%20Gap"
     },
     {
       id: "call-discipleship",
@@ -427,7 +427,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 84,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Call%20to%20Discipleship"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Call%20to%20Discipleship"
     },
     {
       id: "fire-holy-spirit",
@@ -440,7 +440,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 92,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Fire%20of%20the%20Holy%20Spirit"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Fire%20of%20the%20Holy%20Spirit"
     },
     {
       id: "victory-in-christ",
@@ -453,7 +453,7 @@ export const contentData = {
       category: { en: "Faith", ta: "விசுவாசம்" },
       pages: 50,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Victory%20in%20Christ"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Victory%20in%20Christ"
     },
     {
       id: "good-shepherd",
@@ -466,7 +466,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 44,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Good%20Shepherd"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Good%20Shepherd"
     },
     {
       id: "heavenly-wisdom",
@@ -479,7 +479,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 74,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Heavenly%20Wisdom"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Heavenly%20Wisdom"
     },
     {
       id: "reaping-harvest",
@@ -492,7 +492,7 @@ export const contentData = {
       category: { en: "Evangelism", ta: "சுவிசேஷம்" },
       pages: 82,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Reaping%20the%20Harvest"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Reaping%20the%20Harvest"
     },
     {
       id: "covenant-of-grace",
@@ -505,7 +505,7 @@ export const contentData = {
       category: { en: "Faith", ta: "விசுவாசம்" },
       pages: 66,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Covenant%20of%20Grace"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Covenant%20of%20Grace"
     },
     {
       id: "quiet-time",
@@ -518,7 +518,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 36,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20Quiet%20Time%20with%20God"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20Quiet%20Time%20with%20God"
     },
     {
       id: "mind-of-christ",
@@ -531,7 +531,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 78,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Mind%20of%20Christ"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Mind%20of%20Christ"
     },
     {
       id: "hope-of-glory",
@@ -544,7 +544,7 @@ export const contentData = {
       category: { en: "Devotional", ta: "வாக்குத்தத்தங்கள்" },
       pages: 52,
       pdfUrl: "#",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Hope%20of%20Glory"
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20The%20Hope%20of%20Glory"
     },
     {
       id: "revival",
@@ -557,7 +557,7 @@ export const contentData = {
       category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
       pages: 101,
       pdfUrl: "/books/Elupputal.pdf",
-      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20book%20Revival%20(Ezhupputhale%20Enathu%20Vaanchai)",
+      hardcopyLink: "https://wa.me/918870083746?text=I%20would%20like%20to%20order%20the%20book%20Revival%20(Ezhupputhale%20Enathu%20Vaanchai)",
       coverImageUrl: "/assets/extracted_img_1_1.png"
     }
   ] as BookItem[],
@@ -948,15 +948,15 @@ export const contentData = {
       ta: "தேவனுடைய வார்த்தையை பிரசுரித்தல், ஜெபத்தின் மூலம் வாழ்வை பலப்படுத்துதல்"
     },
     address: {
-      en: "36/1, Fire Flame Ellam, Hosur - 635109, Tamil Nadu, India",
-      ta: "36/1, அக்கினி ஜுவாலை இல்லம், ஓசூர் - 635109, தமிழ்நாடு, இந்தியா"
+      en: "K.R. Complex Chithambaranagar P.W.D.Road, Nagercoil-2-K.K.Dist",
+      ta: "K.R. காம்ப்ளக்ஸ், சிதம்பரநகர், பி.டபிள்யூ.டி. ரோடு, நாகர்கோவில்-2, கன்னியாகுமரி மாவட்டம்"
     },
     founderName: {
       en: "Pr. V. Jeromias",
       ta: "Pr. V. Jeromias"
     },
-    phone1: "+91 94421 93236",
-    phone2: "+91 95978 85311",
+    phone1: "+91 88700 83746",
+    phone2: "",
     email: "info@fireflamemission.org",
     donationMotto: {
       en: "Your support enables the printing and free distribution of Bible promise materials and missionary support.",

@@ -40,8 +40,8 @@ export const Contact: React.FC = () => {
   };
 
   const phoneHref1 = `tel:${contentData.general.phone1.replace(/\s+/g, "")}`;
-  const phoneHref2 = `tel:${contentData.general.phone2.replace(/\s+/g, "")}`;
-  const whatsappHref = `https://wa.me/919442193236?text=Hello%2C%20I%20am%20reaching%20out%20to%20Fire%20Flame%20Mission`;
+  const phoneHref2 = contentData.general.phone2 ? `tel:${contentData.general.phone2.replace(/\s+/g, "")}` : "#";
+  const whatsappHref = `https://wa.me/918870083746?text=Hello%2C%20I%20am%20reaching%20out%20to%20Fire%20Flame%20Mission`;
 
   return (
     <section id="contact-page" className="py-36 px-6 md:py-36 md:px-24 bg-brand-parchment bg-opacity-10 border-b border-brand-gold/20 relative">
@@ -171,10 +171,10 @@ export const Contact: React.FC = () => {
               <div className="space-y-1.5 p-4 border border-brand-gold/15 bg-brand-cream/50">
                 <span className="inline-flex items-center gap-1 font-serif-cinzel text-[9px] uppercase tracking-wider font-bold text-brand-gold">
                   <MapPin className="w-3 h-3" />
-                  {language === "en" ? "Hosur Center" : "ஓசூர் மையம்"}
+                  {language === "en" ? "Nagercoil Center" : "நாகர்கோவில் மையம்"}
                 </span>
-                <p className="text-brand-brown leading-relaxed">
-                  36/1, Fire Flame Ellam, Hosur - 635109, Tamil Nadu
+                <p className="text-brand-brown leading-relaxed text-xs">
+                  {language === "en" ? contentData.general.address.en : contentData.general.address.ta}
                 </p>
               </div>
 
@@ -185,8 +185,12 @@ export const Contact: React.FC = () => {
                 </span>
                 <p className="text-brand-brown">
                   <a href={phoneHref1} className="hover:text-brand-gold transition-colors">{contentData.general.phone1}</a>
-                  <br />
-                  <a href={phoneHref2} className="hover:text-brand-gold transition-colors">{contentData.general.phone2}</a>
+                  {contentData.general.phone2 && (
+                    <>
+                      <br />
+                      <a href={phoneHref2} className="hover:text-brand-gold transition-colors">{contentData.general.phone2}</a>
+                    </>
+                  )}
                 </p>
               </div>
 

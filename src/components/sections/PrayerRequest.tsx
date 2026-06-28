@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useLanguage } from "@/components/LanguageContext";
 import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
 import { PaperCard } from "@/components/PaperCard";
-import { Send, CheckCircle2, Heart } from "lucide-react";
+import { Send, CheckCircle2, Heart, Mail, MessageSquare } from "lucide-react";
 
 export const PrayerRequest: React.FC = () => {
   const { language } = useLanguage();
@@ -39,6 +39,18 @@ export const PrayerRequest: React.FC = () => {
     });
     setFormSubmitted(false);
   };
+
+  const typeText = formData.type === "testimony" 
+    ? (language === "en" ? "Testimony" : "சாட்சி")
+    : (language === "en" ? "Prayer Request" : "ஜெப விண்ணப்பம்");
+    
+  const formattedMessage = `Hello Fire Flame Mission,\n\nI have submitted a ${typeText} via the website:\n\n*Name:* ${formData.name}\n*Email:* ${formData.email || 'N/A'}\n*Phone:* ${formData.phone || 'N/A'}\n\n*Petition:* \n${formData.message}`;
+  
+  const whatsappUrl = `https://wa.me/918870083746?text=${encodeURIComponent(formattedMessage)}`;
+
+  const emailSubject = `New ${typeText} from ${formData.name}`;
+  const emailBody = `Name: ${formData.name}\nEmail: ${formData.email || 'N/A'}\nPhone: ${formData.phone || 'N/A'}\n\nPetition:\n${formData.message}`;
+  const emailUrl = `mailto:info@fireflamemission.org?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   return (
     <section id="prayer-request" className="py-36 px-6 md:py-36 md:px-24 bg-brand-parchment bg-opacity-35 border-b border-brand-gold/20 relative">
@@ -180,12 +192,34 @@ export const PrayerRequest: React.FC = () => {
                 </span>
               </div>
 
-              <button
-                onClick={resetForm}
-                className="px-6 py-2 border border-brand-gold/30 text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-parchment hover:border-brand-gold transition-colors"
-              >
-                {language === "en" ? "Send Another request" : "மற்றொரு விண்ணப்பம்"}
-              </button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto pt-4">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-[10px] font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 text-brand-gold" />
+                  {language === "en" ? "Send via WhatsApp" : "வாட்ஸ்அப்பில் அனுப்ப"}
+                </a>
+                
+                <a
+                  href={emailUrl}
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-[10px] font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
+                >
+                  <Mail className="w-3.5 h-3.5 text-brand-gold" />
+                  {language === "en" ? "Send via Email" : "மின்னஞ்சலில் அனுப்ப"}
+                </a>
+              </div>
+
+              <div className="pt-2">
+                <button
+                  onClick={resetForm}
+                  className="px-6 py-2 border border-brand-gold/30 text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-parchment hover:border-brand-gold transition-colors"
+                >
+                  {language === "en" ? "Send Another request" : "மற்றொரு விண்ணப்பம்"}
+                </button>
+              </div>
             </div>
           )}
 

@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { useLanguage, Language } from "@/components/LanguageContext";
 import { contentData } from "@/data/contentData";
 import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
 import { PaperCard } from "@/components/PaperCard";
 import { BookOpen, Download, ShoppingCart, X, ChevronLeft, ChevronRight, BookMarked, ExternalLink } from "lucide-react";
+
+const PdfBookReader = dynamic(() => import("./PdfBookReader"), { ssr: false });
 
 // Bilingual sample pages for the interactive 3D Book Reader
 const BOOK_PAGES: Record<string, { en: string[]; ta: string[] }> = {
@@ -610,270 +613,192 @@ export const FeaturedPublications: React.FC<FeaturedPublicationsProps> = ({
 
       {/* 2. IMMERSIVE 3D BOOK READER OVERLAY */}
       {readingBook && (
-        <div className="reader-backdrop-blur fixed inset-0 z-[100] flex flex-col justify-between items-center p-4 md:p-8" role="dialog" aria-modal="true">
-          
-          {/* Top Header Bar */}
-          <div className={`w-full flex justify-between items-center z-50 pb-3 border-b border-brand-gold/20 mb-4 ${
-            readingBook.pdfUrl && readingBook.pdfUrl !== "#" && !isReaderMobile ? "max-w-7xl" : "max-w-4xl md:max-w-5xl"
-          }`}>
-            <div className="flex items-center gap-2 truncate pr-4">
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold">
-                {language === "en" ? "Reading" : "வாசிக்கிறது"}:
-              </span>
-              <span className="text-xs md:text-sm font-serif-eb text-brand-cream truncate font-semibold">
-                {t(readingBook.title)}
-              </span>
-            </div>
-            <div className="flex items-center gap-3 flex-shrink-0">
-              {readingBook.pdfUrl && readingBook.pdfUrl !== "#" && !isReaderMobile && (
-                <a
-                  href={readingBook.pdfUrl}
-                  download
-                  className="flex items-center gap-1.5 border border-brand-gold/40 hover:bg-brand-gold hover:text-brand-brown rounded-none px-3 py-1.5 text-[10px] md:text-xs uppercase tracking-widest font-serif-cinzel text-brand-cream bg-transparent transition-all duration-300 cursor-pointer"
-                >
-                  <Download className="w-3.5 h-3.5 text-brand-gold hover:text-inherit" />
-                  {language === "en" ? "Download PDF" : "பதிவிறக்கம் செய்ய"}
-                </a>
-              )}
-              <button
-                onClick={() => setReadingBook(null)}
-                className="hover:bg-brand-gold hover:text-brand-brown border border-brand-gold/30 rounded-none px-3 py-1.5 text-[10px] md:text-xs uppercase tracking-widest font-serif-cinzel text-brand-cream bg-transparent transition-all duration-300 cursor-pointer"
-              >
-                ✕ {language === "en" ? "Close Reader" : "மூடுக"}
-              </button>
-            </div>
-          </div>
-
-          <div className={readingBook.pdfUrl && readingBook.pdfUrl !== "#" && !isReaderMobile 
-            ? "w-full max-w-7xl flex-grow flex items-center justify-center relative my-2 h-[82vh]" 
-            : "reader-stage-3d flex items-center justify-center w-full flex-grow relative"
-          }>
+        readingBook.pdfUrl && readingBook.pdfUrl !== "#" ? (
+          <PdfBookReader 
+            book={readingBook} 
+            onClose={() => setReadingBook(null)} 
+          />
+        ) : (
+          <div className="reader-backdrop-blur fixed inset-0 z-[100] flex flex-col justify-between items-center p-4 md:p-8" role="dialog" aria-modal="true">
             
-            {readingBook.pdfUrl && readingBook.pdfUrl !== "#" ? (
-              isReaderMobile ? (
-                /* Mobile: Beautiful PDF reader prompt */
-                <div className="w-full max-w-sm bg-brand-cream p-6 border border-brand-gold/45 shadow-2xl relative z-10 flex flex-col items-center text-center rounded-sm animate-fadeIn mx-4">
-                  {/* Book Cover */}
-                  <div className="w-24 h-36 shadow-lg mb-4 rounded-r border-l-[12px] flex flex-col justify-between p-4 relative overflow-hidden"
-                    style={{
-                      borderLeftColor: getBookCoverStyles(readingBook.id, readingBook.category.en).borderLeftColor,
-                      backgroundColor: getBookCoverStyles(readingBook.id, readingBook.category.en).backgroundColor,
-                      color: getBookCoverStyles(readingBook.id, readingBook.category.en).color
-                    }}
-                  >
-                    <div className="book-cover-shine"></div>
-                    <span className="block text-[5px] uppercase tracking-[0.25em] font-serif-cinzel text-center opacity-70">
+            {/* Top Header Bar */}
+            <div className={`w-full flex justify-between items-center z-50 pb-3 border-b border-brand-gold/20 mb-4 max-w-4xl md:max-w-5xl`}>
+              <div className="flex items-center gap-2 truncate pr-4">
+                <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold">
+                  {language === "en" ? "Reading" : "வாசிக்கிறது"}:
+                </span>
+                <span className="text-xs md:text-sm font-serif-eb text-brand-cream truncate font-semibold">
+                  {t(readingBook.title)}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 flex-shrink-0">
+                <button
+                  onClick={() => setReadingBook(null)}
+                  className="hover:bg-brand-gold hover:text-brand-brown border border-brand-gold/30 rounded-none px-3 py-1.5 text-[10px] md:text-xs uppercase tracking-widest font-serif-cinzel text-brand-cream bg-transparent transition-all duration-300 cursor-pointer"
+                >
+                  ✕ {language === "en" ? "Close Reader" : "மூடுக"}
+                </button>
+              </div>
+            </div>
+
+            <div className="reader-stage-3d flex items-center justify-center w-full flex-grow relative">
+              
+              {!readerOpened ? (
+                <div 
+                  className="closed-book-cover transform-gpu flex"
+                  onClick={() => setReaderOpened(true)}
+                  style={{ 
+                    backgroundColor: getBookCoverStyles(readingBook.id, readingBook.category.en).backgroundColor,
+                  }}
+                >
+                  <div 
+                    className="closed-book-spine"
+                    style={{ backgroundColor: getBookCoverStyles(readingBook.id, readingBook.category.en).borderLeftColor }}
+                  ></div>
+                  
+                  <div className="closed-book-front relative">
+                    <div className="absolute inset-2 border border-brand-gold/15 pointer-events-none"></div>
+                    
+                    <span className="cb-genre text-[8px] uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold">
                       {t(readingBook.category)}
                     </span>
-                    <h4 className="font-serif-cinzel font-bold tracking-wider leading-normal text-center text-[7px] my-auto">
-                      {t(readingBook.title).replace(/\(.*?\)/g, "")}
-                    </h4>
-                    <span className="text-[5px] uppercase tracking-widest font-serif-cinzel text-center opacity-60">
-                      Heritage Press
+                    
+                    <h3 className="cb-title font-serif-cinzel font-bold text-xl md:text-3xl leading-snug tracking-wide text-brand-cream max-w-xs px-2 mt-4 mb-2">
+                      {t(readingBook.title)}
+                    </h3>
+                    
+                    <span className="cb-author text-xs font-serif-cormorant italic text-brand-gold">
+                      {t(readingBook.author)}
                     </span>
-                  </div>
 
-                  <h3 className="text-lg font-serif-cinzel font-bold text-brand-brown mb-1 px-2 leading-tight">
-                    {t(readingBook.title)}
-                  </h3>
-                  <p className="text-xs font-serif-eb italic text-brand-muted mb-4">
-                    {language === "en" ? "By" : "ஆசிரியர்"}: <span className="font-bold text-brand-brown not-italic font-serif-cinzel text-[10px] uppercase">{t(readingBook.author)}</span>
-                  </p>
-
-                  <div className="w-12 h-[0.5px] bg-brand-gold/30 mx-auto mb-4"></div>
-
-                  <p className="text-xs font-serif-eb text-brand-muted/95 mb-6 px-2 leading-relaxed text-center">
-                    {language === "en" 
-                      ? "For the best reading experience on mobile devices, open the PDF in a new tab or download it to read offline."
-                      : "கைப்பேசியில் எளிதாக வாசிக்க, PDF கோப்பை புதிய விண்டோவில் திறக்கவும் அல்லது உங்கள் சாதனத்தில் பதிவிறக்கம் செய்யவும்."}
-                  </p>
-
-                  <div className="flex flex-col gap-3 w-full">
-                    <a
-                      href={readingBook.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-brand-brown text-brand-cream text-xs font-bold tracking-widest uppercase font-serif-cinzel border border-brand-gold hover:bg-brand-parchment hover:text-brand-brown transition-all duration-300 shadow-md cursor-pointer"
-                    >
-                      <ExternalLink className="w-3.5 h-3.5 text-brand-gold" />
-                      {language === "en" ? "Open PDF Reader" : "PDF-ஐத் திறக்க"}
-                    </a>
-
-                    <a
-                      href={readingBook.pdfUrl}
-                      download
-                      className="w-full flex items-center justify-center gap-2 py-3 px-4 border border-[#B08D57]/45 text-brand-brown text-xs font-bold tracking-widest uppercase font-serif-cinzel hover:bg-brand-brown hover:text-brand-cream transition-all duration-300 cursor-pointer"
-                    >
-                      <Download className="w-3.5 h-3.5 text-brand-gold" />
-                      {language === "en" ? "Download PDF" : "பதிவிறக்கம் செய்ய"}
-                    </a>
+                    <span className="cb-hint text-[10px] tracking-widest text-brand-cream/40 uppercase pt-6 border-t border-brand-cream/10 w-24 mt-6">
+                      {language === "en" ? "Click to open" : "திறக்க அழுத்தவும்"}
+                    </span>
                   </div>
                 </div>
               ) : (
-                /* Desktop: Standard PDF iframe with toolbar disabled for custom look */
-                <div className="w-full h-full bg-[#1C120C]/90 p-3 border border-brand-gold/30 shadow-2xl relative z-10 flex flex-col animate-fadeIn">
-                  <iframe 
-                    src={`${readingBook.pdfUrl}#toolbar=0&navpanes=0`} 
-                    className="w-full h-full border-none rounded-sm bg-white"
-                    title={t(readingBook.title)}
-                  />
-                </div>
-              )
-            ) : !readerOpened ? (
-              <div 
-                className="closed-book-cover transform-gpu flex"
-                onClick={() => setReaderOpened(true)}
-                style={{ 
-                  backgroundColor: getBookCoverStyles(readingBook.id, readingBook.category.en).backgroundColor,
-                }}
-              >
-                <div 
-                  className="closed-book-spine"
-                  style={{ backgroundColor: getBookCoverStyles(readingBook.id, readingBook.category.en).borderLeftColor }}
-                ></div>
                 
-                <div className="closed-book-front relative">
-                  <div className="absolute inset-2 border border-brand-gold/15 pointer-events-none"></div>
+                /* B. OPEN TWO-PAGE SPREAD (DESKTOP) OR SINGLE-PAGE (MOBILE) VIEW */
+                <div className="open-book-spread relative z-10 max-w-4xl w-full h-full bg-brand-cream shadow-2xl flex border border-brand-gold/30">
                   
-                  <span className="cb-genre text-[8px] uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold">
-                    {t(readingBook.category)}
-                  </span>
-                  
-                  <h3 className="cb-title font-serif-cinzel font-bold text-xl md:text-3xl leading-snug tracking-wide text-brand-cream max-w-xs px-2 mt-4 mb-2">
-                    {t(readingBook.title)}
-                  </h3>
-                  
-                  <span className="cb-author text-xs font-serif-cormorant italic text-brand-gold">
-                    {t(readingBook.author)}
-                  </span>
-
-                  <span className="cb-hint text-[10px] tracking-widest text-brand-cream/40 uppercase pt-6 border-t border-brand-cream/10 w-24 mt-6">
-                    {language === "en" ? "Click to open" : "திறக்க அழுத்தவும்"}
-                  </span>
-                </div>
-              </div>
-            ) : (
-              
-              /* B. OPEN TWO-PAGE SPREAD (DESKTOP) OR SINGLE-PAGE (MOBILE) VIEW */
-              <div className="open-book-spread relative z-10 max-w-4xl w-full h-full bg-brand-cream shadow-2xl flex border border-brand-gold/30">
-                
-                {!isReaderMobile ? (
-                  <>
-                    {/* Left Page */}
-                    <div className={`reader-page-sheet reader-page-left flex flex-col justify-between ${
-                      turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
-                    }`}>
-                      <div className={`page-content font-serif-eb leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto ${fontSizeClass}`}>
-                        {pages[leftPageIdx] || ""}
+                  {!isReaderMobile ? (
+                    <>
+                      {/* Left Page */}
+                      <div className={`reader-page-sheet reader-page-left flex flex-col justify-between ${
+                        turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
+                      }`}>
+                        <div className={`page-content font-serif-eb leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto ${fontSizeClass}`}>
+                          {pages[leftPageIdx] || ""}
+                        </div>
+                        <span className="page-num block text-center text-[10px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
+                          {pages[leftPageIdx] ? leftPageIdx + 1 : ""}
+                        </span>
                       </div>
-                      <span className="page-num block text-center text-[10px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
-                        {pages[leftPageIdx] ? leftPageIdx + 1 : ""}
+
+                      {/* Book Spine Center Gutter shadow */}
+                      <div className="reader-book-gutter" aria-hidden="true"></div>
+
+                      {/* Right Page */}
+                      <div className={`reader-page-sheet reader-page-right flex flex-col justify-between ${
+                        turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
+                      }`}>
+                        <div className={`page-content font-serif-eb leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto font-light ${fontSizeClass}`}>
+                          {pages[rightPageIdx] || ""}
+                        </div>
+                        <span className="page-num block text-center text-[10px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
+                          {pages[rightPageIdx] ? rightPageIdx + 1 : ""}
+                        </span>
+                      </div>
+                    </>
+                  ) : (
+                    /* Mobile: Single Page View with Swiping Gestures */
+                    <div 
+                      className={`reader-page-sheet w-full flex flex-col justify-between ${
+                        turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
+                      }`}
+                      onTouchStart={onTouchStart}
+                      onTouchMove={onTouchMove}
+                      onTouchEnd={onTouchEnd}
+                    >
+                      <div className={`page-content leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto px-1 ${fontSizeClass}`}>
+                        {pages[currentPageIdx] || ""}
+                      </div>
+                      <span className="page-num block text-center text-[11px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
+                        {currentPageIdx + 1} / {pages.length}
                       </span>
                     </div>
+                  )}
 
-                    {/* Book Spine Center Gutter shadow */}
-                    <div className="reader-book-gutter" aria-hidden="true"></div>
+                </div>
+              )}
 
-                    {/* Right Page */}
-                    <div className={`reader-page-sheet reader-page-right flex flex-col justify-between ${
-                      turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
-                    }`}>
-                      <div className={`page-content font-serif-eb leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto font-light ${fontSizeClass}`}>
-                        {pages[rightPageIdx] || ""}
-                      </div>
-                      <span className="page-num block text-center text-[10px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
-                        {pages[rightPageIdx] ? rightPageIdx + 1 : ""}
-                      </span>
-                    </div>
-                  </>
-                ) : (
-                  /* Mobile: Single Page View with Swiping Gestures */
-                  <div 
-                    className={`reader-page-sheet w-full flex flex-col justify-between ${
-                      turningDirection === "next" ? "reader-page-turning-next" : turningDirection === "prev" ? "reader-page-turning-prev" : ""
-                    }`}
-                    onTouchStart={onTouchStart}
-                    onTouchMove={onTouchMove}
-                    onTouchEnd={onTouchEnd}
-                  >
-                    <div className={`page-content leading-relaxed text-brand-brown whitespace-pre-line h-full overflow-y-auto px-1 ${fontSizeClass}`}>
-                      {pages[currentPageIdx] || ""}
-                    </div>
-                    <span className="page-num block text-center text-[11px] font-serif-cinzel text-brand-muted opacity-60 mt-4 border-t border-brand-gold/10 pt-2">
-                      {currentPageIdx + 1} / {pages.length}
-                    </span>
+            </div>
+
+            {/* Controls toolbar */}
+            {readerOpened && (
+              <div className="reader-controls flex flex-col md:flex-row items-center justify-between gap-4 mt-6 z-20 relative w-full max-w-4xl border-t border-brand-gold/15 pt-4">
+                
+                {/* Left Side: Font Size controls */}
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/60">
+                    {language === "en" ? "Text Size" : "எழுத்து அளவு"}:
+                  </span>
+                  <div className="flex border border-brand-gold/30 rounded-none bg-brand-cream/5 overflow-hidden">
+                    {(["sm", "base", "lg", "xl"] as const).map((size) => (
+                      <button
+                        key={size}
+                        onClick={() => setFontSize(size)}
+                        className={`px-3 py-1 text-xs font-bold uppercase transition-colors cursor-pointer border-r last:border-r-0 border-brand-gold/20 ${
+                          fontSize === size 
+                            ? "bg-brand-gold text-brand-brown animate-none font-bold" 
+                            : "text-brand-cream hover:bg-brand-cream/10"
+                        }`}
+                      >
+                        {size === "sm" ? "A-" : size === "base" ? "A" : size === "lg" ? "A+" : "A++"}
+                      </button>
+                    ))}
                   </div>
-                )}
+                </div>
+
+                {/* Center: Navigation controls */}
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={handlePrevPage}
+                    disabled={isReaderMobile ? currentPageIdx === 0 : Math.floor(currentPageIdx / 2) === 0}
+                    className="page-btn flex items-center gap-1 text-[11px] uppercase tracking-widest font-serif-cinzel text-brand-cream border border-brand-cream/20 bg-brand-cream/5 px-4 py-2 hover:bg-brand-cream/15 disabled:opacity-20 disabled:pointer-events-none transition-colors cursor-pointer"
+                  >
+                    <ChevronLeft className="w-3.5 h-3.5" />
+                    {language === "en" ? "Prev" : "முந்தைய"}
+                  </button>
+
+                  <span className="reader-progress text-xs font-serif-cinzel text-brand-cream/70 tracking-widest min-w-[100px] text-center">
+                    {isReaderMobile ? (
+                      `${language === "en" ? "PAGE" : "பக்கம்"} ${currentPageIdx + 1} / ${pages.length}`
+                    ) : (
+                      `${language === "en" ? "SPREAD" : "பக்கம்"} ${Math.floor(currentPageIdx / 2) + 1} / ${totalSpreads()}`
+                    )}
+                  </span>
+
+                  <button
+                    onClick={handleNextPage}
+                    disabled={isReaderMobile ? currentPageIdx >= pages.length - 1 : Math.floor(currentPageIdx / 2) >= totalSpreads() - 1}
+                    className="page-btn flex items-center gap-1 text-[11px] uppercase tracking-widest font-serif-cinzel text-brand-cream border border-brand-cream/20 bg-brand-cream/5 px-4 py-2 hover:bg-brand-cream/15 disabled:opacity-20 disabled:pointer-events-none transition-colors cursor-pointer"
+                  >
+                    {language === "en" ? "Next" : "அடுத்த"}
+                    <ChevronRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
+                {/* Right Side: Layout mode info */}
+                <div className="hidden md:block text-[10px] uppercase tracking-widest font-serif-cinzel text-brand-cream/55">
+                  {language === "en" ? "Double Page Spread" : "இருபக்கப் பார்வை"}
+                </div>
 
               </div>
             )}
 
           </div>
-
-          {/* Controls toolbar */}
-          {readerOpened && !(readingBook.pdfUrl && readingBook.pdfUrl !== "#") && (
-            <div className="reader-controls flex flex-col md:flex-row items-center justify-between gap-4 mt-6 z-20 relative w-full max-w-4xl border-t border-brand-gold/15 pt-4">
-              
-              {/* Left Side: Font Size controls */}
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/60">
-                  {language === "en" ? "Text Size" : "எழுத்து அளவு"}:
-                </span>
-                <div className="flex border border-brand-gold/30 rounded-none bg-brand-cream/5 overflow-hidden">
-                  {(["sm", "base", "lg", "xl"] as const).map((size) => (
-                    <button
-                      key={size}
-                      onClick={() => setFontSize(size)}
-                      className={`px-3 py-1 text-xs font-bold uppercase transition-colors cursor-pointer border-r last:border-r-0 border-brand-gold/20 ${
-                        fontSize === size 
-                          ? "bg-brand-gold text-brand-brown animate-none font-bold" 
-                          : "text-brand-cream hover:bg-brand-cream/10"
-                      }`}
-                    >
-                      {size === "sm" ? "A-" : size === "base" ? "A" : size === "lg" ? "A+" : "A++"}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Center: Navigation controls */}
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={handlePrevPage}
-                  disabled={isReaderMobile ? currentPageIdx === 0 : Math.floor(currentPageIdx / 2) === 0}
-                  className="page-btn flex items-center gap-1 text-[11px] uppercase tracking-widest font-serif-cinzel text-brand-cream border border-brand-cream/20 bg-brand-cream/5 px-4 py-2 hover:bg-brand-cream/15 disabled:opacity-20 disabled:pointer-events-none transition-colors cursor-pointer"
-                >
-                  <ChevronLeft className="w-3.5 h-3.5" />
-                  {language === "en" ? "Prev" : "முந்தைய"}
-                </button>
-
-                <span className="reader-progress text-xs font-serif-cinzel text-brand-cream/70 tracking-widest min-w-[100px] text-center">
-                  {isReaderMobile ? (
-                    `${language === "en" ? "PAGE" : "பக்கம்"} ${currentPageIdx + 1} / ${pages.length}`
-                  ) : (
-                    `${language === "en" ? "SPREAD" : "பக்கம்"} ${Math.floor(currentPageIdx / 2) + 1} / ${totalSpreads()}`
-                  )}
-                </span>
-
-                <button
-                  onClick={handleNextPage}
-                  disabled={isReaderMobile ? currentPageIdx >= pages.length - 1 : Math.floor(currentPageIdx / 2) >= totalSpreads() - 1}
-                  className="page-btn flex items-center gap-1 text-[11px] uppercase tracking-widest font-serif-cinzel text-brand-cream border border-brand-cream/20 bg-brand-cream/5 px-4 py-2 hover:bg-brand-cream/15 disabled:opacity-20 disabled:pointer-events-none transition-colors cursor-pointer"
-                >
-                  {language === "en" ? "Next" : "அடுத்த"}
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {/* Right Side: Layout mode info */}
-              <div className="hidden md:block text-[10px] uppercase tracking-widest font-serif-cinzel text-brand-cream/55">
-                {language === "en" ? "Double Page Spread" : "இருபக்கப் பார்வை"}
-              </div>
-
-            </div>
-          )}
-
-        </div>
+        )
       )}
 
       {/* 3. MOBILE DRAWER OVERLAY FOR BOOK DETAILS */}
