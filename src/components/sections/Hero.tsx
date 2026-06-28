@@ -112,7 +112,7 @@ export const Hero: React.FC = () => {
               className="text-4xl sm:text-6xl md:text-7xl font-serif-cinzel tracking-wider text-brand-cream leading-tight font-bold uppercase text-center"
               style={{ textShadow: "0 4px 16px rgba(16,10,6,0.95), 0 2px 4px rgba(16,10,6,0.85)" }}
             >
-              நெருப்பு ஜுவாலை
+              அக்கினி ஜுவாலை
             </h1>
           )}
 

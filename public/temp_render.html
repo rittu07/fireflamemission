@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Renderer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+  <h1>Rendering PDF Page 1...</h1>
+  <canvas id="pdf-canvas" style="border: 1px solid black;"></canvas>
+  <div id="status" style="margin-top: 20px; font-weight: bold;">Starting...</div>
+
+  <script>
+    // Point to the PDF.js worker
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+    const pdfUrl = '/books/Elupputal.pdf';
+    
+    async function renderPage() {
+      const statusDiv = document.getElementById('status');
+      try {
+        statusDiv.innerText = 'Loading PDF...';
+        const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+        statusDiv.innerText = 'PDF loaded. Fetching page 1...';
+        
+        const page = await pdf.getPage(1);
+        statusDiv.innerText = 'Page 1 loaded. Rendering...';
+
+        const scale = 2.0; // Render at 2x resolution for high fidelity cover
+        const viewport = page.getViewport({ scale });
+        
+        const canvas = document.getElementById('pdf-canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: viewport
+        };
+        
+        await page.render(renderContext).promise;
+        statusDiv.innerText = 'Page rendered. Converting to PNG...';
+
+        const dataUrl = canvas.toDataURL('image/png');
+        
+        statusDiv.innerText = 'Sending to local server...';
+        const response = await fetch('http://localhost:3001/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ image: dataUrl })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          statusDiv.innerText = 'SUCCESS! Cover page updated successfully.';
+          console.log('SUCCESS');
+        } else {
+          statusDiv.innerText = 'FAILED: ' + result.error;
+        }
+      } catch (err) {
+        statusDiv.innerText = 'ERROR: ' + err.message;
+        console.error(err);
+      }
+    }
+
+    // Run after load
+    window.onload = renderPage;
+  </script>
+</body>
+</html>

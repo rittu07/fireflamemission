@@ -207,7 +207,7 @@ export const Contact: React.FC = () => {
                 </svg>
 
                 <h4 className="font-serif-cinzel text-xs font-bold text-brand-brown tracking-widest uppercase mb-1">
-                  {language === "en" ? "Map View: Fire Flame Ellam" : "ஆலய வரைபடம்: நெருப்பு ஜுவாலை இல்லம்"}
+                  {language === "en" ? "Map View: Fire Flame Ellam" : "ஆலய வரைபடம்: அக்கினி ஜுவாலை இல்லம்"}
                 </h4>
                 <p className="font-serif-cormorant text-[10px] italic text-brand-muted max-w-xs leading-normal">
                   {language === "en"

@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Motto */}
           <div className="space-y-4 md:col-span-1">
             <h3 className="text-lg font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
-              {language === "en" ? "Fire Flame" : "நெருப்பு ஜுவாலை"}
+              {language === "en" ? "Fire Flame" : "அக்கினி ஜுவாலை"}
               <span className="block text-xs font-serif-cormorant text-brand-gold italic">
                 {language === "en" ? "Ministry" : "மினிஸ்ட்ரி"}
               </span>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div>
-            &copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "நெருப்பு ஜுவாலை ஊழியம்"}.
+            &copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜுவாலை ஊழியம்"}.
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center text-center">
             <Link href="/about" className="hover:text-brand-gold transition-colors">

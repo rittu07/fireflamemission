@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif-cinzel text-xs font-bold tracking-wider text-brand-brown group-hover:text-brand-gold transition-colors leading-none">
-                {language === "en" ? "Fire Flame" : "நெருப்பு ஜுவாலை"}
+                {language === "en" ? "Fire Flame" : "அக்கினி ஜுவாலை"}
               </span>
               <span className="font-serif-cormorant text-[10px] italic text-brand-muted leading-tight mt-1">
                 {language === "en" ? "Ministry" : "மினிஸ்ட்ரி"}

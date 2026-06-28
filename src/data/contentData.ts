@@ -25,6 +25,7 @@ export interface BookItem {
   pages: number;
   pdfUrl: string;
   hardcopyLink: string;
+  coverImageUrl?: string;
 }
 
 export interface SermonItem {
@@ -158,7 +159,7 @@ export const contentData = {
     {
       id: "akkini-mugam",
       title: { en: "Akkini Mugam (Face of Fire)", ta: "அக்கினி முகம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A powerful booklet calling believers to a life of fiery evangelism, spiritual authority, and complete dedication to Christ.",
         ta: "விசுவாசிகளை அக்கினியான சுவிசேஷப் பணிக்கும், ஆவிக்குரிய அதிகாரத்திற்கும், கிறிஸ்துவுக்கான அர்ப்பணிப்பிற்கும் அழைக்கும் வல்லமையான புத்தகம்."
@@ -171,7 +172,7 @@ export const contentData = {
     {
       id: "jeba-mugam",
       title: { en: "Jeba Mugam (Face of Prayer)", ta: "ஜெப முகம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "An exhaustive guide on the apostolic model of house-to-house prayer meetings, intercession, and personal intimacy with God.",
         ta: "வீட்டு ஜெபக்கூட்டங்கள் மற்றும் தேவனுடனான தனிப்பட்ட ஐக்கியத்தின் அப்போஸ்தலிக் மாதிரியைப் பற்றிய விரிவான வழிகாட்டி."
@@ -184,7 +185,7 @@ export const contentData = {
     {
       id: "daily-confession",
       title: { en: "Daily Confession Prayer", ta: "தினசரி அறிக்கை ஜெபங்கள்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Scriptural confessions and prayers to align your daily speech with the victory, protection, and provision of God's Word.",
         ta: "உமது தினசரி வார்த்தைகளை தேவனுடைய வெற்றியோடும், பாதுகாப்போடும், வாக்குத்தத்தங்களோடும் இணைக்கும் வேதப்பூர்வமான அறிக்கை ஜெபங்கள்."
@@ -210,7 +211,7 @@ export const contentData = {
     {
       id: "rebuilding-family-altar",
       title: { en: "Rebuilding the Family Altar", ta: "இல்ல பலிபீடத்தை மீண்டும் கட்டுதல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A spiritual guide detailing the steps to establish family intercession, daily devotion, and spiritual protection for your home.",
         ta: "குடும்ப ஜெபம், தினசரி ஆராதனை மற்றும் உங்கள் வீட்டிற்கான ஆவிக்குரிய பாதுகாப்பை நிறுவுவதற்கான படிகளை விவரிக்கும் ஆவிக்குரிய வழிகாட்டி."
@@ -223,7 +224,7 @@ export const contentData = {
     {
       id: "spiritual-authority",
       title: { en: "Spiritual Authority", ta: "ஆவிக்குரிய அதிகாரம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Understanding the spiritual keys to walk in divine authority, overcome obstacles, and live a victorious life in Christ.",
         ta: "தேவனுடைய அதிகாரத்தில் நடப்பதற்கும், தடைகளை வெல்வதற்கும், கிறிஸ்துவுக்குள் ஜெயமுள்ள வாழ்க்கை வாழ்வதற்கும் ஆவிக்குரிய வழிகள்."
@@ -236,7 +237,7 @@ export const contentData = {
     {
       id: "walking-by-faith",
       title: { en: "Walking by Faith", ta: "விசுவாசத்தினால் நடத்தல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A guide on moving from doubt and fear into absolute trust in God's promises, experiencing miracles through unwavering faith.",
         ta: "சந்தேகத்திலிருந்தும் பயத்திலிருந்தும் தேவ வாக்குத்தத்தங்களின் மீதான முழுமையான விசுவாசத்திற்கு நகர்ந்து, அற்புதங்களை அனுபவிப்பதற்கான ஒரு வழிகாட்டி."
@@ -249,7 +250,7 @@ export const contentData = {
     {
       id: "power-of-fasting",
       title: { en: "The Power of Fasting", ta: "உபவாசத்தின் வல்லமை" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Unlocking spiritual breakthroughs, healing, and divine intervention through scriptural fasting and prayer.",
         ta: "வேதப்பூர்வமான உபவாசம் மற்றும் ஜெபத்தின் மூலம் ஆவிக்குரிய உடைப்புகள், சுகமளித்தல் மற்றும் தேவனுடைய தலையீட்டைப் பெறுதல்."
@@ -262,7 +263,7 @@ export const contentData = {
     {
       id: "apostolic-model",
       title: { en: "The Apostolic Model", ta: "அப்போஸ்தலிக் மாதிரி" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Exploring the practices of the early church to establish home fellowships, sound doctrine, and community service.",
         ta: "இல்ல ஐக்கியங்கள், தூய உபதேசங்கள் மற்றும் சமூக ஊழியங்களை நிறுவுவதற்கு ஆதி திருச்சபையின் நடைமுறைகளை ஆராய்தல்."
@@ -275,7 +276,7 @@ export const contentData = {
     {
       id: "shield-of-faith",
       title: { en: "The Shield of Faith", ta: "விசுவாசக் கேடயம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "How to use the shield of faith to quench the fiery darts of the enemy and remain steadfast in trials.",
         ta: "எதிரியின் அக்கினியாஸ்திரங்களை அணைக்கவும், சோதனைகளின் மத்தியில் உறுதியாக நிற்கவும் விசுவாசக் கேடயத்தை எவ்வாறு பயன்படுத்துவது."
@@ -288,7 +289,7 @@ export const contentData = {
     {
       id: "streams-of-blessing",
       title: { en: "Streams of Blessing", ta: "ஆசீர்வாத ஊற்றுகள்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Devotional teachings on the covenants of God, unlocking His favor and spiritual abundance in daily life.",
         ta: "தேவனுடைய உடன்படிக்கைகள் பற்றிய தியானப் போதனைகள், அன்றாட வாழ்வில் அவரது கிருபையையும் ஆவிக்குரிய ஆசீர்வாதத்தையும் வெளிப்படுத்துகிறது."
@@ -301,7 +302,7 @@ export const contentData = {
     {
       id: "preparing-harvest",
       title: { en: "Preparing for the Harvest", ta: "அறுவடைக்கு ஆயத்தப்படுதல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Equipping local congregations for effective evangelism, training soul-winners, and establishing local missions.",
         ta: "உள்ளூர் சபைகளைச் சுவிசேஷப் பணிகளுக்காக ஆயத்தப்படுத்துதல், ஆத்தும ஆதாயம் செய்பவர்களுக்குப் பயிற்சி அளித்தல்."
@@ -314,7 +315,7 @@ export const contentData = {
     {
       id: "voice-of-god",
       title: { en: "The Voice of God", ta: "தேவ சத்தம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Learning to discern the Holy Spirit's guidance from other voices, and walking in obedience to divine directions.",
         ta: "பரிசுத்த ஆவியானவரின் வழிகாட்டுதலைப் பிற சத்தங்களிலிருந்து பிரித்தறியக் கற்றுக்கொள்வது, மற்றும் தேவ கட்டளைகளுக்குக் கீழ்ப்படிந்து நடப்பது."
@@ -327,7 +328,7 @@ export const contentData = {
     {
       id: "prevailing-prayer",
       title: { en: "Prevailing Prayer", ta: "ஜெய ஜெபம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Deep intercessory prayer principles that move heaven and earth, bringing answers to complex situations.",
         ta: "பரலோகத்தையும் பூமியையும் அசைக்கும் ஆழமான பரிந்துரை ஜெபக் கொள்கைகள், கடினமான சூழ்நிலைகளுக்கு பதிலைக் கொண்டுவருகிறது."
@@ -340,7 +341,7 @@ export const contentData = {
     {
       id: "walking-holiness",
       title: { en: "Walking in Holiness", ta: "பரிசுத்த வாழ்க்கை" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A call to spiritual purity, separating oneself from worldly influences and growing in Christ-like character.",
         ta: "ஆவிக்குரிய தூய்மைக்கான அழைப்பு, உலக செல்வாக்குகளிலிருந்து உங்களைப் பிரித்து கிறிஸ்துவைப் போன்ற குணத்தில் வளர்தல்."
@@ -353,7 +354,7 @@ export const contentData = {
     {
       id: "armor-of-light",
       title: { en: "The Armor of Light", ta: "ஒளியின் சர்வாயுதவர்க்கம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A study on the armor of light mentioned in Romans 13, walking in righteousness and overcoming darkness.",
         ta: "ரோமர் 13 இல் குறிப்பிடப்பட்டுள்ள ஒளியின் சர்வாயுதத்தைப் பற்றிய ஆய்வு, நீதியில் நடப்பது மற்றும் இருளை வெல்வது."
@@ -366,7 +367,7 @@ export const contentData = {
     {
       id: "overcoming-temptation",
       title: { en: "Overcoming Temptation", ta: "சோதனைகளை வெல்லுதல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Practical and scriptural strategies to guard your heart, resist temptations, and maintain spiritual integrity.",
         ta: "உங்கள் இருதயத்தைக் காக்கவும், சோதனைகளை எதிர்க்கவும், ஆவிக்குரிய நேர்மையைக் காக்கவும் நடைமுறை மற்றும் வேதப்பூர்வமான உத்திகள்."
@@ -379,7 +380,7 @@ export const contentData = {
     {
       id: "sound-doctrine",
       title: { en: "Sound Doctrine", ta: "ஆரோக்கியமான உபதேசம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Guarding the purity of the Gospel, avoiding false teachings, and establishing your faith on solid biblical truth.",
         ta: "சுவிசேஷத்தின் தூய்மையைப் பாதுகாத்தல், தவறான போதனைகளைத் தவிர்த்தல், உங்கள் விசுவாசத்தை வேத சத்தியத்தில் நிலைநிறுத்துதல்."
@@ -392,7 +393,7 @@ export const contentData = {
     {
       id: "joy-of-lord",
       title: { en: "The Joy of the Lord", ta: "கர்த்தருக்குள் மகிழ்ச்சி" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "How to maintain inner joy and peace in times of trouble, finding strength in the presence of God.",
         ta: "துன்ப காலங்களிலும் உள் மகிழ்ச்சியையும் சமாதானத்தையும் எவ்வாறு பராமரிப்பது, தேவனுடைய பிரசன்னத்தில் பெலன் காண்பது."
@@ -405,7 +406,7 @@ export const contentData = {
     {
       id: "standing-gap",
       title: { en: "Standing in the Gap", ta: "திறப்பிலே நிற்றல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "The urgent call for intercessors to stand in the gap for their families, communities, and nations.",
         ta: "குடும்பங்கள், சமுதாயங்கள் மற்றும் தேசங்களுக்காகத் திறப்பிலே நிற்பதற்கான பரிந்துரையாளர்களின் அவசர அழைப்பு."
@@ -418,7 +419,7 @@ export const contentData = {
     {
       id: "call-discipleship",
       title: { en: "The Call to Discipleship", ta: "சீஷத்துவ அழைப்பு" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "What it means to follow Jesus truly, count the cost, and bear fruit in service to God's kingdom.",
         ta: "இயேசுவை மெய்யாகவே பின்பற்றுவது, அதற்கான விலையைக் கொடுப்பது, மற்றும் தேவனுடைய ராஜ்யப் பணியில் கனி கொடுப்பது என்ன என்பதன் அர்த்தம்."
@@ -431,7 +432,7 @@ export const contentData = {
     {
       id: "fire-holy-spirit",
       title: { en: "The Fire of the Holy Spirit", ta: "பரிசுத்த ஆவியின் நெருப்பு" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Experiencing the power, gifts, and fire of the Holy Spirit for effective ministry and personal renewal.",
         ta: "பயனுள்ள ஊழியம் மற்றும் தனிப்பட்ட புதுப்பித்தலுக்காகப் பரிசுத்த ஆவியானவரின் வல்லமை, வரங்கள் மற்றும் நெருப்பை அனுபவித்தல்."
@@ -444,7 +445,7 @@ export const contentData = {
     {
       id: "victory-in-christ",
       title: { en: "Victory in Christ", ta: "கிறிஸ்துவுக்குள் ஜெயம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Living in the finished work of the cross, overcoming defeatism, and walking as overcomers.",
         ta: "சிலுவையின் முற்றுப்பெற்ற பணியில் வாழ்வது, தோல்வி மனப்பான்மையை வெல்வது மற்றும் வெற்றியாளர்களாக நடப்பது."
@@ -457,7 +458,7 @@ export const contentData = {
     {
       id: "good-shepherd",
       title: { en: "The Good Shepherd", ta: "நல்ல மேய்ப்பன்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Meditations on Psalm 23, experiencing the comfort, guidance, and abundance of our Shepherd.",
         ta: "சங்கீதம் 23 பற்றிய தியானங்கள், நமது மேய்ப்பரின் ஆறுதல், நடத்துதல் மற்றும் ஆசீர்வாதங்களை அனுபவித்தல்."
@@ -470,7 +471,7 @@ export const contentData = {
     {
       id: "heavenly-wisdom",
       title: { en: "Heavenly Wisdom", ta: "பரலோக ஞானம்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Seeking the wisdom that comes from above to make righteous decisions and lead a blessed, orderly life.",
         ta: "நீதியான முடிவுகளை எடுக்கவும், ஆசீர்வதிக்கப்பட்ட, ஒழுங்கான வாழ்க்கையை நடத்தவும் பரலோகத்திலிருந்து வரும் ஞானத்தை நாடுதல்."
@@ -483,7 +484,7 @@ export const contentData = {
     {
       id: "reaping-harvest",
       title: { en: "Reaping the Harvest", ta: "அறுவடையைச் சேகரித்தல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Strategies for effective follow-up and discipleship of new converts, ensuring lasting spiritual fruits.",
         ta: "புதிய விசுவாசிகளின் பயனுள்ள தொடர் பராமரிப்பு மற்றும் சீஷத்துவத்திற்கான உத்திகள், நிலையான ஆவிக்குரிய கனிகளை உறுதிப்படுத்துதல்."
@@ -496,7 +497,7 @@ export const contentData = {
     {
       id: "covenant-of-grace",
       title: { en: "The Covenant of Grace", ta: "கிருபையின் உடன்படிக்கை" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "A deep study on God's grace under the New Covenant, breaking the chains of legalism and condemnation.",
         ta: "புதிய உடன்படிக்கையின் கீழ் தேவனுடைய கிருபையைப் பற்றிய ஆழமான ஆய்வு, நியாயப்பிரமாண மற்றும் குற்றச்சாட்டின் சங்கிலிகளை உடைத்தல்."
@@ -509,7 +510,7 @@ export const contentData = {
     {
       id: "quiet-time",
       title: { en: "Quiet Time with God", ta: "தேவனுடன் தனித்திருத்தல்" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "The practice of daily personal devotion, reading scriptures, listening to God, and secret prayer.",
         ta: "தினசரி தனிப்பட்ட தியானம், வேதம் வாசித்தல், தேவனுக்கு செவிகொடுத்தல் மற்றும் தனி ஜெபத்தின் நடைமுறை."
@@ -522,7 +523,7 @@ export const contentData = {
     {
       id: "mind-of-christ",
       title: { en: "The Mind of Christ", ta: "கிறிஸ்துவின் சிந்தை" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Walking in humility, love, and unity by aligning our thoughts and attitudes with Christ Jesus.",
         ta: "நமது எண்ணங்களையும் அணுகுமுறைகளையும் கிறிஸ்து இயேசுவுக்குள் இணைப்பதன் மூலம் தாழ்மை, அன்பு மற்றும் ஒற்றுமையில் நடப்பது."
@@ -535,7 +536,7 @@ export const contentData = {
     {
       id: "hope-of-glory",
       title: { en: "The Hope of Glory", ta: "மகிமையின் நம்பிக்கை" },
-      author: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       description: {
         en: "Strengthening our hope in the second coming of Christ, eternal life, and the inheritance of the saints.",
         ta: "கிறிஸ்துவின் இரண்டாம் வருகை, நித்திய ஜீவன் மற்றும் பரிசுத்தவான்களின் சுதந்தரம் ஆகியவற்றின் மீதான நமது நம்பிக்கையை பலப்படுத்துதல்."
@@ -544,15 +545,29 @@ export const contentData = {
       pages: 52,
       pdfUrl: "#",
       hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20The%20Hope%20of%20Glory"
+    },
+    {
+      id: "revival",
+      title: { en: "Revival (Ezhupputhale Enathu Vaanchai)", ta: "எழுப்புதலே எனது வாஞ்சை" },
+      author: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
+      description: {
+        en: "A powerful Tamil Christian book that explores the biblical foundation of spiritual revival and personal transformation. Through Scripture, inspiring historical revival movements, and practical teachings on prayer, holiness, repentance, and the work of the Holy Spirit, this book encourages believers to deepen their relationship with God and become instruments of revival in their families, churches, and communities. Whether you are seeking spiritual renewal or a greater passion for God's presence, this book serves as a guide toward a vibrant and Christ-centered life.",
+        ta: "எழுப்புதல் என்பது ஆவிக்குரிய விழிப்புணர்வு மற்றும் தேவனோடு ஆழமான உறவை உருவாக்கும் நோக்கில் எழுதப்பட்ட தமிழ் கிறிஸ்தவ நூல். வேதாகம அடிப்படைகள், வரலாற்றில் நிகழ்ந்த எழுப்புதல்கள், ஜெபம், பரிசுத்தம், மனந்திரும்புதல் மற்றும் பரிசுத்த ஆவியின் செயல்பாடு ஆகியவற்றை தெளிவாக விளக்கி, ஒவ்வொரு விசுவாசியும் தனிப்பட்ட வாழ்க்கையிலும், குடும்பத்திலும், சபையிலும், சமூகத்திலும் தேவனுடைய எழுப்புதலின் கருவியாக மாற ஊக்குவிக்கிறது. கிறிஸ்துவுக்குள் புதிய அர்ப்பணிப்பையும் ஆவிக்குரிய வளர்ச்சியையும் விரும்பும் அனைவருக்கும் இந்நூல் ஒரு மதிப்புமிக்க வழிகாட்டியாகும்."
+      },
+      category: { en: "Christian Living", ta: "கிறிஸ்தவ வாழ்க்கை" },
+      pages: 101,
+      pdfUrl: "/books/Elupputal.pdf",
+      hardcopyLink: "https://wa.me/919442193236?text=I%20would%20like%20to%20order%20the%20book%20Revival%20(Ezhupputhale%20Enathu%20Vaanchai)",
+      coverImageUrl: "/assets/extracted_img_1_1.png"
     }
   ] as BookItem[],
 
   aboutText: {
-    title: { en: "About Fire Flame Mission", ta: "நெருப்பு ஜுவாலை ஊழியம் பற்றி" },
+    title: { en: "About Fire Flame Mission", ta: "அக்கினி ஜுவாலை ஊழியம் பற்றி" },
     paragraphs: [
       {
         en: "Fire Flame Mission is a Christ-centered ministry founded in 1996 with a vision to proclaim the Gospel of Jesus Christ, strengthen believers through prayer, and spread God's Word through Christian literature and publications.",
-        ta: "நெருப்பு ஜுவாலை ஊழியம் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், கிறிஸ்தவ இலக்கியங்கள் மற்றும் பிரசுரங்கள் மூலம் தேவனுடைய வார்த்தையைப் பரப்பவும் இது துவங்கப்பட்டது."
+        ta: "அக்கினி ஜுவாலை ஊழியம் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், கிறிஸ்தவ இலக்கியங்கள் மற்றும் பிரசுரங்கள் மூலம் தேவனுடைய வார்த்தையைப் பரப்பவும் இது துவங்கப்பட்டது."
       },
       {
         en: "Over the years, the ministry has faithfully served communities through evangelistic outreach, prayer meetings, discipleship programs, youth development, children's ministry, and Christian publishing. Through the grace of God, the ministry has expanded its reach across Tamil Nadu and beyond, touching thousands of lives with the message of salvation and hope.",
@@ -571,7 +586,7 @@ export const contentData = {
       title: { en: "Ministry Inception", ta: "ஊழியத் துவக்கம்" },
       description: {
         en: "The Lord placed a burden for evangelism and prayer ministry, leading to the establishment of Fire Flame Mission.",
-        ta: "சுவிசேஷப் பணி மற்றும் ஜெப ஊழியத்திற்கான பாரத்தை கர்த்தர் தந்தார், இது நெருப்பு ஜுவாலை ஊழியம் நிறுவப்படுவதற்கு வழிவகுத்தது."
+        ta: "சுவிசேஷப் பணி மற்றும் ஜெப ஊழியத்திற்கான பாரத்தை கர்த்தர் தந்தார், இது அக்கினி ஜுவாலை ஊழியம் நிறுவப்படுவதற்கு வழிவகுத்தது."
       }
     },
     {
@@ -634,15 +649,15 @@ export const contentData = {
 
   founderTestimony: {
     title: { en: "Founder's Testimony", ta: "நிறுவனரின் சாட்சி" },
-    subtitle: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+    subtitle: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
     paragraphs: [
       {
-        en: "Born on May 7, 1951, Rev. V. Jeromias experienced God's calling at an early stage of his life. Through prayer, Bible study, and a growing burden for souls, he dedicated himself to serving the Lord.",
-        ta: "மே 7, 1951 இல் பிறந்த Rev. V. Jeromias அவர்கள், தனது வாழ்வின் ஆரம்ப கட்டத்திலேயே தேவனுடைய அழைப்பைப் பெற்றார். ஜெபம், வேத வாசிப்பு மற்றும் ஆத்தும பாரத்தின் மூலமாக கர்த்தருக்கு சேவை செய்ய தங்களை முழுமையாக அர்ப்பணித்தார்."
+        en: "Born on May 7, 1951, Pr. V. Jeromias experienced God's calling at an early stage of his life. Through prayer, Bible study, and a growing burden for souls, he dedicated himself to serving the Lord.",
+        ta: "மே 7, 1951 இல் பிறந்த Pr. V. Jeromias அவர்கள், தனது வாழ்வின் ஆரம்ப கட்டத்திலேயே தேவனுடைய அழைப்பைப் பெற்றார். ஜெபம், வேத வாசிப்பு மற்றும் ஆத்தும பாரத்தின் மூலமாக கர்த்தருக்கு சேவை செய்ய தங்களை முழுமையாக அர்ப்பணித்தார்."
       },
       {
         en: "The Lord led him through many challenges and seasons of preparation, strengthening his faith and shaping his ministry vision. His passion for evangelism, prayer, and teaching became the foundation upon which Fire Flame Mission was established.",
-        ta: "கர்த்தர் அவரைப் பல சோதனைகள் மற்றும் ஆயத்தக் காலங்களின் வழியே நடத்தி, விசுவாசத்தைப் பலப்படுத்தி, ஊழிய தரிசனத்தை உருவாக்கினார். சுவிசேஷம், ஜெபம் மற்றும் போதகத்தின் மீதான அவரது அர்ப்பணிப்பே நெருப்பு ஜுவாலை ஊழியம் நிறுவப்படுவதற்கான அடித்தளமாக அமைந்தது."
+        ta: "கர்த்தர் அவரைப் பல சோதனைகள் மற்றும் ஆயத்தக் காலங்களின் வழியே நடத்தி, விசுவாசத்தைப் பலப்படுத்தி, ஊழிய தரிசனத்தை உருவாக்கினார். சுவிசேஷம், ஜெபம் மற்றும் போதகத்தின் மீதான அவரது அர்ப்பணிப்பே அக்கினி ஜுவாலை ஊழியம் நிறுவப்படுவதற்கான அடித்தளமாக அமைந்தது."
       },
       {
         en: "Under his leadership, the ministry has grown from a small prayer movement into a vibrant ministry network that includes evangelism, publications, missionary outreach, and discipleship programs.",
@@ -711,7 +726,7 @@ export const contentData = {
   branchChurches: {
     intro: {
       en: "Through God's grace, Fire Flame Mission has established and supported multiple churches and mission stations across Tamil Nadu.",
-      ta: "தேவனுடைய கிருபையினால், நெருப்பு ஜுவாலை ஊழியம் தமிழ்நாட்டின் பல்வேறு பகுதிகளில் பல சபைகளையும் மிஷனரி மையங்களையும் நிறுவி ஆதரித்து வருகிறது."
+      ta: "தேவனுடைய கிருபையினால், அக்கினி ஜுவாலை ஊழியம் தமிழ்நாட்டின் பல்வேறு பகுதிகளில் பல சபைகளையும் மிஷனரி மையங்களையும் நிறுவி ஆதரித்து வருகிறது."
     },
     locations: [
       { en: "Nagercoil", ta: "நாகர்கோவில்" },
@@ -737,7 +752,7 @@ export const contentData = {
 
   leadershipTeam: {
     founder: {
-      name: { en: "Rev. V. Jeromias", ta: "Rev. V. Jeromias" },
+      name: { en: "Pr. V. Jeromias", ta: "Pr. V. Jeromias" },
       role: { en: "Founder & Lead Writer", ta: "நிறுவனர் & தலைமை எழுத்தாளர்" }
     },
     intro: {
@@ -934,11 +949,11 @@ export const contentData = {
     },
     address: {
       en: "36/1, Fire Flame Ellam, Hosur - 635109, Tamil Nadu, India",
-      ta: "36/1, நெருப்பு ஜுவாலை இல்லம், ஓசூர் - 635109, தமிழ்நாடு, இந்தியா"
+      ta: "36/1, அக்கினி ஜுவாலை இல்லம், ஓசூர் - 635109, தமிழ்நாடு, இந்தியா"
     },
     founderName: {
-      en: "Rev. V. Jeromias",
-      ta: "Rev. V. Jeromias"
+      en: "Pr. V. Jeromias",
+      ta: "Pr. V. Jeromias"
     },
     phone1: "+91 94421 93236",
     phone2: "+91 95978 85311",

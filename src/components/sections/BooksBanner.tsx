@@ -66,7 +66,7 @@ export const BooksBanner: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg sm:text-2xl font-serif-cormorant italic text-brand-gold font-light"
         >
-          {language === "en" ? "by Rev. V. Jeromias" : "Rev. V. Jeromias அவர்களின் படைப்புகள்"}
+          {language === "en" ? "by Pr. V. Jeromias" : "Pr. V. Jeromias அவர்களின் படைப்புகள்"}
         </motion.p>
 
         {/* Brick red button matching Timothy Keller reference style */}

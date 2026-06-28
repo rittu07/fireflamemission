@@ -59,7 +59,7 @@ export default function AboutPage() {
             {language === "en" ? "About Our Ministry" : "எங்கள் ஊழியம் பற்றி"}
           </h1>
           <p className="text-xs uppercase tracking-[0.25em] font-serif-cormorant text-brand-gold max-w-md mx-auto">
-            {language === "en" ? "Fire Flame Mission • Founded 1996" : "நெருப்பு ஜுவாலை ஊழியம் • துவக்கம் 1996"}
+            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜுவாலை ஊழியம் • துவக்கம் 1996"}
           </p>
         </div>
       </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={getAssetPath("/assets/founder_portrait.png")}
-                  alt="Rev. V. Jeromias Portrait"
+                  alt="Pr. V. Jeromias Portrait"
                   className="absolute inset-0 w-full h-full object-cover filter sepia-[0.15] contrast-[1.05]"
                 />
                 <div className="relative z-10 bg-brand-cream/95 p-4 m-4 border border-brand-gold/25 text-center leading-none">
@@ -107,7 +107,7 @@ export default function AboutPage() {
                     {language === "en" ? "Born May 7, 1951" : "பிறப்பு மே 7, 1951"}
                   </div>
                   <div className="font-accent-great text-xl text-brand-gold">
-                    {language === "en" ? "Rev. V. Jeromias" : "Rev. V. Jeromias"}
+                    {language === "en" ? "Pr. V. Jeromias" : "Pr. V. Jeromias"}
                   </div>
                 </div>
               </div>

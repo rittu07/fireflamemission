@@ -45,9 +45,9 @@ const ebGaramond = EB_Garamond({
 
 export const metadata: Metadata = {
   title: "Fire Flame Mission - Timeless Christian Library",
-  description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Rev. V. Jeromias. Read our digital archives and 100 Bible Promises.",
-  keywords: ["Fire Flame Mission", "Rev. V. Jeromias", "Bible Promises", "Christian Publications", "Tamil Christian Ministry", "Prophecy & Prayer Ministry"],
-  authors: [{ name: "Rev. V. Jeromias" }],
+  description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pr. V. Jeromias. Read our digital archives and 100 Bible Promises.",
+  keywords: ["Fire Flame Mission", "Pr. V. Jeromias", "Bible Promises", "Christian Publications", "Tamil Christian Ministry", "Prophecy & Prayer Ministry"],
+  authors: [{ name: "Pr. V. Jeromias" }],
   openGraph: {
     title: "Fire Flame Mission",
     description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996.",
