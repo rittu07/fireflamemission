@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useLanguage } from "@/components/LanguageContext";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
   ChevronLeft, 
   ChevronRight, 
@@ -40,6 +41,337 @@ interface PdfBookReaderProps {
   onClose: () => void;
 }
 
+// Helper to detect printable content bounds by scanning canvas pixels for non-white areas
+const detectContentBounds = async (page: any): Promise<{ left: number; top: number; right: number; bottom: number } | null> => {
+  try {
+    const tempCanvas = document.createElement("canvas");
+    const tempContext = tempCanvas.getContext("2d", { willReadFrequently: true });
+    if (!tempContext) return null;
+
+    // Use scale 0.8 to scan quickly but accurately
+    const scanScale = 0.8;
+    const viewport = page.getViewport({ scale: scanScale });
+    tempCanvas.width = viewport.width;
+    tempCanvas.height = viewport.height;
+
+    // Draw white background
+    tempContext.fillStyle = "#ffffff";
+    tempContext.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+
+    const renderContext = {
+      canvasContext: tempContext,
+      viewport: viewport
+    };
+
+    // Render page offscreen
+    await page.render(renderContext).promise;
+
+    const imgData = tempContext.getImageData(0, 0, tempCanvas.width, tempCanvas.height);
+    const data = imgData.data;
+    const width = tempCanvas.width;
+    const height = tempCanvas.height;
+
+    let minX = width;
+    let minY = height;
+    let maxX = 0;
+    let maxY = 0;
+
+    // Scan pixels skipping a small margin at edges to avoid black border artifacts
+    const edgeMargin = 5;
+    const step = 2; // Optimization: scan every 2nd pixel for performance
+
+    for (let y = edgeMargin; y < height - edgeMargin; y += step) {
+      for (let x = edgeMargin; x < width - edgeMargin; x += step) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+
+        // If pixel is opaque and significantly darker than white (RGB < 240)
+        if (a > 50 && (r < 240 || g < 240 || b < 240)) {
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+          if (y < minY) minY = y;
+          if (y > maxY) maxY = y;
+        }
+      }
+    }
+
+    // Clean up temporary canvas elements
+    tempCanvas.width = 0;
+    tempCanvas.height = 0;
+
+    if (maxX <= minX || maxY <= minY) {
+      return null;
+    }
+
+    // Convert crop coordinates back to scale 1.0 (PDF point) space
+    // Add safety margins (12px) to prevent characters from being cropped right at the edge
+    const padding = 12;
+    const left = Math.max(0, (minX / scanScale) - padding);
+    const top = Math.max(0, (minY / scanScale) - padding);
+    const right = Math.min(viewport.width / scanScale, (maxX / scanScale) + padding);
+    const bottom = Math.min(viewport.height / scanScale, (maxY / scanScale) + padding);
+
+    return { left, top, right, bottom };
+  } catch (e) {
+    console.error("Error detecting content bounds:", e);
+    return null;
+  }
+};
+
+const slideVariants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? "100%" : direction < 0 ? "-100%" : 0,
+    opacity: 0
+  }),
+  center: {
+    x: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => ({
+    x: direction < 0 ? "100%" : direction > 0 ? "-100%" : 0,
+    opacity: 0
+  })
+};
+
+interface PdfPageProps {
+  pageNum: number;
+  pdfDoc: any;
+  zoomScale: number | "fit-width" | "fit-content";
+  containerWidth: number;
+  containerHeight: number;
+  boundsCache: Record<number, { left: number; top: number; right: number; bottom: number } | null>;
+  onBoundsDetected: (pageNum: number, bounds: { left: number; top: number; right: number; bottom: number } | null) => void;
+  onScaleCalculated: (scales: { fitPageScale: number; fitContentScale: number; currentScale: number }) => void;
+  onTouchStart: (e: React.TouchEvent) => void;
+  onTouchEnd: (e: React.TouchEvent) => void;
+}
+
+const PdfPage: React.FC<PdfPageProps> = ({
+  pageNum,
+  pdfDoc,
+  zoomScale,
+  containerWidth,
+  containerHeight,
+  boundsCache,
+  onBoundsDetected,
+  onScaleCalculated,
+  onTouchStart,
+  onTouchEnd
+}) => {
+  const [page, setPage] = useState<any>(null);
+  const [rendering, setRendering] = useState<boolean>(true);
+  const [pageLayout, setPageLayout] = useState<{
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+    pageWidth: number;
+    pageHeight: number;
+  } | null>(null);
+
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const renderTaskRef = useRef<any>(null);
+
+  // 1. Fetch PDF page object
+  useEffect(() => {
+    let isMounted = true;
+    const fetchPage = async () => {
+      try {
+        setRendering(true);
+        const loadedPage = await pdfDoc.getPage(pageNum);
+        if (isMounted) {
+          setPage(loadedPage);
+        }
+      } catch (err) {
+        console.error("Error loading page:", err);
+      }
+    };
+    fetchPage();
+    return () => {
+      isMounted = false;
+    };
+  }, [pdfDoc, pageNum]);
+
+  // 2. Render Page on canvas and calculate layouts
+  useEffect(() => {
+    if (!page) return;
+
+    let isMounted = true;
+    const render = async () => {
+      try {
+        setRendering(true);
+        if (renderTaskRef.current) {
+          renderTaskRef.current.cancel();
+        }
+
+        const originalViewport = page.getViewport({ scale: 1.0 });
+        const availWidth = Math.max(200, containerWidth - 32);
+        const availHeight = Math.max(200, containerHeight - 32);
+
+        const fitPageScale = Math.min(availWidth / originalViewport.width, availHeight / originalViewport.height);
+        let fitContentScale = availWidth / originalViewport.width; // default fallback
+
+        let left = 0;
+        let top = 0;
+        let contentWidth = originalViewport.width;
+        let contentHeight = originalViewport.height;
+
+        // Check if crop is in cache or if we need to detect it
+        let crop = boundsCache[pageNum];
+        if (zoomScale === "fit-content" && crop === undefined) {
+          crop = await detectContentBounds(page);
+          onBoundsDetected(pageNum, crop);
+        }
+
+        if (crop) {
+          left = crop.left;
+          top = crop.top;
+          contentWidth = crop.right - crop.left;
+          contentHeight = crop.bottom - crop.top;
+          fitContentScale = availWidth / contentWidth;
+        }
+
+        let scale = 1.5;
+        if (zoomScale === "fit-width") {
+          scale = fitPageScale;
+        } else if (zoomScale === "fit-content") {
+          scale = fitContentScale;
+        } else {
+          scale = zoomScale;
+        }
+
+        if (!isMounted) return;
+
+        onScaleCalculated({
+          fitPageScale,
+          fitContentScale,
+          currentScale: scale
+        });
+
+        // 2. Render Page to canvas
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const context = canvas.getContext("2d");
+        if (!context) throw new Error("Could not acquire 2D canvas context");
+
+        const dpr = window.devicePixelRatio || 1;
+        const viewport = page.getViewport({ scale });
+
+        canvas.width = viewport.width * dpr;
+        canvas.height = viewport.height * dpr;
+        canvas.style.width = `${viewport.width}px`;
+        canvas.style.height = `${viewport.height}px`;
+
+        context.scale(dpr, dpr);
+
+        const renderContext = {
+          canvasContext: context,
+          viewport: viewport
+        };
+
+        const renderTask = page.render(renderContext);
+        renderTaskRef.current = renderTask;
+
+        await renderTask.promise;
+
+        if (!isMounted) return;
+
+        // 3. Set layout coordinates
+        if (zoomScale === "fit-content") {
+          setPageLayout({
+            left: left * scale,
+            top: top * scale,
+            width: contentWidth * scale,
+            height: contentHeight * scale,
+            pageWidth: originalViewport.width * scale,
+            pageHeight: originalViewport.height * scale
+          });
+        } else {
+          setPageLayout({
+            left: 0,
+            top: 0,
+            width: originalViewport.width * scale,
+            height: originalViewport.height * scale,
+            pageWidth: originalViewport.width * scale,
+            pageHeight: originalViewport.height * scale
+          });
+        }
+
+        setRendering(false);
+      } catch (err: any) {
+        if (err.name === "RenderingCancelledException" || err.name === "RenderingCancelled") {
+          return;
+        }
+        console.error("Error rendering PDF page component:", err);
+        if (isMounted) setRendering(false);
+      }
+    };
+
+    render();
+
+    return () => {
+      isMounted = false;
+      if (renderTaskRef.current) {
+        renderTaskRef.current.cancel();
+      }
+    };
+  }, [page, zoomScale, containerWidth, containerHeight, boundsCache, pageNum, onBoundsDetected]);
+
+  // Estimate dimensions while loading to prevent layout shifts
+  const originalViewport = page ? page.getViewport({ scale: 1.0 }) : { width: 595, height: 842 };
+  const availWidth = Math.max(200, containerWidth - 32);
+  const availHeight = Math.max(200, containerHeight - 32);
+
+  const estScale = zoomScale === "fit-width"
+    ? Math.min(availWidth / originalViewport.width, availHeight / originalViewport.height)
+    : zoomScale === "fit-content"
+      ? availWidth / originalViewport.width
+      : zoomScale;
+
+  const estWidth = originalViewport.width * estScale;
+  const estHeight = originalViewport.height * estScale;
+
+  return (
+    <div
+      className="relative shadow-2xl border border-brand-gold/20 bg-white overflow-hidden transition-all duration-300 ease-in-out select-none"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+      style={{
+        width: pageLayout ? `${pageLayout.width}px` : `${estWidth}px`,
+        height: pageLayout ? `${pageLayout.height}px` : `${estHeight}px`,
+        position: "relative"
+      }}
+    >
+      <canvas
+        ref={canvasRef}
+        className="block shadow-inner"
+        style={{
+          position: pageLayout ? "absolute" : "static",
+          left: pageLayout ? `-${pageLayout.left}px` : "0px",
+          top: pageLayout ? `-${pageLayout.top}px` : "0px",
+          width: pageLayout ? `${pageLayout.pageWidth}px` : "100%",
+          height: pageLayout ? `${pageLayout.pageHeight}px` : "auto",
+          maxWidth: "none"
+        }}
+      />
+
+      {/* Center spine simulation shadow (adds book feel) */}
+      <div className="absolute inset-y-0 left-0 w-[4px] bg-gradient-to-r from-black/8 to-transparent pointer-events-none z-10"></div>
+
+      {/* Rendering indicator overlay */}
+      {rendering && (
+        <div className="absolute inset-0 bg-[#0F0A07]/10 flex items-center justify-center backdrop-blur-[1px] z-20">
+          <RefreshCw className="w-6 h-6 text-brand-gold animate-spin" />
+        </div>
+      )}
+    </div>
+  );
+};
+
 export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) => {
   const { language } = useLanguage();
   
@@ -50,12 +382,18 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
   // PDF states
   const [pdfDoc, setPdfDoc] = useState<any>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [direction, setDirection] = useState<number>(0);
   const [totalPages, setTotalPages] = useState<number>(0);
   const [pdfLoading, setPdfLoading] = useState<boolean>(true);
-  const [renderingPage, setRenderingPage] = useState<boolean>(false);
   
   // UI states
-  const [zoomScale, setZoomScale] = useState<number | "fit-width">(1.25);
+  const [zoomScale, setZoomScale] = useState<number | "fit-width" | "fit-content">("fit-content");
+  const [renderedScales, setRenderedScales] = useState<{
+    fitPageScale: number;
+    fitContentScale: number;
+    currentScale: number;
+  }>({ fitPageScale: 1.0, fitContentScale: 1.0, currentScale: 1.0 });
+  const [containerDimensions, setContainerDimensions] = useState({ width: 0, height: 0 });
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [sidebarTab, setSidebarTab] = useState<"info" | "outline" | "bookmarks" | "search">("info");
   const [bookmarks, setBookmarks] = useState<number[]>([]);
@@ -72,10 +410,28 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
   const [savedProgress, setSavedProgress] = useState<number | null>(null);
 
   // Refs
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const renderTaskRef = useRef<any>(null);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+  const boundsCacheRef = useRef<Record<number, { left: number; top: number; right: number; bottom: number } | null>>({});
+
+  // Bounds detection callback
+  const handleBoundsDetected = useCallback((pageNum: number, bounds: { left: number; top: number; right: number; bottom: number } | null) => {
+    boundsCacheRef.current[pageNum] = bounds;
+  }, []);
+
+  // Track container resize
+  useEffect(() => {
+    if (!containerRef.current) return;
+    
+    const observer = new ResizeObserver((entries) => {
+      if (!entries || entries.length === 0) return;
+      const { width, height } = entries[0].contentRect;
+      setContainerDimensions({ width, height });
+    });
+    
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   // 1. Script Loader
   useEffect(() => {
@@ -172,6 +528,27 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
     }
   }, [book]);
 
+  // Load/Save Zoom Scale Preference
+  useEffect(() => {
+    const savedZoom = localStorage.getItem("pdf-reader-zoom-scale");
+    if (savedZoom) {
+      if (savedZoom === "fit-width" || savedZoom === "fit-content") {
+        setZoomScale(savedZoom);
+      } else {
+        const val = parseFloat(savedZoom);
+        if (!isNaN(val)) setZoomScale(val);
+      }
+    } else {
+      setZoomScale("fit-content");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (zoomScale) {
+      localStorage.setItem("pdf-reader-zoom-scale", zoomScale.toString());
+    }
+  }, [zoomScale]);
+
   // 3. Load PDF Document
   useEffect(() => {
     if (!libLoaded || !book.pdfUrl) return;
@@ -216,91 +593,12 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
     };
   }, [libLoaded, book.pdfUrl]);
 
-  // 4. Render Current Page
-  const renderPage = useCallback(async () => {
-    if (!pdfDoc || !canvasRef.current || renderingPage) return;
-
-    try {
-      setRenderingPage(true);
-      
-      // Cancel previous render task if active
-      if (renderTaskRef.current) {
-        renderTaskRef.current.cancel();
-      }
-
-      const page = await pdfDoc.getPage(currentPage);
-      const canvas = canvasRef.current;
-      const context = canvas.getContext("2d");
-
-      if (!context) throw new Error("Could not acquire 2D canvas context");
-
-      // Calculate scale
-      let scale = 1.5;
-      if (zoomScale === "fit-width") {
-        if (containerRef.current) {
-          const containerWidth = containerRef.current.clientWidth - 32; // deduct paddings
-          const originalViewport = page.getViewport({ scale: 1.0 });
-          scale = containerWidth / originalViewport.width;
-        }
-      } else {
-        scale = zoomScale;
-      }
-
-      // Handle retina displays
-      const dpr = window.devicePixelRatio || 1;
-      const viewport = page.getViewport({ scale });
-      
-      canvas.width = viewport.width * dpr;
-      canvas.height = viewport.height * dpr;
-      
-      canvas.style.width = `${viewport.width}px`;
-      canvas.style.height = `${viewport.height}px`;
-
-      context.scale(dpr, dpr);
-
-      const renderContext = {
-        canvasContext: context,
-        viewport: viewport
-      };
-
-      const renderTask = page.render(renderContext);
-      renderTaskRef.current = renderTask;
-      
-      await renderTask.promise;
-      
-      setRenderingPage(false);
-      renderTaskRef.current = null;
-      
-      // Save progress history
+  // 4. Save Progress History when page changes
+  useEffect(() => {
+    if (pdfDoc && currentPage >= 1) {
       localStorage.setItem(`read-progress-${book.id}`, currentPage.toString());
-    } catch (err: any) {
-      if (err.name === "RenderingCancelledException" || err.name === "RenderingCancelled") {
-        // Safe to ignore
-        return;
-      }
-      console.error("Page render error:", err);
-      setRenderingPage(false);
     }
-  }, [pdfDoc, currentPage, zoomScale, book.id]);
-
-  // Run renderPage when page/zoom changes
-  useEffect(() => {
-    renderPage();
-  }, [pdfDoc, currentPage, zoomScale, renderPage]);
-
-  // Handle container resize (for Fit Width auto-scaling)
-  useEffect(() => {
-    if (zoomScale !== "fit-width") return;
-
-    const handleResize = () => {
-      renderPage();
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [zoomScale, renderPage]);
+  }, [currentPage, book.id, pdfDoc]);
 
   // Keyboard Shortcuts
   useEffect(() => {
@@ -343,14 +641,15 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
 
   // Navigation Logic
   const turnPage = (offset: number) => {
-    setCurrentPage((prev) => {
-      const next = prev + offset;
-      return next >= 1 && next <= totalPages ? next : prev;
-    });
+    if (currentPage + offset >= 1 && currentPage + offset <= totalPages) {
+      setDirection(offset);
+      setCurrentPage((prev) => prev + offset);
+    }
   };
 
   const jumpToPage = (pageNum: number) => {
     if (pageNum >= 1 && pageNum <= totalPages) {
+      setDirection(pageNum > currentPage ? 1 : -1);
       setCurrentPage(pageNum);
       setShowRestorePrompt(false);
     }
@@ -358,8 +657,15 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
 
   const adjustZoom = (amount: number) => {
     setZoomScale((prev) => {
-      if (prev === "fit-width") return 1.25; // default back to scale
-      const next = prev + amount;
+      let baseScale = 1.0;
+      if (typeof prev === "number") {
+        baseScale = prev;
+      } else if (prev === "fit-content") {
+        baseScale = amount < 0 ? renderedScales.fitPageScale - amount : renderedScales.fitContentScale;
+      } else if (prev === "fit-width") {
+        baseScale = renderedScales.fitPageScale;
+      }
+      const next = baseScale + amount;
       return next >= 0.5 && next <= 3.0 ? next : prev;
     });
   };
@@ -701,22 +1007,37 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
           {/* CANVAS STAGE */}
           {!pdfLoading && !loadError && (
             <div 
-              className="relative shadow-2xl border border-brand-gold/20 bg-white transition-opacity duration-300 animate-fadeIn"
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
+              className="relative w-full flex-grow flex items-center justify-center overflow-hidden min-h-[400px]"
               onClick={(e) => e.stopPropagation()} // Prevent hiding controls when clicking directly on page
             >
-              <canvas ref={canvasRef} className="block shadow-inner" />
-              
-              {/* Center spine simulation shadow (adds book feel) */}
-              <div className="absolute inset-y-0 left-0 w-[4px] bg-gradient-to-r from-black/8 to-transparent pointer-events-none"></div>
-              
-              {/* Rendering indicator overlay */}
-              {renderingPage && (
-                <div className="absolute inset-0 bg-[#0F0A07]/20 flex items-center justify-center backdrop-blur-[1px]">
-                  <RefreshCw className="w-8 h-8 text-brand-gold animate-spin" />
-                </div>
-              )}
+              <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                <motion.div
+                  key={currentPage}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{
+                    x: { type: "spring", stiffness: 280, damping: 28 },
+                    opacity: { duration: 0.25, ease: [0.16, 1, 0.3, 1] }
+                  }}
+                  className="w-full flex items-center justify-center"
+                >
+                  <PdfPage
+                    pageNum={currentPage}
+                    pdfDoc={pdfDoc}
+                    zoomScale={zoomScale}
+                    containerWidth={containerDimensions.width}
+                    containerHeight={containerDimensions.height}
+                    boundsCache={boundsCacheRef.current}
+                    onBoundsDetected={handleBoundsDetected}
+                    onScaleCalculated={setRenderedScales}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           )}
 
@@ -817,7 +1138,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
           <div className="flex items-center gap-2">
             <button
               onClick={() => adjustZoom(-0.25)}
-              disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale <= 0.5)}
+              disabled={pdfLoading || (typeof zoomScale === "number" && zoomScale <= 0.5)}
               className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none cursor-pointer"
               title="Zoom Out"
             >
@@ -825,21 +1146,36 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
             </button>
             <button
               onClick={() => adjustZoom(0.25)}
-              disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale >= 3.0)}
+              disabled={pdfLoading || (typeof zoomScale === "number" && zoomScale >= 3.0)}
               className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none cursor-pointer"
               title="Zoom In"
             >
               <ZoomIn className="w-3.5 h-3.5" />
             </button>
-            <button
-              onClick={() => setZoomScale((prev) => prev === "fit-width" ? 1.25 : "fit-width")}
-              disabled={pdfLoading}
-              className={`px-2 py-1.5 border border-brand-gold/20 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 rounded-none cursor-pointer ${
-                zoomScale === "fit-width" ? "bg-brand-gold text-brand-brown border-brand-gold" : "text-brand-cream/80 hover:bg-brand-gold/10"
-              }`}
-            >
-              Fit Width
-            </button>
+            <div className="flex items-center border border-brand-gold/25 rounded-none overflow-hidden select-none">
+              <button
+                onClick={() => setZoomScale("fit-width")}
+                disabled={pdfLoading}
+                className={`px-2.5 py-1.5 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 cursor-pointer ${
+                  zoomScale === "fit-width" 
+                    ? "bg-brand-gold text-brand-brown" 
+                    : "text-brand-cream/85 hover:bg-brand-gold/10"
+                }`}
+              >
+                Fit Page
+              </button>
+              <button
+                onClick={() => setZoomScale("fit-content")}
+                disabled={pdfLoading}
+                className={`px-2.5 py-1.5 border-l border-brand-gold/25 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 cursor-pointer ${
+                  zoomScale === "fit-content" 
+                    ? "bg-brand-gold text-brand-brown" 
+                    : "text-brand-cream/85 hover:bg-brand-gold/10"
+                }`}
+              >
+                Fit Content
+              </button>
+            </div>
           </div>
 
           {/* Col 2: Navigation (Center) */}
@@ -946,7 +1282,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => adjustZoom(-0.25)}
-                disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale <= 0.5)}
+                disabled={pdfLoading || (typeof zoomScale === "number" && zoomScale <= 0.5)}
                 className="p-2 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
                 title="Zoom Out"
               >
@@ -954,21 +1290,36 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
               </button>
               <button
                 onClick={() => adjustZoom(0.25)}
-                disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale >= 3.0)}
+                disabled={pdfLoading || (typeof zoomScale === "number" && zoomScale >= 3.0)}
                 className="p-2 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
                 title="Zoom In"
               >
                 <ZoomIn className="w-3.5 h-3.5" />
               </button>
+            <div className="flex items-center border border-brand-gold/25 rounded-none overflow-hidden select-none">
               <button
-                onClick={() => setZoomScale((prev) => prev === "fit-width" ? 1.25 : "fit-width")}
+                onClick={() => setZoomScale("fit-width")}
                 disabled={pdfLoading}
-                className={`px-2 py-1.5 border border-brand-gold/20 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 rounded-none cursor-pointer ${
-                  zoomScale === "fit-width" ? "bg-brand-gold text-brand-brown border-brand-gold" : "text-brand-cream/80 hover:bg-brand-gold/10"
+                className={`px-2 py-1.5 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 cursor-pointer ${
+                  zoomScale === "fit-width" 
+                    ? "bg-brand-gold text-brand-brown" 
+                    : "text-brand-cream/85 hover:bg-brand-gold/10"
                 }`}
               >
-                Fit Width
+                Fit Page
               </button>
+              <button
+                onClick={() => setZoomScale("fit-content")}
+                disabled={pdfLoading}
+                className={`px-2.5 py-1.5 border-l border-brand-gold/25 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 cursor-pointer ${
+                  zoomScale === "fit-content" 
+                    ? "bg-brand-gold text-brand-brown" 
+                    : "text-brand-cream/85 hover:bg-brand-gold/10"
+                }`}
+              >
+                Fit Content
+              </button>
+            </div>
             </div>
 
             {/* Bookmark button */}
