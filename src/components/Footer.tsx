@@ -132,8 +132,20 @@ export const Footer: React.FC = () => {
 
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
-          <div>
-            &copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜுவாலை ஊழியம்"}.
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
+            <span>&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜுவாலை ஊழியம்"}.</span>
+            <span className="hidden md:inline text-brand-cream/35">|</span>
+            <span className="flex items-center gap-1.5">
+              {language === "en" ? "Developed by " : "உருவாக்கியவர் "}
+              <a 
+                href="https://rittu07.github.io/grwsureinfotech/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-gold hover:text-brand-cream transition-all normal-case hover:underline font-bold px-2.5 py-1 bg-black/30 border border-brand-gold/35 rounded-md hover:bg-brand-gold/20 text-xs md:text-sm tracking-normal inline-block"
+              >
+                Grwsure Infotech
+              </a>
+            </span>
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center text-center">
             <Link href="/about" className="hover:text-brand-gold transition-colors">

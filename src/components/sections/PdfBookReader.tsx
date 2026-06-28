@@ -810,15 +810,15 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
           <span className="shrink-0 font-bold">{getPercentage()}% Read</span>
         </div>
 
-        {/* Action Controls Toolbar (3 columns layout) */}
-        <div className="grid grid-cols-3 items-center text-xs font-serif-cinzel">
+        {/* Action Controls Toolbar (Desktop: 3 columns layout) */}
+        <div className="hidden md:grid grid-cols-3 items-center text-xs font-serif-cinzel">
           
           {/* Col 1: Zoom options */}
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="flex items-center gap-2">
             <button
               onClick={() => adjustZoom(-0.25)}
               disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale <= 0.5)}
-              className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
+              className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none cursor-pointer"
               title="Zoom Out"
             >
               <ZoomOut className="w-3.5 h-3.5" />
@@ -826,7 +826,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
             <button
               onClick={() => adjustZoom(0.25)}
               disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale >= 3.0)}
-              className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
+              className="p-1.5 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none cursor-pointer"
               title="Zoom In"
             >
               <ZoomIn className="w-3.5 h-3.5" />
@@ -882,6 +882,100 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
               onClick={toggleBookmark}
               disabled={pdfLoading}
               className={`flex items-center gap-1.5 border border-brand-gold/20 px-3 py-1.5 text-[9px] uppercase tracking-wider font-bold transition-colors rounded-none cursor-pointer ${
+                bookmarks.includes(currentPage) 
+                  ? "bg-brand-gold/25 text-brand-gold border-brand-gold/55" 
+                  : "text-brand-cream hover:bg-brand-gold/10"
+              }`}
+            >
+              {bookmarks.includes(currentPage) ? (
+                <>
+                  <BookmarkCheck className="w-3.5 h-3.5 text-brand-gold fill-current" />
+                  <span>Bookmarked</span>
+                </>
+              ) : (
+                <>
+                  <Bookmark className="w-3.5 h-3.5" />
+                  <span>Bookmark</span>
+                </>
+              )}
+            </button>
+          </div>
+
+        </div>
+
+        {/* Action Controls Toolbar (Mobile: 2 rows stacked layout) */}
+        <div className="flex md:hidden flex-col gap-3 items-center text-xs font-serif-cinzel w-full">
+          
+          {/* Row 1: Navigation (Centered) */}
+          <div className="flex justify-center items-center gap-3 py-1 bg-brand-brown/10 w-full border-y border-brand-gold/10">
+            <button
+              onClick={() => turnPage(-1)}
+              disabled={currentPage === 1 || pdfLoading}
+              className="p-2 hover:text-brand-gold text-brand-cream/80 disabled:opacity-35 transition-colors cursor-pointer"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            <div className="flex items-center gap-2 font-serif-eb">
+              <input
+                type="number"
+                value={currentPage}
+                onChange={(e) => {
+                  const val = parseInt(e.target.value, 10);
+                  if (!isNaN(val)) jumpToPage(val);
+                }}
+                min={1}
+                max={totalPages || 1}
+                className="w-12 bg-brand-brown/30 border border-brand-gold/20 text-center py-1 text-sm text-brand-gold focus:outline-none focus:border-brand-gold font-bold select-all rounded-none"
+              />
+              <span className="text-xs text-brand-cream/60">/ {totalPages || "--"}</span>
+            </div>
+
+            <button
+              onClick={() => turnPage(1)}
+              disabled={currentPage === totalPages || pdfLoading}
+              className="p-2 hover:text-brand-gold text-brand-cream/80 disabled:opacity-35 transition-colors cursor-pointer"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Row 2: Zoom options (Left) & Bookmarks (Right) */}
+          <div className="flex justify-between items-center w-full px-1">
+            {/* Zoom controls */}
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={() => adjustZoom(-0.25)}
+                disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale <= 0.5)}
+                className="p-2 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
+                title="Zoom Out"
+              >
+                <ZoomOut className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={() => adjustZoom(0.25)}
+                disabled={pdfLoading || zoomScale === "fit-width" || (typeof zoomScale === "number" && zoomScale >= 3.0)}
+                className="p-2 border border-brand-gold/20 hover:bg-brand-gold hover:text-brand-brown text-brand-cream/80 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-brand-cream transition-colors rounded-none"
+                title="Zoom In"
+              >
+                <ZoomIn className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={() => setZoomScale((prev) => prev === "fit-width" ? 1.25 : "fit-width")}
+                disabled={pdfLoading}
+                className={`px-2 py-1.5 border border-brand-gold/20 text-[9px] uppercase tracking-wider font-bold transition-all duration-300 rounded-none cursor-pointer ${
+                  zoomScale === "fit-width" ? "bg-brand-gold text-brand-brown border-brand-gold" : "text-brand-cream/80 hover:bg-brand-gold/10"
+                }`}
+              >
+                Fit Width
+              </button>
+            </div>
+
+            {/* Bookmark button */}
+            <button
+              onClick={toggleBookmark}
+              disabled={pdfLoading}
+              className={`flex items-center gap-1 border border-brand-gold/20 px-2.5 py-1.5 text-[9px] uppercase tracking-wider font-bold transition-colors rounded-none cursor-pointer ${
                 bookmarks.includes(currentPage) 
                   ? "bg-brand-gold/25 text-brand-gold border-brand-gold/55" 
                   : "text-brand-cream hover:bg-brand-gold/10"
