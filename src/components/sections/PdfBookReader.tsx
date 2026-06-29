@@ -399,6 +399,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
   const [bookmarks, setBookmarks] = useState<number[]>([]);
   const [outline, setOutline] = useState<any[]>([]);
   const [isControlsVisible, setIsControlsVisible] = useState<boolean>(true);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
   
   // Search states
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -539,7 +540,8 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
         if (!isNaN(val)) setZoomScale(val);
       }
     } else {
-      setZoomScale("fit-content");
+      const isMobile = window.innerWidth < 768;
+      setZoomScale(isMobile ? "fit-content" : "fit-width");
     }
   }, []);
 
@@ -642,6 +644,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
   // Navigation Logic
   const turnPage = (offset: number) => {
     if (currentPage + offset >= 1 && currentPage + offset <= totalPages) {
+      setIsTransitioning(true);
       setDirection(offset);
       setCurrentPage((prev) => prev + offset);
     }
@@ -649,6 +652,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
 
   const jumpToPage = (pageNum: number) => {
     if (pageNum >= 1 && pageNum <= totalPages) {
+      setIsTransitioning(true);
       setDirection(pageNum > currentPage ? 1 : -1);
       setCurrentPage(pageNum);
       setShowRestorePrompt(false);
@@ -969,7 +973,9 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
         <div 
           ref={containerRef}
           onClick={toggleControls}
-          className="flex-grow flex flex-col justify-center items-center overflow-auto p-4 md:p-8 cursor-pointer relative"
+          className={`flex-grow flex flex-col justify-center items-center ${
+            isTransitioning ? "overflow-hidden" : "overflow-auto"
+          } p-4 md:p-8 cursor-pointer relative`}
         >
           {/* SKELETON LOADER */}
           {pdfLoading && (
@@ -1007,7 +1013,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
           {/* CANVAS STAGE */}
           {!pdfLoading && !loadError && (
             <div 
-              className="relative w-full flex-grow flex items-center justify-center overflow-hidden min-h-[400px]"
+              className="relative w-full flex-grow flex items-center justify-center overflow-visible min-h-[400px]"
               onClick={(e) => e.stopPropagation()} // Prevent hiding controls when clicking directly on page
             >
               <AnimatePresence initial={false} custom={direction} mode="popLayout">
@@ -1018,6 +1024,7 @@ export const PdfBookReader: React.FC<PdfBookReaderProps> = ({ book, onClose }) =
                   initial="enter"
                   animate="center"
                   exit="exit"
+                  onAnimationComplete={() => setIsTransitioning(false)}
                   transition={{
                     x: { type: "spring", stiffness: 280, damping: 28 },
                     opacity: { duration: 0.25, ease: [0.16, 1, 0.3, 1] }
