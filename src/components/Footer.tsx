@@ -133,15 +133,17 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
-            <span>&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அகினி ஜ்வாலை ஊழியங்கள்"}.</span>
+            <span className="whitespace-nowrap">&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அகினி ஜ்வாலை ஊழியங்கள்"}.</span>
             <span className="hidden md:inline text-brand-cream/35">|</span>
-            <span className="flex items-center gap-1.5">
-              {language === "en" ? "Designed & Developed by " : "வடிவமைத்து உருவாக்கியவர் "}
+            <span className="flex items-center gap-1.5 flex-wrap justify-center md:justify-start">
+              <span className="whitespace-nowrap">
+                {language === "en" ? "Designed & Developed by" : "வடிவமைத்து உருவாக்கியவர்"}
+              </span>
               <a 
                 href="https://rittu07.github.io/grwsureinfotech/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-brand-gold hover:text-brand-cream transition-all normal-case hover:underline font-bold px-2 py-0.5 bg-black/30 border border-brand-gold/35 rounded-md hover:bg-brand-gold/20 text-[10px] md:text-xs tracking-normal inline-block"
+                className="text-brand-gold hover:text-brand-cream transition-all normal-case hover:underline font-bold px-2 py-0.5 bg-black/30 border border-brand-gold/35 rounded-md hover:bg-brand-gold/20 text-[10px] md:text-xs tracking-normal inline-block whitespace-nowrap"
               >
                 Grwsure Infotech
               </a>
