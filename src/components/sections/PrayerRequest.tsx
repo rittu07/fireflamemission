@@ -50,7 +50,7 @@ export const PrayerRequest: React.FC = () => {
 
   const emailSubject = `New ${typeText} from ${formData.name}`;
   const emailBody = `Name: ${formData.name}\nEmail: ${formData.email || 'N/A'}\nPhone: ${formData.phone || 'N/A'}\n\nPetition:\n${formData.message}`;
-  const emailUrl = `mailto:info@fireflamemission.org?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+  const emailUrl = `mailto:fireflamemission07@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   return (
     <section id="prayer-request" className="py-36 px-6 md:py-36 md:px-24 bg-brand-parchment bg-opacity-35 border-b border-brand-gold/20 relative">

@@ -98,13 +98,7 @@ export const Hero: React.FC = () => {
                 className="text-5xl sm:text-7xl md:text-8xl font-serif-cinzel tracking-[0.12em] text-brand-cream font-bold uppercase"
                 style={{ textShadow: "0 4px 16px rgba(16,10,6,0.95), 0 2px 4px rgba(16,10,6,0.85)" }}
               >
-                Fire
-              </span>
-              <span 
-                className="text-5xl sm:text-7xl md:text-8xl font-serif-cinzel tracking-[0.12em] text-brand-cream font-bold uppercase mt-3"
-                style={{ textShadow: "0 4px 16px rgba(16,10,6,0.95), 0 2px 4px rgba(16,10,6,0.85)" }}
-              >
-                Flame
+                Fire Flame
               </span>
             </h1>
           ) : (
@@ -112,7 +106,7 @@ export const Hero: React.FC = () => {
               className="text-4xl sm:text-6xl md:text-7xl font-serif-cinzel tracking-wider text-brand-cream leading-tight font-bold uppercase text-center"
               style={{ textShadow: "0 4px 16px rgba(16,10,6,0.95), 0 2px 4px rgba(16,10,6,0.85)" }}
             >
-              அக்கினி ஜுவாலை
+              அகினி ஜ்வாலை
             </h1>
           )}
 
@@ -123,7 +117,7 @@ export const Hero: React.FC = () => {
               className="text-2xl sm:text-3xl md:text-4xl font-serif-cormorant font-light italic text-brand-gold leading-none"
               style={{ textShadow: "0 2px 6px rgba(16,10,6,0.95)" }}
             >
-              {language === "en" ? "Mission" : "ஊழியம்"}
+              {language === "en" ? "Mission" : "ஊழியங்கள்"}
             </span>
             <div className="w-12 h-[0.5px] bg-brand-gold/40"></div>
           </div>

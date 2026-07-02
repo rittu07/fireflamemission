@@ -59,7 +59,7 @@ export default function AboutPage() {
             {language === "en" ? "About Our Ministry" : "எங்கள் ஊழியம் பற்றி"}
           </h1>
           <p className="text-xs uppercase tracking-[0.25em] font-serif-cormorant text-brand-gold max-w-md mx-auto">
-            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜுவாலை ஊழியம் • துவக்கம் 1996"}
+            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அகினி ஜ்வாலை ஊழியங்கள் • துவக்கம் 1996"}
           </p>
         </div>
       </div>
@@ -95,14 +95,16 @@ export default function AboutPage() {
           <div className="flex flex-col items-center py-6">
             <div className="relative p-3 border border-brand-gold/40 bg-brand-parchment shadow-2xl max-w-md w-full gold-glow">
               <div className="absolute inset-[6px] border border-brand-gold/25 pointer-events-none"></div>
-              <div className="relative aspect-[4/5] bg-brand-cream border border-brand-gold/15 overflow-hidden flex flex-col justify-end">
+              <div className="relative bg-brand-cream border border-brand-gold/15 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={getAssetPath("/assets/founder_portrait.png")}
+                  src={getAssetPath("/assets/founder.jpg")}
                   alt="Pr. V. Jeromias Portrait"
-                  className="absolute inset-0 w-full h-full object-cover filter sepia-[0.15] contrast-[1.05]"
+                  className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
                 />
-                <div className="relative z-10 bg-brand-cream/95 p-4 m-4 border border-brand-gold/25 text-center leading-none">
+                
+                {/* Title overlay board */}
+                <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-4 border border-brand-gold/25 text-center leading-none shadow-md">
                   <div className="font-serif-cinzel text-[10px] tracking-[0.2em] text-brand-muted uppercase font-bold mb-1">
                     {language === "en" ? "Born May 7, 1951" : "பிறப்பு மே 7, 1951"}
                   </div>

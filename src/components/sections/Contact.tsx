@@ -229,11 +229,11 @@ export const Contact: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-between border-t border-brand-gold/15 pt-4 text-xs font-serif-eb text-brand-muted">
               <div className="flex gap-1.5 items-center">
                 <Mail className="w-3.5 h-3.5 text-brand-gold" />
-                <span>info@fireflamemission.org</span>
+                <span>fireflamemission07@gmail.com</span>
               </div>
               <div className="flex gap-1.5 items-center">
                 <Clock className="w-3.5 h-3.5 text-brand-gold" />
-                <span>Intercession Hours: 9:00 AM — 6:00 PM</span>
+                <span>Intercession Hours: 9:00 AM — 6:30 PM</span>
               </div>
             </div>
 

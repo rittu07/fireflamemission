@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageContext";
 import { contentData } from "@/data/contentData";
-import { Menu, X, Landmark, Heart, HeartHandshake } from "lucide-react";
+import { Menu, X, Landmark, Heart, HeartHandshake, QrCode } from "lucide-react";
 import { getAssetPath } from "@/utils/paths";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -49,10 +49,10 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif-cinzel text-xs font-bold tracking-wider text-brand-brown group-hover:text-brand-gold transition-colors leading-none">
-                {language === "en" ? "Fire Flame" : "அக்கினி ஜுவாலை"}
+                {language === "en" ? "Fire Flame" : "அகினி ஜ்வாலை"}
               </span>
               <span className="font-serif-cormorant text-[10px] italic text-brand-muted leading-tight mt-1">
-                {language === "en" ? "Ministry" : "மினிஸ்ட்ரி"}
+                {language === "en" ? "Mission" : "ஊழியங்கள்"}
               </span>
             </div>
           </Link>
@@ -165,7 +165,7 @@ export const Navbar: React.FC = () => {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 15, opacity: 0 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
-              className="bg-brand-cream border border-brand-gold/50 max-w-lg w-full p-8 md:p-10 relative shadow-2xl"
+              className="bg-brand-cream border border-brand-gold/50 max-w-2xl w-full p-8 md:p-10 relative shadow-2xl"
             >
               {/* Interior frame */}
               <div className="absolute inset-[4px] border border-brand-gold/20 pointer-events-none"></div>
@@ -177,51 +177,82 @@ export const Navbar: React.FC = () => {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="text-center space-y-4">
-                <Heart className="w-10 h-10 text-brand-gold mx-auto" />
-                <h3 className="text-2xl font-serif-cinzel font-bold text-brand-brown">
-                  {language === "en" ? "Support Our Ministry" : "நன்கொடை வழங்குக"}
-                </h3>
-                <p className="text-xs text-brand-muted leading-relaxed font-serif-eb max-w-sm mx-auto">
-                  {language === "en"
-                    ? "Your seed gift helps us print and distribute gospel magazines and Biblical promises materials freely to rural sectors."
-                    : "சுவிசேஷப் பத்திரிகைகள் மற்றும் வாக்குத்தத்த அட்டைகளை அச்சிட்டு இலவசமாக விநியோகிக்க உங்களது உதவிகள் பெரிதும் துணைபுரியும்."}
-                </p>
+              <div className="text-center space-y-6">
+                <div className="space-y-4">
+                  <Heart className="w-10 h-10 text-brand-gold mx-auto" />
+                  <h3 className="text-2xl font-serif-cinzel font-bold text-brand-brown">
+                    {language === "en" ? "Support Our Ministry" : "நன்கொடை வழங்குக"}
+                  </h3>
+                  <p className="text-xs text-brand-muted leading-relaxed font-serif-eb max-w-lg mx-auto">
+                    {language === "en"
+                      ? "Your seed gift helps us print and distribute gospel magazines and Biblical promises materials freely to rural sectors."
+                      : "சுவிசேஷப் பத்திரிகைகள் மற்றும் வாக்குத்தத்த அட்டைகளை அச்சிட்டு இலவசமாக விநியோகிக்க உங்களது உதவிகள் பெரிதும் துணைபுரியும்."}
+                  </p>
+                </div>
                 
                 <div className="w-12 h-[1px] bg-brand-gold/30 mx-auto"></div>
 
-                {/* Bank Account info panel */}
-                <div className="bg-brand-parchment/60 p-6 border border-brand-gold/20 space-y-4 text-left leading-relaxed">
-                  <div className="flex gap-2 items-center text-brand-gold mb-2">
-                    <Landmark className="w-4 h-4" />
-                    <span className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold">
-                      {language === "en" ? "Bank Wire Transfer" : "வங்கி விவரங்கள்"}
-                    </span>
+                {/* Donation Options Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                  {/* Bank Account info panel */}
+                  <div className="bg-brand-parchment/60 p-6 border border-brand-gold/20 space-y-4 leading-relaxed flex flex-col justify-between">
+                    <div>
+                      <div className="flex gap-2 items-center text-brand-gold mb-4">
+                        <Landmark className="w-4 h-4" />
+                        <span className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold">
+                          {language === "en" ? "Bank Wire Transfer" : "வங்கி விவரங்கள்"}
+                        </span>
+                      </div>
+                      
+                      <div className="text-xs space-y-2 font-serif-eb text-brand-brown">
+                        <div>
+                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Holder Name</strong>
+                          Jeromias.V
+                        </div>
+                        <div>
+                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Bank Name</strong>
+                          SBI
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Number</strong>
+                            10663102721
+                          </div>
+                          <div>
+                            <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">IFSC Code</strong>
+                            SBIN0008653
+                          </div>
+                        </div>
+                        <div>
+                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Branch Details</strong>
+                          AGRI COMERCIAL BRANCH KOTTAR
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div className="text-xs space-y-2 font-serif-eb text-brand-brown">
-                    <div>
-                      <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Holder Name</strong>
-                      Fire Flame Mission Trust
-                    </div>
-                    <div>
-                      <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Bank Name</strong>
-                      State Bank of India (SBI)
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Number</strong>
-                        39281048201
+
+                  {/* UPI QR Code Section */}
+                  <div className="bg-brand-parchment/60 p-6 border border-brand-gold/20 flex flex-col items-center justify-between text-center leading-relaxed">
+                    <div className="w-full">
+                      <div className="flex gap-2 items-center justify-center text-brand-gold mb-4">
+                        <QrCode className="w-4 h-4" />
+                        <span className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold">
+                          {language === "en" ? "UPI QR Code" : "UPI QR குறியீடு"}
+                        </span>
                       </div>
-                      <div>
-                        <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">IFSC Code</strong>
-                        SBIN0001092
+                      
+                      <div className="relative mx-auto w-52 h-52 border border-brand-gold/30 bg-white p-1.5 shadow-sm rounded-sm mb-3 overflow-hidden flex items-center justify-center">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={getAssetPath("/assets/upi.png")}
+                          alt="UPI QR Code"
+                          className="w-full h-full object-contain scale-[1.15]"
+                        />
                       </div>
                     </div>
-                    <div>
-                      <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Branch Details</strong>
-                      Hosur Main Branch, Tamil Nadu
-                    </div>
+                    <p className="text-[9px] font-serif-cinzel text-brand-muted uppercase tracking-widest mt-2">
+                      {language === "en" ? "Scan to support our ministry" : "எங்கள் ஊழியத்திற்கு உதவ ஸ்கேன் செய்யவும்"}
+                    </p>
                   </div>
                 </div>
 

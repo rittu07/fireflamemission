@@ -52,16 +52,16 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
             <div className="relative p-2.5 border border-brand-gold/40 bg-brand-parchment shadow-xl max-w-sm w-full gold-glow">
               <div className="absolute inset-[5px] border border-brand-gold/25 pointer-events-none"></div>
               
-              <div className="relative aspect-[3/4] bg-brand-cream border border-brand-gold/15 overflow-hidden flex flex-col justify-end">
+              <div className="relative bg-brand-cream border border-brand-gold/15 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={getAssetPath("/assets/founder_portrait.png")}
+                  src={getAssetPath("/assets/founder.jpg")}
                   alt="Pr. V. Jeromias Portrait"
-                  className="absolute inset-0 w-full h-full object-cover filter sepia-[0.15] contrast-[1.05]"
+                  className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
                 />
                 
                 {/* Title overlay board */}
-                <div className="relative z-10 bg-brand-cream/95 p-3 m-3 border border-brand-gold/25 text-center leading-none">
+                <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-3 border border-brand-gold/25 text-center leading-none shadow-md">
                   <div className="font-accent-great text-2xl text-brand-gold mb-1">
                     Pr. V. Jeromias
                   </div>

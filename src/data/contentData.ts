@@ -567,11 +567,11 @@ export const contentData = {
     paragraphs: [
       {
         en: "Fire Flame Mission is a Christ-centered ministry founded in 1996 with a vision to proclaim the Gospel of Jesus Christ, strengthen believers through prayer, and spread God's Word through Christian literature and publications.",
-        ta: "அக்கினி ஜுவாலை ஊழியம் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், கிறிஸ்தவ இலக்கியங்கள் மற்றும் பிரசுரங்கள் மூலம் தேவனுடைய வார்த்தையைப் பரப்பவும் இது துவங்கப்பட்டது."
+        ta: "அகினி ஜ்வாலை ஊழியங்கள் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், ஆவிக்குரிய புத்தகங்களை இந்தியா முழுவதும் பரப்புவதற்காக இந்த ஊழியம் தொடங்கப்பட்டது."
       },
       {
         en: "Over the years, the ministry has faithfully served communities through evangelistic outreach, prayer meetings, discipleship programs, youth development, children's ministry, and Christian publishing. Through the grace of God, the ministry has expanded its reach across Tamil Nadu and beyond, touching thousands of lives with the message of salvation and hope.",
-        ta: "பல ஆண்டுகளாக, சுவிசேஷப் பணி, ஜெபக் கூட்டங்கள், சீஷத்துவப் பயிற்சிகள், இளைஞர் மேம்பாடு, சிறுவர் ஊழியம் மற்றும் கிறிஸ்தவப் பிரசுரங்கள் ஆகியவற்றின் மூலம் இந்த ஊழியம் விசுவாசத்தோடு பணியாற்றி வருகிறது. தேவனுடைய கிருபையினால், இந்த ஊழியம் தமிழ்நாடு மற்றும் பிற பகுதிகளுக்கும் விரிவடைந்து, ஆயிரக்கணக்கான மக்களின் வாழ்வில் இரட்சிப்பையும் நம்பிக்கையையும் கொண்டு சேர்த்துள்ளது."
+        ta: "பல ஆண்டுகளாக, சுவிசேஷப் பணி, ஜெபக் கூட்டங்கள், சீஷத்துவப் பயிற்சிகள், இளைஞர் மேம்பாடு, சிறுவர் ஊழியம் மற்றும் புத்தக ஊழியங்கள் ஆகியவற்றின் மூலம் இந்த ஊழியம் விசுவாசத்தோடு பணியாற்றி வருகிறது. தேவனுடைய கிருபையினால், இந்த ஊழியம் தமிழ்நாடு மற்றும் பிற மாநிலங்களுக்கும் விரிவடைந்து, ஆயிரக்கணக்கான மக்களின் வாழ்வில் இரட்சிப்பையும் விசுவாசத்தையும் கொண்டு சேர்த்துள்ளது."
       },
       {
         en: "The ministry remains committed to its founding purpose of leading people to Christ, nurturing spiritual growth, and equipping believers for effective Christian living.",
@@ -661,7 +661,7 @@ export const contentData = {
       },
       {
         en: "Under his leadership, the ministry has grown from a small prayer movement into a vibrant ministry network that includes evangelism, publications, missionary outreach, and discipleship programs.",
-        ta: "இவரது தலைமையின் கீழ், இந்த ஊழியம் ஒரு சிறிய ஜெபக் குழுவிலிருந்து சுவிசேஷப் பிரசாரங்கள், நூல்கள் பிரசுரித்தல், கிராமப்புற மிஷனரி பணிகள் மற்றும் சீஷத்துவப் பயிற்சி ஆகியவற்றை உள்ளடக்கிய ஒரு பெரிய ஊழிய வலையமைப்பாக வளர்ந்துள்ளது."
+        ta: "இவரது தலைமையின் கீழ், இந்த ஊழியம் ஒரு சிறிய ஜெபக் குழுவிலிருந்து சுவிசேஷக் கூடுகைகள், நூல்கள் பிரசுரித்தல், கிராமப்புற மிஷனரி பணிகள் மற்றும் சீஷத்துவப் பயிற்சி ஆகியவற்றை உள்ளடக்கிய ஒரு பெரிய ஊழிய வலையமைப்பாக வளர்ந்துள்ளது."
       },
       {
         en: "His life continues to inspire believers to trust God's calling, remain faithful in service, and proclaim the Gospel without compromise.",
@@ -673,14 +673,14 @@ export const contentData = {
   visionMission: {
     vision: {
       en: "To glorify God by proclaiming the Gospel of Jesus Christ, equipping believers through biblical teaching, and transforming lives through prayer and discipleship.",
-      ta: "இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிப்பதன் மூலமும், விவிலியப் போதனைகள் மூலம் விசுவாசிகளை ஆயத்தப்படுத்துவதன் மூலமும், ஜெபம் மற்றும் சீஷத்துவம் மூலம் மக்களின் வாழ்வை மாற்றுவதன் மூலமும் தேவனை மகிமைப்படுத்துதல்."
+      ta: "இயேசு கிறிஸ்துவின் சுவிசேஷத்தை அறிவித்தல், வேதாகமப் போதனைகள் மூலம் விசுவாசிகளை ஆவிக்குரிய வளர்ச்சியில் மேம்படுத்துதல், ஜெபம் மற்றும் ஆராதனையின் மூலம் மக்களின் ஆவிக்குரிய வாழ்க்கையை பலப்படுத்துதல், ஆவிக்குரிய புத்தகங்களை இந்தியா முழுவதும் மற்றும் பிற மாநிலங்களுக்கும் கொண்டு சேர்த்தல், இறைவனின் மகிமையை வெளிப்படுத்துதல்."
     },
     mission: [
       {
         title: { en: "Evangelism", ta: "சுவிசேஷப் பணி" },
         description: {
           en: "To reach people with the saving message of Jesus Christ through personal evangelism, outreach programs, and Gospel campaigns.",
-          ta: "தனிநபர் சுவிசேஷம், சுவிசேஷப் பிரசாரங்கள் மற்றும் நற்செய்தி கூட்டங்கள் மூலம் இயேசு கிறிஸ்துவின் இரட்சிப்பின் செய்தியை மக்களைச் சென்றடையச் செய்தல்."
+          ta: "தனிநபர் சுவிசேஷம், சுவிசேஷக் கூடுகைகள் மற்றும் நற்செய்தி கூட்டங்கள் மூலம் இயேசு கிறிஸ்துவின் இரட்சிப்பின் செய்தியை மக்களைச் சென்றடையச் செய்தல்."
         }
       },
       {
@@ -691,17 +691,17 @@ export const contentData = {
         }
       },
       {
-        title: { en: "Christian Publishing", ta: "கிறிஸ்தவப் பிரசுரங்கள்" },
+        title: { en: "Christian Publishing", ta: "புத்தக ஊழியங்கள்" },
         description: {
           en: "To publish and distribute biblical books, magazines, devotionals, and teaching materials that strengthen believers.",
-          ta: "விசுவாசிகளைப் பலப்படுத்தும் வேதப்பூர்வமான புத்தகங்கள், மாதாந்திர இதழ்கள், தியானப் பொருட்கள் மற்றும் போதக நூல்களை பிரசுரித்து விநியோகித்தல்."
+          ta: "விசுவாசிகளைப் பலப்படுத்தும் வேதப்பூர்வமான புத்தகங்கள், மாதாந்திர இதழ்கள், ஆவிக்குரிய புத்தகங்கள் மற்றும் போதக நூல்களை பிரசுரித்து விநியோகித்தல்."
         }
       },
       {
         title: { en: "Discipleship", ta: "சீஷத்துவம்" },
         description: {
           en: "To nurture believers through sound biblical teaching, leadership development, and spiritual mentoring.",
-          ta: "ஆரோக்கியமான விவிலியப் போதனைகள், தலைமைத்துவ மேம்பாடு மற்றும் ஆவிக்குரிய ஆலோசனைகள் மூலம் விசுவாசிகளை சீஷர்களாக உருவாக்குதல்."
+          ta: "ஆரோக்கியமான வேதாகமப் போதனை, தலைமைத்துவ மேம்பாடு மற்றும் ஆவிக்குரிய ஆலோசனைகள் மூலம் விசுவாசிகளை சீஷர்களாக உருவாக்குதல்."
         }
       },
       {
@@ -714,10 +714,10 @@ export const contentData = {
     ],
     coreValues: [
       { en: "Christ-Centered Living", ta: "கிறிஸ்துவை மையமாகக் கொண்ட வாழ்வு" },
-      { en: "Biblical Integrity", ta: "வேதப்பூர்வமான நேர்மை" },
-      { en: "Prayer Dependence", ta: "ஜெபத்தை சார்ந்திருத்தல்" },
+      { en: "Biblical Integrity", ta: "வேதாகம மதிப்புகளின்படி வாழ்தல்" },
+      { en: "Prayer Dependence", ta: "ஜெபத்தில் நிலைத்திருத்தல்" },
       { en: "Evangelistic Passion", ta: "சுவிசேஷ தாகம்" },
-      { en: "Servant Leadership", ta: "சேவக தலைமைத்துவம்" },
+      { en: "Servant Leadership", ta: "சேவை மனப்பான்மையுடன் வழிநடத்துதல்" },
       { en: "Compassionate Service", ta: "இரக்கமுள்ள சேவை" },
       { en: "Spiritual Excellence", ta: "ஆவிக்குரிய மேன்மை" }
     ]
@@ -782,7 +782,7 @@ export const contentData = {
       },
       {
         title: { en: "Children's Ministry Workers", ta: "சிறுவர் ஊழியர்கள்" },
-        description: { en: "Teaching and nurturing children in biblical truth.", ta: "சிறுவர்களுக்கு நற்பண்புகளையும் விவிலிய சத்தியங்களைக் கற்றுத் தருபவர்கள்." }
+        description: { en: "Teaching and nurturing children in biblical truth.", ta: "சிறுவர்களுக்கு நற்பண்புகளையும் வேதாகம சத்தியங்களைக் கற்றுத் தருபவர்கள்." }
       }
     ],
     commitments: [
@@ -824,10 +824,10 @@ export const contentData = {
     },
     {
       id: "publishing",
-      title: { en: "Christian Publishing", ta: "கிறிஸ்தவப் பிரசுரங்கள்" },
+      title: { en: "Christian Publishing", ta: "புத்தக ஊழியங்கள்" },
       description: {
         en: "Publication of books, magazines, devotionals, teaching materials, and Gospel literature in multiple formats.",
-        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள், தியானப் பொருட்கள் மற்றும் போதக நூல்களை அச்சிடுதல்."
+        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள், ஆவிக்குரிய புத்தகங்கள் மற்றும் போதக நூல்களை அச்சிடுதல்."
       },
       tamilName: "நூல் மற்றும் பத்திரிக்கை ஊழியம்",
       iconName: "BookOpen"
@@ -847,7 +847,7 @@ export const contentData = {
       title: { en: "Children's Ministry", ta: "சிறுவர் ஊழியம்" },
       description: {
         en: "Bible teaching, character development, and faith formation programs designed for children.",
-        ta: "சிறுவர்களுக்கான விவிலியப் போதனைகள், நற்பண்புகள் வளர்த்தல் மற்றும் விசுவாசப் பயிற்சி வகுப்புகள்."
+        ta: "சிறுவர்களுக்கான வேதாகமப் போதனை, நற்பண்புகள் வளர்த்தல் மற்றும் விசுவாசப் பயிற்சி வகுப்புகள்."
       },
       tamilName: "விசுவாச சிறுவர் ஊழியம்",
       iconName: "Baby"
@@ -857,7 +857,7 @@ export const contentData = {
       title: { en: "Women's Ministry", ta: "மகளிர் ஊழியம்" },
       description: {
         en: "Encouraging and equipping women through fellowship meetings, prayer gatherings, and biblical teaching.",
-        ta: "சகோதரிகள் ஐக்கியக் கூட்டங்கள், ஜெபக் கூடங்கள் மற்றும் விவிலியப் படிப்புகள் மூலம் பெண்களை ஆவிக்குரிய வாழ்வில் பலப்படுத்துதல்."
+        ta: "சகோதரிகள் ஐக்கியக் கூட்டங்கள், ஜெபக் கூடங்கள் மற்றும் வேதாகமப் படிப்புகள் மூலம் பெண்களை ஆவிக்குரிய வாழ்வில் பலப்படுத்துதல்."
       },
       tamilName: "சகோதரிகள் ஜெப ஐக்கியம்",
       iconName: "Heart"
@@ -884,10 +884,10 @@ export const contentData = {
     },
     {
       id: "bible-teaching",
-      title: { en: "Bible Teaching", ta: "விவிலிய போதனை" },
+      title: { en: "Bible Teaching", ta: "வேதாகமப் போதனை" },
       description: {
         en: "Regular Bible study programs, leadership training sessions, seminars, and discipleship courses.",
-        ta: "முறையான விவிலிய ஆராய்ச்சி வகுப்புகள், ஊழியர்களுக்கான தலைமைத்துவப் பயிற்சிகள் மற்றும் கருத்தரங்குகள்."
+        ta: "முறையான வேதாகம ஆராய்ச்சி வகுப்புகள், ஊழியர்களுக்கான தலைமைத்துவப் பயிற்சிகள் மற்றும் கருத்தரங்குகள்."
       },
       tamilName: "வேத ஆராய்ச்சி போதகம்",
       iconName: "BookOpenCheck"
@@ -945,7 +945,7 @@ export const contentData = {
   general: {
     motto: {
       en: "Publishing God's Word, Strengthening Lives Through Prayer",
-      ta: "தேவனுடைய வார்த்தையை பிரசுரித்தல், ஜெபத்தின் மூலம் வாழ்வை பலப்படுத்துதல்"
+      ta: "தேவனுடைய வார்த்தையைப் பிரசங்கித்து, சுவிசேஷத்தின் மூலம் வாழ்வை பலப்படுத்துதல்"
     },
     address: {
       en: "K.R. Complex Chithambaranagar P.W.D.Road, Nagercoil-2-K.K.Dist",
@@ -957,7 +957,7 @@ export const contentData = {
     },
     phone1: "+91 88700 83746",
     phone2: "",
-    email: "info@fireflamemission.org",
+    email: "fireflamemission07@gmail.com",
     donationMotto: {
       en: "Your support enables the printing and free distribution of Bible promise materials and missionary support.",
       ta: "வாக்குத்தத்த அட்டைகள் அச்சிடுவதற்கும் இலவச சுவிசேஷப் புத்தக விநியோகத்திற்கும் உங்களது நன்கொடைகள் உதவுகின்றன."

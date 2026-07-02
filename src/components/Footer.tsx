@@ -33,9 +33,9 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Motto */}
           <div className="space-y-4 md:col-span-1">
             <h3 className="text-lg font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
-              {language === "en" ? "Fire Flame" : "அக்கினி ஜுவாலை"}
+              {language === "en" ? "Fire Flame" : "அகினி ஜ்வாலை"}
               <span className="block text-xs font-serif-cormorant text-brand-gold italic">
-                {language === "en" ? "Ministry" : "மினிஸ்ட்ரி"}
+                {language === "en" ? "Mission" : "ஊழியங்கள்"}
               </span>
             </h3>
             <p className="text-xs text-brand-cream/70 font-serif-eb leading-relaxed italic">
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
-            <span>&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜுவாலை ஊழியம்"}.</span>
+            <span>&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அகினி ஜ்வாலை ஊழியங்கள்"}.</span>
             <span className="hidden md:inline text-brand-cream/35">|</span>
             <span className="flex items-center gap-1.5">
               {language === "en" ? "Developed by " : "உருவாக்கியவர் "}
