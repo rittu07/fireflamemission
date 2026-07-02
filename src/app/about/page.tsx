@@ -158,10 +158,10 @@ export default function AboutPage() {
           {/* Vision card display */}
           <div className="relative p-8 border border-brand-gold bg-brand-parchment text-center gold-glow max-w-3xl mx-auto">
             <div className="absolute inset-[5px] border border-brand-gold/20 pointer-events-none"></div>
-            <span className="text-[9px] uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block mb-2">
+            <span className="text-xs md:text-sm uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block mb-2">
               {language === "en" ? "Our Vision" : "எங்கள் தரிசனம்"}
             </span>
-            <p className="text-lg md:text-xl font-serif-cormorant italic text-brand-brown leading-relaxed font-light">
+            <p className="text-xl md:text-2xl font-serif-cormorant italic text-brand-brown leading-relaxed font-light">
               "{language === "en" ? vm.vision.en : vm.vision.ta}"
             </p>
           </div>
@@ -174,10 +174,10 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center bg-brand-cream mx-auto gold-glow">
                     {getMissionIcon(idx)}
                   </div>
-                  <h4 className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold text-brand-gold">
+                  <h4 className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold text-brand-gold">
                     {language === "en" ? item.title.en : item.title.ta}
                   </h4>
-                  <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-serif-eb">
+                  <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
                     {language === "en" ? item.description.en : item.description.ta}
                   </p>
                 </div>
@@ -188,17 +188,17 @@ export default function AboutPage() {
 
           {/* Core Values grid */}
           <div className="space-y-8 pt-8">
-            <h4 className="text-center font-serif-cinzel text-xs uppercase tracking-widest text-brand-brown font-bold">
+            <h4 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
               {language === "en" ? "Core Values" : "முக்கிய மதிப்புகள்"}
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {vm.coreValues.map((value, idx) => (
                 <div key={idx} className="p-4 border border-brand-gold/15 bg-brand-parchment/30 text-center relative">
                   <div className="absolute inset-1 border border-brand-gold/5 pointer-events-none"></div>
-                  <span className="font-serif-cinzel text-[10px] uppercase tracking-wider text-brand-brown font-bold block mb-1">
+                  <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider text-brand-brown font-bold block mb-1">
                     {language === "en" ? value.en : value.ta}
                   </span>
-                  <span className="text-[8px] text-brand-gold uppercase font-serif-cormorant italic">
+                  <span className="text-[10px] text-brand-gold uppercase font-serif-cormorant italic">
                     Value 0{idx + 1}
                   </span>
                 </div>
@@ -219,7 +219,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold">
               {language === "en" ? "Branch Churches" : "சபை மையங்கள்"}
             </h2>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-serif-eb">
+            <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
               {language === "en" ? bc.intro.en : bc.intro.ta}
             </p>
             <OrnamentalSeparator />
@@ -232,7 +232,7 @@ export default function AboutPage() {
                 className="flex items-center gap-3 p-4 border border-brand-gold/25 bg-brand-parchment/40 gold-glow-hover relative group"
               >
                 <MapPin className="w-4 h-4 text-brand-gold" />
-                <span className="font-serif-cinzel text-[11px] font-bold tracking-wider text-brand-brown">
+                <span className="font-serif-cinzel text-xs md:text-sm font-bold tracking-wider text-brand-brown">
                   {language === "en" ? loc.en : loc.ta}
                 </span>
               </div>
@@ -241,14 +241,14 @@ export default function AboutPage() {
 
           {/* Activities list */}
           <div className="space-y-8 pt-8">
-            <h4 className="text-center font-serif-cinzel text-xs uppercase tracking-widest text-brand-brown font-bold">
+            <h4 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
               {language === "en" ? "Ministry Activities Focus" : "சபையின் பிரதான செயல்பாடுகள்"}
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {bc.focus.map((item, idx) => (
                 <PaperCard key={idx} className="p-5 text-center space-y-2 flex flex-col items-center justify-center">
                   <CheckCircle className="w-5 h-5 text-brand-gold/70" />
-                  <span className="font-serif-cinzel text-[10px] uppercase tracking-wider text-brand-brown font-bold">
+                  <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider text-brand-brown font-bold">
                     {language === "en" ? item.en : item.ta}
                   </span>
                 </PaperCard>
@@ -268,7 +268,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold">
               {language === "en" ? "Missionaries & Staff" : "மிஷனரிகள் & ஊழியர்கள்"}
             </h2>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-serif-eb">
+            <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
               {language === "en" ? team.intro.en : team.intro.ta}
             </p>
             <OrnamentalSeparator />
@@ -282,10 +282,10 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center bg-brand-cream mx-auto gold-glow">
                     {getRoleIcon(idx)}
                   </div>
-                  <h3 className="font-serif-cinzel text-xs uppercase tracking-wider font-bold text-brand-brown">
+                  <h3 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider font-bold text-brand-brown">
                     {language === "en" ? role.title.en : role.title.ta}
                   </h3>
-                  <p className="text-sm text-brand-muted leading-relaxed font-serif-eb">
+                  <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
                     {language === "en" ? role.description.en : role.description.ta}
                   </p>
                 </div>
@@ -296,14 +296,14 @@ export default function AboutPage() {
 
           {/* Commitments checklist */}
           <div className="space-y-8 pt-8">
-            <h4 className="text-center font-serif-cinzel text-xs uppercase tracking-widest text-brand-brown font-bold">
+            <h4 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
               {language === "en" ? "Ministry Commitments" : "எங்கள் அர்ப்பணிப்புகள்"}
             </h4>
             <div className="flex flex-wrap gap-3 justify-center max-w-2xl mx-auto">
               {team.commitments.map((commit, idx) => (
                 <div 
                   key={idx} 
-                  className="px-5 py-2.5 border border-brand-gold/25 bg-brand-parchment/20 text-[10px] font-serif-cinzel font-bold tracking-wider text-brand-gold flex items-center gap-2"
+                  className="px-5 py-2.5 border border-brand-gold/25 bg-brand-parchment/20 text-xs md:text-sm font-serif-cinzel font-bold tracking-wider text-brand-gold flex items-center gap-2"
                 >
                   <div className="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
                   {language === "en" ? commit.en : commit.ta}

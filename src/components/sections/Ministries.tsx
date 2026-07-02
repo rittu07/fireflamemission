@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useLanguage } from "@/components/LanguageContext";
 import { contentData } from "@/data/contentData";
 import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
 import { PaperCard } from "@/components/PaperCard";
-import { BookOpen, Flame, Compass, Users, Baby, Heart, TrendingUp, Sparkles, BookCheck, Share2 } from "lucide-react";
+import { BookOpen, Flame, Compass, Users, Baby, Heart, TrendingUp, Sparkles, BookCheck, Share2, Church } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface MinistriesProps {
@@ -60,6 +61,8 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
         return <BookCheck className={classes} />;
       case "Share2":
         return <Share2 className={classes} />;
+      case "Church":
+        return <Church className={classes} />;
       default:
         return <BookOpen className={classes} />;
     }
@@ -108,17 +111,17 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
                   </div>
 
                   {/* Tamil Name subtitle */}
-                  <span className="text-[10px] tracking-[0.15em] uppercase font-serif-cinzel text-brand-gold font-bold block mb-2">
+                  <span className="text-xs md:text-sm tracking-[0.15em] uppercase font-serif-cinzel text-brand-gold font-bold block mb-2">
                     {min.tamilName}
                   </span>
 
                   {/* English / Active Name */}
-                  <h3 className="text-lg font-serif-cinzel font-bold text-brand-brown mb-4">
+                  <h3 className="text-xl md:text-2xl font-serif-cinzel font-bold text-brand-brown mb-4">
                     {t(min.title)}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-serif-eb">
+                  <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
                     {t(min.description)}
                   </p>
                 </div>
@@ -130,6 +133,23 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* View All Ministries CTA */}
+        {limit && (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-16"
+          >
+            <Link
+              href="/ministries"
+              className="inline-block px-8 py-3 border border-brand-gold/40 text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-parchment hover:border-brand-gold transition-colors"
+            >
+              {language === "en" ? "Explore All Ministries" : "அனைத்து ஊழியங்களையும் காண்க"}
+            </Link>
+          </motion.div>
+        )}
 
       </div>
     </section>

@@ -100,7 +100,7 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
 
                   {/* Metadata */}
                   <div className="space-y-2">
-                    <span className="text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold block">
+                    <span className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold block">
                       {sermon.type === "video" 
                         ? (language === "en" ? "Video Sermon" : "வீдео செய்தி")
                         : sermon.type === "audio"
@@ -108,15 +108,15 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
                         : (language === "en" ? "Written Message" : "எழுதப்பட்ட செய்தி")}
                     </span>
                     
-                    <span className="text-[9px] text-brand-muted font-serif-eb uppercase tracking-widest block">
+                    <span className="text-xs text-brand-muted font-serif-eb uppercase tracking-widest block">
                       {t(sermon.reference)}
                     </span>
                     
-                    <h3 className="text-lg font-serif-cinzel font-bold text-brand-brown leading-tight">
+                    <h3 className="text-xl md:text-2xl font-serif-cinzel font-bold text-brand-brown leading-tight">
                       {t(sermon.title).split(": ").slice(-1)[0]}
                     </h3>
                     
-                    <p className="text-sm text-brand-muted leading-relaxed font-serif-eb">
+                    <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
                       {t(sermon.excerpt)}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
                       href={sermon.mediaUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-1 py-2 border border-brand-gold bg-brand-cream text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
+                      className="w-full flex items-center justify-center gap-1 py-2.5 border border-brand-gold bg-brand-cream text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
                     >
                       {language === "en" ? "Watch Video" : "வீдео காண்க"}
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -138,7 +138,7 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
                   ) : sermon.type === "audio" ? (
                     <button
                       onClick={() => alert(language === "en" ? "Playing Audio Sermon..." : "ஆடியோ செய்தி ஒலிக்கிறது...")}
-                      className="w-full flex items-center justify-center gap-1 py-2 border border-brand-gold bg-brand-cream text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
+                      className="w-full flex items-center justify-center gap-1 py-2.5 border border-brand-gold bg-brand-cream text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
                     >
                       {language === "en" ? "Listen Audio" : "ஆடியோ கேட்க"}
                       <ChevronRight className="w-3.5 h-3.5" />
@@ -152,7 +152,7 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
                           setActiveWrittenSermon(sermon.id);
                         }
                       }}
-                      className="w-full flex items-center justify-center gap-1 py-2 border border-brand-gold bg-brand-cream text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
+                      className="w-full flex items-center justify-center gap-1 py-2.5 border border-brand-gold bg-brand-cream text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors"
                     >
                       {activeWrittenSermon === sermon.id 
                         ? (language === "en" ? "Close Text" : "பனுவலை மூடு")

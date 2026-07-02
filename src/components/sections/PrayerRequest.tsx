@@ -82,7 +82,7 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Name field */}
               <div className="space-y-1.5">
-                <label className="text-[11px] sm:text-xs uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Full Name" : "முழு பெயர்"} *
                 </label>
                 <input
@@ -98,7 +98,7 @@ export const PrayerRequest: React.FC = () => {
               {/* Grid: Email & Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                  <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                     {language === "en" ? "Email Address" : "மின்னஞ்சல்"}
                   </label>
                   <input
@@ -111,7 +111,7 @@ export const PrayerRequest: React.FC = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-[11px] sm:text-xs uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                  <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                     {language === "en" ? "Phone Number" : "தொலைபேசி எண்"}
                   </label>
                   <input
@@ -126,7 +126,7 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Request Type */}
               <div className="space-y-1.5">
-                <label className="text-[11px] sm:text-xs uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Submission Type" : "விண்ணப்ப வகை"}
                 </label>
                 <select
@@ -142,7 +142,7 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Message Body */}
               <div className="space-y-1.5">
-                <label className="text-[11px] sm:text-xs uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Petition / Details" : "விண்ணப்ப விவரம்"} *
                 </label>
                 <textarea
@@ -174,7 +174,7 @@ export const PrayerRequest: React.FC = () => {
                 <h3 className="text-2xl font-serif-cinzel font-bold text-brand-brown">
                   {language === "en" ? "Petition Received" : "விண்ணப்பம் பெறப்பட்டது"}
                 </h3>
-                <p className="text-xs text-brand-muted max-w-sm mx-auto leading-relaxed font-serif-eb">
+                <p className="text-sm md:text-base text-brand-muted max-w-sm mx-auto leading-relaxed font-serif-eb">
                   {language === "en" 
                     ? "Your request has been added to our sanctuary altar scroll. Our intercessors will pray over this daily."
                     : "உங்கள் ஜெப விண்ணப்பம் எங்களிடம் சமர்ப்பிக்கப்பட்டுள்ளது. எங்கள் ஜெபக்குழுவினர் உங்களுக்காக ஜெபிப்பார்கள்."}
@@ -182,12 +182,12 @@ export const PrayerRequest: React.FC = () => {
               </div>
 
               {/* Classical reassurance scripture quote */}
-              <div className="p-4 bg-brand-cream/50 border border-brand-gold/15 max-w-md mx-auto italic font-serif-cormorant text-xs text-brand-brown">
+              <div className="p-4 bg-brand-cream/50 border border-brand-gold/15 max-w-md mx-auto italic font-serif-cormorant text-sm md:text-base text-brand-brown">
                 <Heart className="w-3.5 h-3.5 text-brand-gold mx-auto mb-1" />
                 "{language === "en" 
                   ? "And this is the confidence that we have toward him, that if we ask anything according to his will he hears us." 
                   : "நாம் எதையாகிலும் அவருடைய சித்தத்தின்படி கேட்டால், அவர் நமக்குச் செவிகொடுக்கிறாரென்பதே அவரை நோக்கி நாம் கொண்டிருக்கும் தைரியம்."}"
-                <span className="block mt-1 font-serif-cinzel text-[9px] uppercase font-bold tracking-wider">
+                <span className="block mt-1 font-serif-cinzel text-xs md:text-sm uppercase font-bold tracking-wider">
                   — 1 John 5:14
                 </span>
               </div>
@@ -197,7 +197,7 @@ export const PrayerRequest: React.FC = () => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-[10px] font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-xs md:text-sm font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-brand-gold" />
                   {language === "en" ? "Send via WhatsApp" : "வாட்ஸ்அப்பில் அனுப்ப"}
@@ -205,7 +205,7 @@ export const PrayerRequest: React.FC = () => {
                 
                 <a
                   href={emailUrl}
-                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-[10px] font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 py-3 px-6 border border-brand-gold bg-brand-brown text-xs md:text-sm font-bold tracking-widest uppercase font-serif-cinzel text-brand-cream hover:bg-brand-parchment hover:text-brand-brown transition-colors cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 text-brand-gold" />
                   {language === "en" ? "Send via Email" : "மின்னஞ்சலில் அனுப்ப"}
@@ -215,7 +215,7 @@ export const PrayerRequest: React.FC = () => {
               <div className="pt-2">
                 <button
                   onClick={resetForm}
-                  className="px-6 py-2 border border-brand-gold/30 text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-parchment hover:border-brand-gold transition-colors"
+                  className="px-6 py-2 border border-brand-gold/30 text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-brown hover:bg-brand-parchment hover:border-brand-gold transition-colors"
                 >
                   {language === "en" ? "Send Another request" : "மற்றொரு விண்ணப்பம்"}
                 </button>

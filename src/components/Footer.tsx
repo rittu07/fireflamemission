@@ -32,26 +32,26 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Motto */}
           <div className="space-y-4 md:col-span-1">
-            <h3 className="text-lg font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
+            <h3 className="text-xl md:text-2xl font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
               {language === "en" ? "Fire Flame" : "அகினி ஜ்வாலை"}
-              <span className="block text-xs font-serif-cormorant text-brand-gold italic">
+              <span className="block text-sm md:text-base font-serif-cormorant text-brand-gold italic">
                 {language === "en" ? "Mission" : "ஊழியங்கள்"}
               </span>
             </h3>
-            <p className="text-xs text-brand-cream/70 font-serif-eb leading-relaxed italic">
+            <p className="text-sm md:text-base text-brand-cream/70 font-serif-eb leading-relaxed italic">
               "{t(contentData.general.motto)}"
             </p>
-            <span className="text-[10px] tracking-widest text-brand-gold/60 font-serif-cinzel block">
+            <span className="text-xs md:text-sm tracking-widest text-brand-gold/60 font-serif-cinzel block">
               {language === "en" ? "ESTD. 1996" : "துவக்கம் 1996"}
             </span>
           </div>
 
           {/* Col 2: Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-serif-cinzel text-xs uppercase tracking-wider text-brand-gold font-bold">
+            <h4 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider text-brand-gold font-bold">
               {language === "en" ? "Quick Links" : "விரைவு இணைப்புகள்"}
             </h4>
-            <ul className="space-y-2 text-xs font-serif-eb text-brand-cream/80">
+            <ul className="space-y-2 text-sm md:text-base font-serif-eb text-brand-cream/80">
               <li>
                 <Link href="/books" className="hover:text-brand-gold transition-colors">
                   {language === "en" ? "Books & Publications" : "புத்தகங்கள் & வெளியீடுகள்"}
@@ -77,10 +77,10 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Newsletter */}
           <div className="space-y-4">
-            <h4 className="font-serif-cinzel text-xs uppercase tracking-wider text-brand-gold font-bold">
+            <h4 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider text-brand-gold font-bold">
               {language === "en" ? "Newsletter" : "செய்தி மடல்"}
             </h4>
-            <p className="text-xs text-brand-cream/70 font-serif-eb leading-relaxed">
+            <p className="text-sm md:text-base text-brand-cream/70 font-serif-eb leading-relaxed">
               {language === "en" 
                 ? "Subscribe to receive monthly newsletters and promise updates."
                 : "மாதாந்திர செய்தி இதழ் மற்றும் வாக்குத்தத்தங்களை பெற பதிவு செய்யவும்."}
@@ -92,35 +92,35 @@ export const Footer: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={language === "en" ? "Your email..." : "மின்னஞ்சல் முகவரி..."}
-                className="w-full px-3 py-2 bg-transparent text-xs text-brand-cream focus:outline-none font-serif-eb placeholder-brand-cream/35"
+                className="w-full px-3 py-2 bg-transparent text-sm md:text-base text-brand-cream focus:outline-none font-serif-eb placeholder-brand-cream/35"
               />
               <button
                 type="submit"
                 className="p-2 text-brand-gold hover:text-brand-cream hover:bg-brand-gold/15 transition-colors border-l border-brand-gold/30"
               >
-                {subscribed ? <Check className="w-3.5 h-3.5 text-green-500" /> : <Send className="w-3.5 h-3.5" />}
+                {subscribed ? <Check className="w-4 h-4 text-green-500" /> : <Send className="w-4 h-4" />}
               </button>
             </form>
           </div>
 
           {/* Col 4: Contact Information */}
           <div className="space-y-4">
-            <h4 className="font-serif-cinzel text-xs uppercase tracking-wider text-brand-gold font-bold">
-              {language === "en" ? "Contact Information" : "தொடர்பு தகவல்"}
+            <h4 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider text-brand-gold font-bold">
+              {language === "en" ? "Contact Information" : "தொடர்பu தகவல்"}
             </h4>
-            <ul className="space-y-3 text-xs font-serif-eb text-brand-cream/80">
+            <ul className="space-y-3 text-sm md:text-base font-serif-eb text-brand-cream/80">
               <li className="flex gap-2 items-start">
-                <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                 <span>{language === "en" ? contentData.general.address.en : contentData.general.address.ta}</span>
               </li>
               <li className="flex gap-2 items-center">
-                <Phone className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                <Phone className="w-4 h-4 text-brand-gold shrink-0" />
                 <a href={`tel:${contentData.general.phone1.replace(/\s+/g, "")}`} className="hover:text-brand-gold transition-colors">
                   {contentData.general.phone1}
                 </a>
               </li>
               <li className="flex gap-2 items-center">
-                <Mail className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                <Mail className="w-4 h-4 text-brand-gold shrink-0" />
                 <a href={`mailto:${contentData.general.email}`} className="hover:text-brand-gold transition-colors">
                   {contentData.general.email}
                 </a>
@@ -131,17 +131,17 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
             <span>&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அகினி ஜ்வாலை ஊழியங்கள்"}.</span>
             <span className="hidden md:inline text-brand-cream/35">|</span>
             <span className="flex items-center gap-1.5">
-              {language === "en" ? "Developed by " : "உருவாக்கியவர் "}
+              {language === "en" ? "Designed & Developed by " : "வடிவமைத்து உருவாக்கியவர் "}
               <a 
                 href="https://rittu07.github.io/grwsureinfotech/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-brand-gold hover:text-brand-cream transition-all normal-case hover:underline font-bold px-2.5 py-1 bg-black/30 border border-brand-gold/35 rounded-md hover:bg-brand-gold/20 text-xs md:text-sm tracking-normal inline-block"
+                className="text-brand-gold hover:text-brand-cream transition-all normal-case hover:underline font-bold px-2 py-0.5 bg-black/30 border border-brand-gold/35 rounded-md hover:bg-brand-gold/20 text-[10px] md:text-xs tracking-normal inline-block"
               >
                 Grwsure Infotech
               </a>

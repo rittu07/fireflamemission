@@ -183,7 +183,7 @@ export const Navbar: React.FC = () => {
                   <h3 className="text-2xl font-serif-cinzel font-bold text-brand-brown">
                     {language === "en" ? "Support Our Ministry" : "நன்கொடை வழங்குக"}
                   </h3>
-                  <p className="text-xs text-brand-muted leading-relaxed font-serif-eb max-w-lg mx-auto">
+                  <p className="text-sm md:text-base text-brand-muted leading-relaxed font-serif-eb max-w-lg mx-auto">
                     {language === "en"
                       ? "Your seed gift helps us print and distribute gospel magazines and Biblical promises materials freely to rural sectors."
                       : "சுவிசேஷப் பத்திரிகைகள் மற்றும் வாக்குத்தத்த அட்டைகளை அச்சிட்டு இலவசமாக விநியோகிக்க உங்களது உதவிகள் பெரிதும் துணைபுரியும்."}
@@ -199,32 +199,32 @@ export const Navbar: React.FC = () => {
                     <div>
                       <div className="flex gap-2 items-center text-brand-gold mb-4">
                         <Landmark className="w-4 h-4" />
-                        <span className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold">
+                        <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold">
                           {language === "en" ? "Bank Wire Transfer" : "வங்கி விவரங்கள்"}
                         </span>
                       </div>
                       
-                      <div className="text-xs space-y-2 font-serif-eb text-brand-brown">
+                      <div className="text-sm space-y-2.5 font-serif-eb text-brand-brown">
                         <div>
-                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Holder Name</strong>
+                          <strong className="font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-brand-muted block">Account Holder Name</strong>
                           Jeromias.V
                         </div>
                         <div>
-                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Bank Name</strong>
+                          <strong className="font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-brand-muted block">Bank Name</strong>
                           SBI
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Account Number</strong>
+                            <strong className="font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-brand-muted block">Account Number</strong>
                             10663102721
                           </div>
                           <div>
-                            <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">IFSC Code</strong>
+                            <strong className="font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-brand-muted block">IFSC Code</strong>
                             SBIN0008653
                           </div>
                         </div>
                         <div>
-                          <strong className="font-serif-cinzel uppercase text-[9px] tracking-wider text-brand-muted block">Branch Details</strong>
+                          <strong className="font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-brand-muted block">Branch Details</strong>
                           AGRI COMERCIAL BRANCH KOTTAR
                         </div>
                       </div>
@@ -236,7 +236,7 @@ export const Navbar: React.FC = () => {
                     <div className="w-full">
                       <div className="flex gap-2 items-center justify-center text-brand-gold mb-4">
                         <QrCode className="w-4 h-4" />
-                        <span className="font-serif-cinzel text-[10px] uppercase tracking-wider font-bold">
+                        <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold">
                           {language === "en" ? "UPI QR Code" : "UPI QR குறியீடு"}
                         </span>
                       </div>
@@ -250,18 +250,18 @@ export const Navbar: React.FC = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-[9px] font-serif-cinzel text-brand-muted uppercase tracking-widest mt-2">
+                    <p className="text-[10px] sm:text-xs font-serif-cinzel text-brand-muted uppercase tracking-widest mt-2">
                       {language === "en" ? "Scan to support our ministry" : "எங்கள் ஊழியத்திற்கு உதவ ஸ்கேன் செய்யவும்"}
                     </p>
                   </div>
                 </div>
 
                 {/* Reassurance text */}
-                <p className="text-[10px] italic text-brand-muted font-serif-cormorant max-w-xs mx-auto">
+                <p className="text-xs sm:text-sm italic text-brand-muted font-serif-cormorant max-w-md mx-auto">
                   {language === "en"
                     ? "Each one must give as he has decided in his heart, not reluctantly or under compulsion, for God loves a cheerful giver."
                     : "அவனவன் தன் மனதில் நியமித்தபடியே கொடுக்கக்கடவன்; வருத்தத்தோடல்ல, கட்டாயத்தோடமல்ல; உற்சாகமாய்க் கொடுக்கிறவனிடத்தில் தேவன் பிரியமாயிருக்கிறார்."}
-                  <span className="block mt-1 font-serif-cinzel text-[8px] uppercase tracking-wider font-bold">
+                  <span className="block mt-1 font-serif-cinzel text-[10px] sm:text-xs uppercase tracking-wider font-bold">
                     — 2 Corinthians 9:7
                   </span>
                 </p>

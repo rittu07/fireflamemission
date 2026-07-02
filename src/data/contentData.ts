@@ -673,7 +673,7 @@ export const contentData = {
   visionMission: {
     vision: {
       en: "To glorify God by proclaiming the Gospel of Jesus Christ, equipping believers through biblical teaching, and transforming lives through prayer and discipleship.",
-      ta: "இயேசு கிறிஸ்துவின் சுவிசேஷத்தை அறிவித்தல், வேதாகமப் போதனைகள் மூலம் விசுவாசிகளை ஆவிக்குரிய வளர்ச்சியில் மேம்படுத்துதல், ஜெபம் மற்றும் ஆராதனையின் மூலம் மக்களின் ஆவிக்குரிய வாழ்க்கையை பலப்படுத்துதல், ஆவிக்குரிய புத்தகங்களை இந்தியா முழுவதும் மற்றும் பிற மாநிலங்களுக்கும் கொண்டு சேர்த்தல், இறைவனின் மகிமையை வெளிப்படுத்துதல்."
+      ta: "இயேசு கிறிஸ்துவின் சுவிசேஷத்தை அறிவித்தல், வேதாகமப் போதனை மூலம் விசுவாசிகளை ஆவிக்குரிய வளர்ச்சியில் மேம்படுத்துதல், ஜெபம் மற்றும் ஆராதனையின் மூலம் மக்களின் ஆவிக்குரிய வாழ்க்கையை பலப்படுத்துதல், ஆவிக்குரிய புத்தகங்களை இந்தியா முழுவதும் மற்றும் பிற மாநிலங்களுக்கும் கொண்டு சேர்த்தல், இறைவனின் மகிமையை வெளிப்படுத்துதல்."
     },
     mission: [
       {
@@ -694,7 +694,7 @@ export const contentData = {
         title: { en: "Christian Publishing", ta: "புத்தக ஊழியங்கள்" },
         description: {
           en: "To publish and distribute biblical books, magazines, devotionals, and teaching materials that strengthen believers.",
-          ta: "விசுவாசிகளைப் பலப்படுத்தும் வேதப்பூர்வமான புத்தகங்கள், மாதாந்திர இதழ்கள், ஆவிக்குரிய புத்தகங்கள் மற்றும் போதக நூல்களை பிரசுரித்து விநியோகித்தல்."
+          ta: "விசுவாசிகளைப் பலப்படுத்தும் வேதப்பூர்வமான புத்தகங்கள், மாதாந்திர இதழ்கள் மற்றும் போதக நூல்களை பிரசுரித்து விநியோகித்தல்."
         }
       },
       {
@@ -827,7 +827,7 @@ export const contentData = {
       title: { en: "Christian Publishing", ta: "புத்தக ஊழியங்கள்" },
       description: {
         en: "Publication of books, magazines, devotionals, teaching materials, and Gospel literature in multiple formats.",
-        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள், ஆவிக்குரிய புத்தகங்கள் மற்றும் போதக நூல்களை அச்சிடுதல்."
+        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள் மற்றும் போதக நூல்களை அச்சிடுதல்."
       },
       tamilName: "நூல் மற்றும் பத்திரிக்கை ஊழியம்",
       iconName: "BookOpen"
@@ -877,7 +877,7 @@ export const contentData = {
       title: { en: "Revival Meetings", ta: "எழுப்புதல் கூட்டங்கள்" },
       description: {
         en: "Special conventions, revival services, prayer conferences, and spiritual enrichment programs.",
-        ta: "சிறப்பு நற்செய்தி பெருங் கூட்டங்கள், எழுப்புதல் கூட்டங்கள் மற்றும் ஆவிக்குரிய புத்துணர்ச்சி மாநாடுகள்."
+        ta: "சிறப்பு நற்செய்தி பெருங் கூட்டங்கள், எழுப்புதல் கூட்டங்கள் மற்றும் ஆவிக்குரிய ஜெபப் பயிற்சி மாநாடுகள்."
       },
       tamilName: "ஆவிக்குரிய எழுப்புதல் மாநாடுகள்",
       iconName: "Sparkles"
@@ -887,7 +887,7 @@ export const contentData = {
       title: { en: "Bible Teaching", ta: "வேதாகமப் போதனை" },
       description: {
         en: "Regular Bible study programs, leadership training sessions, seminars, and discipleship courses.",
-        ta: "முறையான வேதாகம ஆராய்ச்சி வகுப்புகள், ஊழியர்களுக்கான தலைமைத்துவப் பயிற்சிகள் மற்றும் கருத்தரங்குகள்."
+        ta: "முறையான வேதாகமக் கல்வி, ஊழியர்களுக்கான தலைமைத்துவப் பயிற்சிகள் மற்றும் கருத்தரங்குகள்."
       },
       tamilName: "வேத ஆராய்ச்சி போதகம்",
       iconName: "BookOpenCheck"
@@ -901,6 +901,16 @@ export const contentData = {
       },
       tamilName: "இலக்கிய சுவிசேஷ விநியோகம்",
       iconName: "Share2"
+    },
+    {
+      id: "church-ministry",
+      title: { en: "Church Ministry", ta: "திருச்சபை ஊழியங்கள்" },
+      description: {
+        en: "Establishing and nurturing local churches, teaching sound biblical doctrines, and building strong spiritual communities.",
+        ta: "உள்ளூர் சபைகளை நிறுவி வளர்த்தல், ஆரோக்கியமான வேத போதனைகளை போதித்தல் மற்றும் வலுவான ஆவிக்குரிய சமூகங்களை உருவாக்குதல்."
+      },
+      tamilName: "திருச்சபை ஊழியங்கள்",
+      iconName: "Church"
     }
   ] as MinistryItem[],
 

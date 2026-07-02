@@ -35,16 +35,16 @@ export const PrayerRequestSection: React.FC = () => {
               </div>
 
               {/* Tamil scripture quote details */}
-              <span className="text-[10px] tracking-[0.2em] uppercase font-serif-cinzel text-brand-gold font-bold">
+              <span className="text-xs md:text-sm tracking-[0.2em] uppercase font-serif-cinzel text-brand-gold font-bold">
                 {language === "en" ? "Acts 12:5 • Prayer was made without ceasing" : "அப்போஸ்தலர் 12:5 • சபையார் ஊக்கமாய் ஜெபம்பண்ணினார்கள்"}
               </span>
 
               {/* Content */}
-              <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold tracking-wide">
+              <h2 className="text-4xl md:text-6xl font-serif-cinzel text-brand-brown font-bold tracking-wide">
                 {language === "en" ? "Need Prayer?" : "ஜெபம் தேவையா?"}
               </h2>
 
-              <p className="text-sm md:text-base font-serif-cormorant text-brand-muted italic leading-relaxed max-w-lg">
+              <p className="text-lg md:text-xl font-serif-cormorant text-brand-muted italic leading-relaxed max-w-lg">
                 {language === "en" 
                   ? "Submit your request and our dedicated prayer team and intercessors will stand with you in faith before the sanctuary altar."
                   : "உங்கள் ஜெப விண்ணப்பங்களை சமர்ப்பிக்கவும். எங்கள் ஜெபக்குழுவினர் உங்களுக்காக ஆலய பலிபீடத்தில் தினசரி பரிந்துரை செய்வார்கள்."}
@@ -56,7 +56,7 @@ export const PrayerRequestSection: React.FC = () => {
               {/* CTA Button */}
               <Link
                 href="/prayer-request"
-                className="inline-flex items-center justify-center px-8 py-3.5 border border-brand-gold bg-brand-brown text-brand-cream text-xs font-bold tracking-widest uppercase font-serif-cinzel hover:bg-brand-parchment hover:text-brand-brown hover:border-brand-gold transition-all duration-300 shadow-md gold-glow"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-brand-gold bg-brand-brown text-brand-cream text-xs md:text-sm font-bold tracking-widest uppercase font-serif-cinzel hover:bg-brand-parchment hover:text-brand-brown hover:border-brand-gold transition-all duration-300 shadow-md gold-glow"
               >
                 {language === "en" ? "Submit Prayer Request" : "ஜெப விண்ணப்பம் அனுப்ப"}
               </Link>

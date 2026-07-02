@@ -73,7 +73,7 @@ export const Contact: React.FC = () => {
                   
                   {/* Name field */}
                   <div className="space-y-1">
-                    <label className="text-[9px] uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                    <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                       {language === "en" ? "Full Name" : "முழு பெயர்"} *
                     </label>
                     <input
@@ -82,14 +82,14 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-brand-gold/30 bg-brand-cream/40 text-xs text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
+                      className="w-full px-4 py-2.5 border border-brand-gold/30 bg-brand-cream/40 text-sm md:text-base text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
                     />
                   </div>
 
                   {/* Grid: Email & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-[9px] uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                      <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                         {language === "en" ? "Email Address" : "மின்னஞ்சல்"}
                       </label>
                       <input
@@ -97,12 +97,12 @@ export const Contact: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-brand-gold/30 bg-brand-cream/40 text-xs text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
+                        className="w-full px-4 py-2.5 border border-brand-gold/30 bg-brand-cream/40 text-sm md:text-base text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
                       />
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-[9px] uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                      <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                         {language === "en" ? "Phone Number" : "தொலைபேசி எண்"}
                       </label>
                       <input
@@ -110,30 +110,30 @@ export const Contact: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-brand-gold/30 bg-brand-cream/40 text-xs text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
+                        className="w-full px-4 py-2.5 border border-brand-gold/30 bg-brand-cream/40 text-sm md:text-base text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb"
                       />
                     </div>
                   </div>
 
                   {/* Message body */}
                   <div className="space-y-1">
-                    <label className="text-[9px] uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                    <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                       {language === "en" ? "Prayer Request / Message" : "ஜெப விண்ணப்பம் / செய்தி"} *
                     </label>
                     <textarea
                       name="message"
                       required
-                      rows={4}
+                      rows={5}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-brand-gold/30 bg-brand-cream/40 text-xs text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb resize-none"
+                      className="w-full px-4 py-2.5 border border-brand-gold/30 bg-brand-cream/40 text-sm md:text-base text-brand-brown focus:outline-none focus:border-brand-gold transition-colors font-serif-eb resize-none"
                     ></textarea>
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 py-2.5 border border-brand-gold bg-brand-parchment text-xs tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-all duration-300 shadow-sm"
+                    className="w-full flex items-center justify-center gap-2 py-3.5 border border-brand-gold bg-brand-parchment text-xs md:text-sm tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-all duration-300 shadow-sm"
                   >
                     <Send className="w-3.5 h-3.5" />
                     {language === "en" ? "Submit Details" : "விவரங்களை அனுப்ப"}
@@ -169,21 +169,21 @@ export const Contact: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-serif-eb">
               
               <div className="space-y-1.5 p-4 border border-brand-gold/15 bg-brand-cream/50">
-                <span className="inline-flex items-center gap-1 font-serif-cinzel text-[9px] uppercase tracking-wider font-bold text-brand-gold">
-                  <MapPin className="w-3 h-3" />
+                <span className="inline-flex items-center gap-1 font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold text-brand-gold">
+                  <MapPin className="w-3.5 h-3.5" />
                   {language === "en" ? "Nagercoil Center" : "நாகர்கோவில் மையம்"}
                 </span>
-                <p className="text-brand-brown leading-relaxed text-xs">
+                <p className="text-brand-brown leading-relaxed text-sm md:text-base">
                   {language === "en" ? contentData.general.address.en : contentData.general.address.ta}
                 </p>
               </div>
 
               <div className="space-y-1.5 p-4 border border-brand-gold/15 bg-brand-cream/50">
-                <span className="inline-flex items-center gap-1 font-serif-cinzel text-[9px] uppercase tracking-wider font-bold text-brand-gold">
-                  <Phone className="w-3 h-3" />
+                <span className="inline-flex items-center gap-1 font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold text-brand-gold">
+                  <Phone className="w-3.5 h-3.5" />
                   {language === "en" ? "Prayer Hotline" : "ஜெப உதவி எண்"}
                 </span>
-                <p className="text-brand-brown">
+                <p className="text-brand-brown text-sm md:text-base leading-relaxed">
                   <a href={phoneHref1} className="hover:text-brand-gold transition-colors">{contentData.general.phone1}</a>
                   {contentData.general.phone2 && (
                     <>
@@ -210,29 +210,29 @@ export const Contact: React.FC = () => {
                   <path d="M 50,85 L 45,65 L 50,55 L 55,65 Z" fill="currentColor" opacity="0.3" />
                 </svg>
 
-                <h4 className="font-serif-cinzel text-xs font-bold text-brand-brown tracking-widest uppercase mb-1">
+                <h4 className="font-serif-cinzel text-sm md:text-base font-bold text-brand-brown tracking-widest uppercase mb-1">
                   {language === "en" ? "Map View: Fire Flame Ellam" : "ஆலய வரைபடம்: அக்கினி ஜுவாலை இல்லம்"}
                 </h4>
-                <p className="font-serif-cormorant text-[10px] italic text-brand-muted max-w-xs leading-normal">
+                <p className="font-serif-cormorant text-xs md:text-sm italic text-brand-muted max-w-xs leading-normal">
                   {language === "en"
                     ? "Hosur, Tamil Nadu — 635109. Located near Hosur Bus Stand and easily accessible from NH48."
                     : "ஓசூர், தமிழ்நாடு — 635109. ஓசூர் பேருந்து நிலையம் அருகே சென்னை-பெங்களூர் தேசிய நெடுஞ்சாலை NH48 வழி எளிதாக அடையலாம்."}
                 </p>
                 
-                <div className="absolute bottom-3 right-3 text-[8px] font-serif-mono text-brand-gold/50">
+                <div className="absolute bottom-3 right-3 text-[10px] font-serif-mono text-brand-gold/50">
                   12.7408° N, 77.8253° E
                 </div>
               </div>
             </PaperCard>
 
             {/* Email & Hours */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-between border-t border-brand-gold/15 pt-4 text-xs font-serif-eb text-brand-muted">
+            <div className="flex flex-col sm:flex-row gap-4 justify-between border-t border-brand-gold/15 pt-4 text-sm md:text-base font-serif-eb text-brand-muted">
               <div className="flex gap-1.5 items-center">
-                <Mail className="w-3.5 h-3.5 text-brand-gold" />
+                <Mail className="w-4 h-4 text-brand-gold" />
                 <span>fireflamemission07@gmail.com</span>
               </div>
               <div className="flex gap-1.5 items-center">
-                <Clock className="w-3.5 h-3.5 text-brand-gold" />
+                <Clock className="w-4 h-4 text-brand-gold" />
                 <span>Intercession Hours: 9:00 AM — 6:30 PM</span>
               </div>
             </div>
