@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Motto */}
           <div className="space-y-4 md:col-span-1">
             <h3 className="text-xl md:text-2xl font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
-              {language === "en" ? "Fire Flame" : "அகினி ஜ்வாலை"}
+              {language === "en" ? "Fire Flame" : "அக்கினி ஜ்வாலை"}
               <span className="block text-sm md:text-base font-serif-cormorant text-brand-gold italic">
                 {language === "en" ? "Mission" : "ஊழியங்கள்"}
               </span>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
           {/* Col 4: Contact Information */}
           <div className="space-y-4">
             <h4 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider text-brand-gold font-bold">
-              {language === "en" ? "Contact Information" : "தொடர்பu தகவல்"}
+              {language === "en" ? "Contact Information" : "தொடர்பு தகவல்"}
             </h4>
             <ul className="space-y-3 text-sm md:text-base font-serif-eb text-brand-cream/80">
               <li className="flex gap-2 items-start">
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
-            <span className="whitespace-nowrap">&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அகினி ஜ்வாலை ஊழியங்கள்"}.</span>
+            <span className="whitespace-nowrap">&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜ்வாலை ஊழியங்கள்"}.</span>
             <span className="hidden md:inline text-brand-cream/35">|</span>
             <span className="flex items-center gap-1.5 flex-wrap justify-center md:justify-start">
               <span className="whitespace-nowrap">
@@ -163,7 +163,7 @@ export const Footer: React.FC = () => {
             </Link>
             <span>•</span>
             <Link href="/sermons" className="hover:text-brand-gold transition-colors">
-              {language === "en" ? "Sermons" : "பிரசங்கங்கள்"}
+              {language === "en" ? "Sermons" : "புத்தகங்கள்"}
             </Link>
             <span>•</span>
             <Link href="/ministries" className="hover:text-brand-gold transition-colors">

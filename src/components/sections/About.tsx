@@ -104,7 +104,7 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
                   <p className="pl-4">
                     {language === "en"
                       ? "Proclaiming Christ through prayer, teaching and publication—bringing revival into local homes."
-                      : "ஜெபம், போதகம் மற்றும் பிரசுரங்கள் மூலம் கிறிஸ்துவை அறிவித்தல்—குடும்பங்கள் தோறும் எழுப்புதலைக் கொண்டுவருதல்."}
+                      : "ஜெபம், போதகம் மற்றும் புத்தகங்கள் மூலம் கிறிஸ்துவை அறிவித்தல்—குடும்பங்கள் தோறும் எழுப்புதலைக் கொண்டுவருதல்."}
                   </p>
                 </div>
               </div>

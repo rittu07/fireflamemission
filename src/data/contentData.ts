@@ -563,11 +563,11 @@ export const contentData = {
   ] as BookItem[],
 
   aboutText: {
-    title: { en: "About Fire Flame Mission", ta: "அக்கினி ஜுவாலை ஊழியம் பற்றி" },
+    title: { en: "About Fire Flame Mission", ta: "அக்கினி ஜ்வாலை ஊழியம் பற்றி" },
     paragraphs: [
       {
-        en: "Fire Flame Mission is a Christ-centered ministry founded in 1996 with a vision to proclaim the Gospel of Jesus Christ, strengthen believers through prayer, and spread God's Word through Christian literature and publications.",
-        ta: "அகினி ஜ்வாலை ஊழியங்கள் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் நற்செய்தியை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், ஆவிக்குரிய புத்தகங்களை இந்தியா முழுவதும் பரப்புவதற்காக இந்த ஊழியம் தொடங்கப்பட்டது."
+        en: "Fire Flame Mission is a Christ-centered ministry founded in 1996 with a vision to proclaim the Gospel of Jesus Christ, strengthen believers through prayer, and spread the Kingdom of God throughout India through Christian literature.",
+        ta: "அக்கினி ஜ்வாலை ஊழியங்கள் என்பது 1996 ஆம் ஆண்டில் நிறுவப்பட்ட ஒரு கிறிஸ்துவை மையமாகக் கொண்ட ஊழியமாகும். இயேசு கிறிஸ்துவின் சுவிசேஷங்களை அறிவிக்கவும், ஜெபத்தின் மூலம் விசுவாசிகளை பலப்படுத்தவும், ஆவிக்குரிய புத்தகங்கள் மூலம் தேவனுடைய ராஜ்ஜியத்தை இந்தியா முழுவதும் பரப்புவதற்காக இந்த ஊழியம் தொடங்கப்பட்டது."
       },
       {
         en: "Over the years, the ministry has faithfully served communities through evangelistic outreach, prayer meetings, discipleship programs, youth development, children's ministry, and Christian publishing. Through the grace of God, the ministry has expanded its reach across Tamil Nadu and beyond, touching thousands of lives with the message of salvation and hope.",
@@ -586,7 +586,7 @@ export const contentData = {
       title: { en: "Ministry Inception", ta: "ஊழியத் துவக்கம்" },
       description: {
         en: "The Lord placed a burden for evangelism and prayer ministry, leading to the establishment of Fire Flame Mission.",
-        ta: "சுவிசேஷப் பணி மற்றும் ஜெப ஊழியத்திற்கான பாரத்தை கர்த்தர் தந்தார், இது அக்கினி ஜுவாலை ஊழியம் நிறுவப்படுவதற்கு வழிவகுத்தது."
+        ta: "சுவிசேஷப் பணி மற்றும் ஜெப ஊழியத்திற்கான பாரத்தை கர்த்தர் தந்தார், இது அக்கினி ஜ்வாலை ஊழியம் நிறுவப்படுவதற்கு வழிவகுத்தது."
       }
     },
     {
@@ -657,7 +657,7 @@ export const contentData = {
       },
       {
         en: "The Lord led him through many challenges and seasons of preparation, strengthening his faith and shaping his ministry vision. His passion for evangelism, prayer, and teaching became the foundation upon which Fire Flame Mission was established.",
-        ta: "கர்த்தர் அவரைப் பல சோதனைகள் மற்றும் ஆயத்தக் காலங்களின் வழியே நடத்தி, விசுவாசத்தைப் பலப்படுத்தி, ஊழிய தரிசனத்தை உருவாக்கினார். சுவிசேஷம், ஜெபம் மற்றும் போதகத்தின் மீதான அவரது அர்ப்பணிப்பே அக்கினி ஜுவாலை ஊழியம் நிறுவப்படுவதற்கான அடித்தளமாக அமைந்தது."
+        ta: "கர்த்தர் அவரைப் பல சோதனைகள் மற்றும் ஆயத்தக் காலங்களின் வழியே நடத்தி, விசுவாசத்தைப் பலப்படுத்தி, ஊழிய தரிசனத்தை உருவாக்கினார். சுவிசேஷம், ஜெபம் மற்றும் போதகத்தின் மீதான அவரது அர்ப்பணிப்பே அக்கினி ஜ்வாலை ஊழியம் நிறுவப்படுவதற்கான அடித்தளமாக அமைந்தது."
       },
       {
         en: "Under his leadership, the ministry has grown from a small prayer movement into a vibrant ministry network that includes evangelism, publications, missionary outreach, and discipleship programs.",
@@ -726,7 +726,7 @@ export const contentData = {
   branchChurches: {
     intro: {
       en: "Through God's grace, Fire Flame Mission has established and supported multiple churches and mission stations across Tamil Nadu.",
-      ta: "தேவனுடைய கிருபையினால், அக்கினி ஜுவாலை ஊழியம் தமிழ்நாட்டின் பல்வேறு பகுதிகளில் பல சபைகளையும் மிஷனரி மையங்களையும் நிறுவி ஆதரித்து வருகிறது."
+      ta: "தேவனுடைய கிருபையினால், அக்கினி ஜ்வாலை ஊழியம் தமிழ்நாட்டின் பல்வேறு பகுதிகளில் பல சபைகளையும் மிஷனரி மையங்களையும் நிறுவி ஆதரித்து வருகிறது."
     },
     locations: [
       { en: "Nagercoil", ta: "நாகர்கோவில்" },
@@ -803,6 +803,16 @@ export const contentData = {
 
   ministries: [
     {
+      id: "church",
+      title: { en: "Church Ministry", ta: "திருச்சபை ஊழியம்" },
+      description: {
+        en: "Establishing and supporting local churches and missionary centers to build strong faith communities.",
+        ta: "உள்ளூர் சபைகள் மற்றும் மிஷனரி மையங்களை நிறுவி, விசுவாசிகளை ஆவிக்குரிய வாழ்வில் வளர்த்தல்."
+      },
+      tamilName: "திருச்சபை மற்றும் மிஷனரி ஊழியம்",
+      iconName: "Church"
+    },
+    {
       id: "prayer",
       title: { en: "Prayer Ministry", ta: "ஜெப ஊழியம்" },
       description: {
@@ -827,7 +837,7 @@ export const contentData = {
       title: { en: "Christian Publishing", ta: "புத்தக ஊழியங்கள்" },
       description: {
         en: "Publication of books, magazines, devotionals, teaching materials, and Gospel literature in multiple formats.",
-        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள் மற்றும் போதக நூல்களை அச்சிடுதல்."
+        ta: "கிறிஸ்தவ புத்தகங்கள், மாதாந்திர செய்தி இதழ்கள் மற்றும் ஆவிக்குரிய நூல்களை அச்சிடுதல்."
       },
       tamilName: "நூல் மற்றும் பத்திரிக்கை ஊழியம்",
       iconName: "BookOpen"
@@ -837,9 +847,9 @@ export const contentData = {
       title: { en: "Youth Ministry", ta: "வாலிபர் ஊழியம்" },
       description: {
         en: "Leadership training, youth conferences, discipleship programs, and spiritual growth initiatives for young people.",
-        ta: "இளைஞர்களுக்கான தலைமைத்துவப் பயிற்சிகள், மாநாடுகள், சீஷத்துவப் பயிற்சி மற்றும் ஆவிக்குரிய வளர்ப்பு திட்டங்கள்."
+        ta: "இளைஞர்களுக்கான தலைமைத்துவப் பயிற்சிகள், மாநாடுகள், சீஷத்துவப் பயிற்சி மற்றும் ஆவிக்குரிய வளர்ச்சி திட்டங்கள்."
       },
-      tamilName: "அக்கினி ஜுவாலை வாலிபர் ஊழியம்",
+      tamilName: "அக்கினி ஜ்வாலை வாலிபர் ஊழியம்",
       iconName: "Users"
     },
     {
@@ -954,8 +964,8 @@ export const contentData = {
 
   general: {
     motto: {
-      en: "Publishing God's Word, Strengthening Lives Through Prayer",
-      ta: "தேவனுடைய வார்த்தையைப் பிரசங்கித்து, சுவிசேஷத்தின் மூலம் வாழ்வை பலப்படுத்துதல்"
+      en: "Who makes His angels spirits, His ministers a flame of fire. — Psalm 104:4",
+      ta: "தம்முடைய தூதர்களை காற்றுகளாகவும் தம்முடைய ஊழியக்காரரை அக்கினி ஜ்வாலைகளாகவும் செய்கிறார் — சங்கீதம் 104:4"
     },
     address: {
       en: "K.R. Complex Chithambaranagar P.W.D.Road, Nagercoil-2-K.K.Dist",

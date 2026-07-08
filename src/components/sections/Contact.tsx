@@ -196,32 +196,19 @@ export const Contact: React.FC = () => {
 
             </div>
 
-            {/* Map Placeholder */}
-            <PaperCard hoverGlow={false} className="p-2 border border-brand-gold/30 shadow-md relative aspect-video w-full">
-              <div className="absolute inset-[3px] border border-brand-gold/15 pointer-events-none"></div>
+            {/* Google Map Embed */}
+            <PaperCard hoverGlow={false} className="p-2 border border-brand-gold/30 shadow-md relative aspect-video w-full overflow-hidden">
+              <div className="absolute inset-[3px] border border-brand-gold/15 pointer-events-none z-10"></div>
               
-              <div className="relative w-full h-full bg-[#EFE7D5] bg-opacity-40 border border-brand-gold/10 overflow-hidden flex flex-col justify-center items-center p-6 text-center select-none">
-                
-                {/* SVG Compass grid pattern for map styling */}
-                <svg className="w-16 h-16 text-brand-gold/20 fill-none mb-3" viewBox="0 0 100 100">
-                  <ellipse cx="50" cy="50" rx="35" ry="35" stroke="currentColor" strokeWidth="0.5" />
-                  <path d="M 50,5 L 50,95 M 5,50 L 95,50" stroke="currentColor" strokeWidth="0.5" />
-                  <path d="M 50,15 L 45,35 L 50,45 L 55,35 Z" fill="currentColor" opacity="0.3" />
-                  <path d="M 50,85 L 45,65 L 50,55 L 55,65 Z" fill="currentColor" opacity="0.3" />
-                </svg>
-
-                <h4 className="font-serif-cinzel text-sm md:text-base font-bold text-brand-brown tracking-widest uppercase mb-1">
-                  {language === "en" ? "Map View: Fire Flame Ellam" : "ஆலய வரைபடம்: அக்கினி ஜுவாலை இல்லம்"}
-                </h4>
-                <p className="font-serif-cormorant text-xs md:text-sm italic text-brand-muted max-w-xs leading-normal">
-                  {language === "en"
-                    ? "Hosur, Tamil Nadu — 635109. Located near Hosur Bus Stand and easily accessible from NH48."
-                    : "ஓசூர், தமிழ்நாடு — 635109. ஓசூர் பேருந்து நிலையம் அருகே சென்னை-பெங்களூர் தேசிய நெடுஞ்சாலை NH48 வழி எளிதாக அடையலாம்."}
-                </p>
-                
-                <div className="absolute bottom-3 right-3 text-[10px] font-serif-mono text-brand-gold/50">
-                  12.7408° N, 77.8253° E
-                </div>
+              <div className="relative w-full h-full border border-brand-gold/10 overflow-hidden bg-brand-parchment">
+                <iframe
+                  title="Fire Flame Mission Location Map"
+                  src="https://maps.google.com/maps?q=8.177602,77.431575&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full border-0 filter sepia-[0.15] contrast-[0.95] saturate-[0.9]"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </PaperCard>
 

@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
     { path: "/", labelEN: "Home", labelTA: "முகப்பு" },
     { path: "/books", labelEN: "Books", labelTA: "நூல்கள்" },
     { path: "/promises", labelEN: "Daily Promises", labelTA: "வாக்குத்தத்தங்கள்" },
-    { path: "/sermons", labelEN: "Sermons", labelTA: "பிரசங்கங்கள்" },
+    { path: "/sermons", labelEN: "Sermons", labelTA: "புத்தகங்கள்" },
     { path: "/ministries", labelEN: "Ministries", labelTA: "ஊழியங்கள்" },
     { path: "/about", labelEN: "About Us", labelTA: "எங்களை பற்றி" },
     { path: "/gallery", labelEN: "Gallery", labelTA: "காட்சியகம்" },
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif-cinzel text-xs font-bold tracking-wider text-brand-brown group-hover:text-brand-gold transition-colors leading-none">
-                {language === "en" ? "Fire Flame" : "அகினி ஜ்வாலை"}
+                {language === "en" ? "Fire Flame" : "அக்கினி ஜ்வாலை"}
               </span>
               <span className="font-serif-cormorant text-[10px] italic text-brand-muted leading-tight mt-1">
                 {language === "en" ? "Mission" : "ஊழியங்கள்"}
