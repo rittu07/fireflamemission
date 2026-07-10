@@ -197,17 +197,27 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
           ))}
         </motion.div>
 
-        {/* View All Sermons Button */}
-        {showViewAllButton && (
-          <div className="text-center mt-12">
+        {/* Actions Button Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          {showViewAllButton && (
             <Link
               href="/sermons"
-              className="inline-flex items-center justify-center px-6 py-3 border border-brand-gold text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 border border-brand-gold text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors shadow-sm"
             >
               {language === "en" ? "View All Sermons" : "அனைத்து பிரசங்கங்கள்"}
             </Link>
-          </div>
-        )}
+          )}
+          
+          <a
+            href="https://youtube.com/@akkinijwalaimissionpr.jero6636?si=OidlbtYcvEzTOZ_7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border border-brand-gold bg-brand-cream text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-brown hover:bg-brand-brown hover:text-brand-cream hover:border-brand-brown transition-colors shadow-sm"
+          >
+            <Video className="w-4 h-4 text-brand-gold" />
+            {language === "en" ? "Watch YouTube Messages" : "யூடியூப் செய்திகள் காண்க"}
+          </a>
+        </div>
 
       </div>
     </section>

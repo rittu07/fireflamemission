@@ -6,6 +6,21 @@ import { useLanguage } from "@/components/LanguageContext";
 import { contentData } from "@/data/contentData";
 import { Mail, Phone, MapPin, Send, Check } from "lucide-react";
 
+const YoutubeIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  </svg>
+);
+
 export const Footer: React.FC = () => {
   const { language, t } = useLanguage();
   const [email, setEmail] = useState("");
@@ -44,6 +59,17 @@ export const Footer: React.FC = () => {
             <span className="text-xs md:text-sm tracking-widest text-brand-gold/60 font-serif-cinzel block">
               {language === "en" ? "ESTD. 1996" : "துவக்கம் 1996"}
             </span>
+            <div className="flex gap-3 pt-2">
+              <a
+                href="https://youtube.com/@akkinijwalaimissionpr.jero6636?si=OidlbtYcvEzTOZ_7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-brand-gold/30 bg-black/25 flex items-center justify-center text-brand-gold hover:text-brand-cream hover:border-brand-gold hover:bg-brand-gold/10 transition-all duration-300 shadow-sm"
+                title={language === "en" ? "Visit YouTube Channel" : "எங்களது யூடியூப் பக்கம்"}
+              >
+                <YoutubeIcon className="w-4 h-4" />
+              </a>
+            </div>
           </div>
 
           {/* Col 2: Quick Links */}

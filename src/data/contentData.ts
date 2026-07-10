@@ -934,7 +934,7 @@ export const contentData = {
         en: "Watch the full teaching on how praise and faithful obedience bring down spiritual walls in life.",
         ta: "துதியும் விசுவாசமான கீழ்ப்படிதலும் எவ்வாறு வாழ்வில் உள்ள ஆவிக்குரிய மதில்களைத் தகர்க்கும் என்பதை வீடியோவில் பார்க்கவும்."
       },
-      mediaUrl: "https://www.youtube.com"
+      mediaUrl: "https://youtube.com/@akkinijwalaimissionpr.jero6636?si=OidlbtYcvEzTOZ_7"
     },
     {
       id: "audio-sermon",

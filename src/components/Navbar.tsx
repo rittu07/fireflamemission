@@ -185,8 +185,8 @@ export const Navbar: React.FC = () => {
                   </h3>
                   <p className="text-sm md:text-base text-brand-muted leading-relaxed font-serif-eb max-w-lg mx-auto">
                     {language === "en"
-                      ? "Your seed gift helps us print and distribute gospel magazines and Biblical promises materials freely to rural sectors."
-                      : "சுவிசேஷப் பத்திரிகைகள் மற்றும் வாக்குத்தத்த அட்டைகளை அச்சிட்டு இலவசமாக விநியோகிக்க உங்களது உதவிகள் பெரிதும் துணைபுரியும்."}
+                      ? "Your seed gift helps us support gospel ministries and print and distribute spiritual books freely to rural sectors."
+                      : "சுவிசேஷ ஊழியங்கள் மற்றும் ஆவிக்குரிய புத்தகங்கள் அச்சிட்டு இலவசமாக விநியோகிக்க உங்களது உதவிகள் பெரிதும் துணைபுரியும்."}
                   </p>
                 </div>
                 
