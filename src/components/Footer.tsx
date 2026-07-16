@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Motto */}
           <div className="space-y-4 md:col-span-1">
             <h3 className="text-xl md:text-2xl font-serif-cinzel tracking-widest text-brand-cream font-bold leading-tight">
-              {language === "en" ? "Fire Flame" : "அக்கினி ஜ்வாலை"}
+              {language === "en" ? "Fire Flame" : "அக்கினி ஜீவாலை"}
               <span className="block text-sm md:text-base font-serif-cormorant text-brand-gold italic">
                 {language === "en" ? "Mission" : "ஊழியங்கள்"}
               </span>
@@ -159,7 +159,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="flex flex-col md:flex-row justify-between items-center text-[10px] md:text-xs uppercase tracking-wider font-serif-cinzel text-brand-cream/50 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-center md:text-left">
-            <span className="whitespace-nowrap">&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜ்வாலை ஊழியங்கள்"}.</span>
+            <span className="whitespace-nowrap">&copy; {new Date().getFullYear()} {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜீவாலை ஊழியங்கள்"}.</span>
             <span className="hidden md:inline text-brand-cream/35">|</span>
             <span className="flex items-center gap-1.5 flex-wrap justify-center md:justify-start">
               <span className="whitespace-nowrap">

@@ -105,6 +105,15 @@ const getBookCoverStyles = (bookId: string, category: string) => {
   if (bookId === "revival") {
     return { borderLeftColor: "#1A2530", backgroundColor: "#0E151C", color: "#E5C185" };
   }
+  if (bookId === "valibar") {
+    return { borderLeftColor: "#143F40", backgroundColor: "#0B2627", color: "#E5C185" };
+  }
+  if (bookId === "chronicles-of-the-redeemed") {
+    return { borderLeftColor: "#4A1515", backgroundColor: "#2C0D0D", color: "#E5C185" };
+  }
+  if (bookId === "prayer-is-my-lifebreath") {
+    return { borderLeftColor: "#1A2E40", backgroundColor: "#0E1C28", color: "#E5C185" };
+  }
 
   switch (category) {
     case "Evangelism":
@@ -259,7 +268,7 @@ export const FeaturedPublications: React.FC<FeaturedPublicationsProps> = ({
     if (language === "en") {
       return [
         `INTRODUCTION\n\nWelcome to "${titleText}".\n\nThis publication is dedicated to exploring the depths of biblical truth, helping believers mature in their faith and experience the life-changing power of God.\n\nAs you read these pages, we pray that your heart will be stirred, your faith strengthened, and your devotion to the Lord Jesus Christ deepened.`,
-        `CHAPTER 1: THE FOUNDATION\n\nEvery spiritual journey begins with a solid foundation. In this chapter, we explore how ${categoryText.toLowerCase()} guides us into a relationship with God.\n\nAs Pr. V. Jeromias writes, we must establish our lives on the unchanging truth of Scripture, allowing the Holy Spirit to transform us daily.`,
+        `CHAPTER 1: THE FOUNDATION\n\nEvery spiritual journey begins with a solid foundation. In this chapter, we explore how ${categoryText.toLowerCase()} guides us into a relationship with God.\n\nAs Rev. S. Jerominas writes, we must establish our lives on the unchanging truth of Scripture, allowing the Holy Spirit to transform us daily.`,
         `CHAPTER 2: WALKING IN VICTORY\n\nTo walk in victory, we must apply these truths to our daily lives. Standing firm in the face of challenges requires constant prayer and reliance on God's grace.\n\nLet us continue to seek His presence, press forward in faith, and proclaim the riches of His glory to those around us.`,
         `CONCLUSION\n\nThank you for reading this sample of "${titleText}".\n\nMay the grace of our Lord Jesus Christ, the love of God, and the fellowship of the Holy Spirit be with you all. Amen.`
       ];

@@ -59,7 +59,7 @@ export default function AboutPage() {
             {language === "en" ? "About Our Ministry" : "எங்கள் ஊழியம் பற்றி"}
           </h1>
           <p className="text-xs uppercase tracking-[0.25em] font-serif-cormorant text-brand-gold max-w-md mx-auto">
-            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜ்வாலை ஊழியங்கள் • துவக்கம் 1996"}
+            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜீவாலை ஊழியங்கள் • துவக்கம் 1996"}
           </p>
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
               {language === "en" ? "Founder's Heritage" : "நிறுவனரின் மரபு"}
             </span>
             <h2 className="text-4xl md:text-6xl font-serif-cinzel text-brand-brown font-bold tracking-wider leading-tight uppercase">
-              {language === "en" ? "A Life of Devoted Calling" : "தேவ அழைப்பிற்கு அர்ப்பணிக்கப்பட்ட ஜீவியம்"}
+              {language === "en" ? founder.title.en : founder.title.ta}
             </h2>
             <div className="text-brand-gold text-lg md:text-xl font-serif-cinzel select-none flex items-center justify-center gap-4">
               <span className="h-[0.5px] w-16 bg-brand-gold/30"></span>
@@ -99,17 +99,17 @@ export default function AboutPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={getAssetPath("/assets/founder.jpg")}
-                  alt="Pr. V. Jeromias Portrait"
+                  alt="Rev. S. Jerominas Portrait"
                   className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
                 />
                 
                 {/* Title overlay board */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-4 border border-brand-gold/25 text-center leading-none shadow-md">
                   <div className="font-serif-cinzel text-[10px] tracking-[0.2em] text-brand-muted uppercase font-bold mb-1">
-                    {language === "en" ? "Born May 7, 1951" : "பிறப்பு மே 7, 1951"}
+                    {language === "en" ? "Born June 7, 1951" : "பிறப்பு ஜூன் 7, 1951"}
                   </div>
                   <div className="font-accent-great text-xl text-brand-gold">
-                    {language === "en" ? "Pr. V. Jeromias" : "Pr. V. Jeromias"}
+                    {language === "en" ? founder.subtitle.en : founder.subtitle.ta}
                   </div>
                 </div>
               </div>

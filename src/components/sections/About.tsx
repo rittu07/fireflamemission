@@ -56,17 +56,17 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={getAssetPath("/assets/founder.jpg")}
-                  alt="Pr. V. Jeromias Portrait"
+                  alt="Rev. S. Jerominas Portrait"
                   className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
                 />
                 
                 {/* Title overlay board */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-3 border border-brand-gold/25 text-center leading-none shadow-md">
                   <div className="font-accent-great text-2xl text-brand-gold mb-1">
-                    Pr. V. Jeromias
+                    {language === "en" ? "Rev. S. Jerominas" : "அருட்பணி. எஸ். ஜெரோமினாஸ்"}
                   </div>
                   <div className="font-serif-cinzel text-[9px] tracking-[0.2em] text-brand-muted uppercase font-bold">
-                    {language === "en" ? "Founder & Author" : "நிறுவனர் & நூலாசிரியர்"}
+                    {language === "en" ? "Founder & Chief Pastor" : "நிறுவனர் & தலைமை போதகர்"}
                   </div>
                 </div>
               </div>
@@ -103,8 +103,8 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
                   <Quote className="w-6 h-6 text-brand-gold/10 absolute top-2 right-4 pointer-events-none" />
                   <p className="pl-4">
                     {language === "en"
-                      ? "Proclaiming Christ through prayer, teaching and publication—bringing revival into local homes."
-                      : "ஜெபம், போதகம் மற்றும் புத்தகங்கள் மூலம் கிறிஸ்துவை அறிவித்தல்—குடும்பங்கள் தோறும் எழுப்புதலைக் கொண்டுவருதல்."}
+                      ? "Proclaiming Christ through prayer, teaching and spiritual publications—bringing revival into local homes."
+                      : "ஜெபம், போதகம் மற்றும் ஆவிக்குரிய புத்தகங்கள் மூலம் கிறிஸ்துவை அறிவித்தல்—குடும்பங்கள் தோறும் எழுப்புதலைக் கொண்டுவருதல்."}
                   </p>
                 </div>
               </div>

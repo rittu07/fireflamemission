@@ -1,0 +1,15 @@
+[33mcommit b0f81d71a522b6ce5384ba84d1b235eb5d943174[m
+Author: Rittu Ronald <ritturonald11a@gmail.com>
+Date:   Thu Jul 9 02:02:13 2026 +0530
+
+    Updated website content
+
+ scripts/generate-pdf-content.ts     |  4 [32m++[m[31m--[m
+ src/app/about/page.tsx              |  2 [32m+[m[31m-[m
+ src/components/Footer.tsx           |  8 [32m++++[m[31m----[m
+ src/components/Navbar.tsx           |  4 [32m++[m[31m--[m
+ src/components/sections/About.tsx   |  2 [32m+[m[31m-[m
+ src/components/sections/Contact.tsx | 37 [32m++++++++++++[m[31m-------------------------[m
+ src/components/sections/Hero.tsx    |  2 [32m+[m[31m-[m
+ src/data/contentData.ts             | 32 [32m+++++++++++++++++++++[m[31m-----------[m
+ 8 files changed, 44 insertions(+), 47 deletions(-)
