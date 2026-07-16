@@ -1041,5 +1041,33 @@ export const contentData = {
       en: "Your support enables the printing and free distribution of Bible promise materials and missionary support.",
       ta: "வாக்குத்தத்த அட்டைகள் அச்சிடுவதற்கும் இலவச சுவிசேஷப் புத்தக விநியோகத்திற்கும் உங்களது நன்கொடைகள் உதவுகின்றன."
     }
+  },
+  churches: {
+    kanyakumari: [
+      { sNo: 1, location: { en: "Nagercoil", ta: "நாகர்கோவில்" }, pastor: { en: "Pr. V. Jerominas", ta: "Pr. V. ஜெரமியா" } },
+      { sNo: 2, location: { en: "Colachel", ta: "குளச்சல்" }, pastor: { en: "Pr. Jinoth", ta: "Pr. ஜினோத்" } },
+      { sNo: 3, location: { en: "Karungal Paloor", ta: "கருங்கல் பாலூர்" }, pastor: { en: "Pr. Jeba", ta: "Pr. ஜெபா" } },
+      { sNo: 4, location: { en: "Kanyakumari", ta: "கன்னியாகுமரி" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
+      { sNo: 5, location: { en: "Kollamcode", ta: "கொல்லங்கோடு" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
+      { sNo: 6, location: { en: "Midalam", ta: "மிடாலம்" }, pastor: { en: "Pr. Selvam", ta: "Pr. செல்வம்" } },
+      { sNo: 7, location: { en: "Keezh Manakkudy", ta: "கீழ மணக்குடி" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
+      { sNo: 8, location: { en: "Kesavanputhenthurai", ta: "கேசவன்புத்தன்துறை" }, pastor: { en: "Pr. Jerominas (Stalin)", ta: "Pr. ஜெரமியா (ஸ்டாலின்)" } },
+      { sNo: 9, location: { en: "Karungal (Junction)", ta: "கருங்கல் (ஜங்ஷன்)" }, pastor: { en: "Pr. Robinson", ta: "Pr. ராபின்சன்" } },
+      { sNo: 10, location: { en: "Ramanthurai", ta: "இராமந்துறை" }, pastor: { en: "Bro. Jerome", ta: "Bro. ஜெரோம்" } },
+    ],
+    other: [
+      { sNo: 1, location: { en: "Tuticorin", ta: "தூத்துக்குடி" }, pastor: { en: "Jhansi", ta: "ஜான்சி" } },
+      { sNo: 2, location: { en: "Alangulam", ta: "ஆலங்குளம்" }, pastor: { en: "Pr. James", ta: "Pr. ஜேம்ஸ்" } },
+      { sNo: 3, location: { en: "Madurai", ta: "மதுரை" }, pastor: { en: "Paul Kegin", ta: "பால்கேகின்" } },
+      { sNo: 4, location: { en: "Madurai", ta: "மதுரை" }, pastor: { en: "Pr. Kannan", ta: "Pr. கண்ணன்" } },
+      { sNo: 5, location: { en: "Mayiladuthurai", ta: "மயிலாடுதுறை" }, pastor: { en: "S. S. Paul", ta: "S.S. பால்" } },
+      { sNo: 6, location: { en: "Neyveli", ta: "நெய்வேலி" }, pastor: { en: "Pr. Abraham", ta: "Pr. ஆபிரகாம்" } },
+      { sNo: 7, location: { en: "Thondi", ta: "தொண்டி" }, pastor: { en: "Pr. James Jebaraj", ta: "Pr. ஜேம்ஸ் ஜெபராஜ்" } },
+      { sNo: 8, location: { en: "Poompuhar (Nagai)", ta: "பூம்புகார் (நாகை)" }, pastor: { en: "Pr. Ambrose", ta: "Pr. அம்புரோஸ்" } },
+      { sNo: 9, location: { en: "Parappadi", ta: "பரப்பாடி" }, pastor: { en: "Pr. James", ta: "Pr. ஜேம்ஸ்" } },
+      { sNo: 10, location: { en: "Chennai (Vadapalani)", ta: "சென்னை (வடபழனி)" }, pastor: { en: "Roobavathi", ta: "ரூபவதி" } },
+      { sNo: 11, location: { en: "Delhi", ta: "டெல்லி" }, pastor: { en: "Pr. Arokia Dass", ta: "Pr. ஆரோக்கிய தாஸ்" } },
+      { sNo: 12, location: { en: "Red Hills (Chennai)", ta: "செங்குன்றம் (சென்னை)" }, pastor: { en: "Sis. Yamuna", ta: "Sis. யமுனா" } },
+    ]
   }
 };

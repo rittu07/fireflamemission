@@ -2,6 +2,7 @@
 
 import React from "react";
 import { About } from "@/components/sections/About";
+import { motion, AnimatePresence } from "framer-motion";
 import { Timeline } from "@/components/sections/Timeline";
 import { Gallery } from "@/components/sections/Gallery";
 import { useLanguage } from "@/components/LanguageContext";
@@ -17,6 +18,7 @@ import { getAssetPath } from "@/utils/paths";
 export default function AboutPage() {
   const { language } = useLanguage();
   const founder = contentData.founderTestimony;
+  const [isChurchModalOpen, setIsChurchModalOpen] = React.useState(false);
   const vm = contentData.visionMission;
   const bc = contentData.branchChurches;
   const team = contentData.leadershipTeam;
