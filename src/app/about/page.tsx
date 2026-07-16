@@ -87,7 +87,7 @@ export default function AboutPage() {
           </div>
 
           {/* First Paragraph (Drop Cap) */}
-          <p className="text-[22px] text-brand-muted leading-[1.9] tracking-[0.01em] font-serif-eb editorial-dropcap">
+          <p className="text-base sm:text-lg md:text-xl text-brand-muted leading-relaxed tracking-[0.01em] font-serif-eb editorial-dropcap">
             {language === "en" ? founder.paragraphs[0].en : founder.paragraphs[0].ta}
           </p>
 
@@ -126,11 +126,11 @@ export default function AboutPage() {
           </div>
 
           {/* Editorial Story */}
-          <div className="space-y-10 text-[22px] text-brand-muted leading-[1.9] tracking-[0.01em] font-serif-eb">
+          <div className="space-y-10 text-base sm:text-lg text-brand-muted leading-relaxed tracking-[0.01em] font-serif-eb">
             {founder.paragraphs.slice(1).map((para: any, idx) => (
               <div key={idx} className="space-y-6">
                 {para.heading && (
-                  <h3 className="text-2xl md:text-3xl font-serif-cinzel font-bold text-brand-brown mt-12 mb-6 border-b border-brand-gold/20 pb-2">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif-cinzel font-bold text-brand-brown mt-8 mb-4 border-b border-brand-gold/20 pb-1">
                     {language === "en" ? para.heading.en : para.heading.ta}
                   </h3>
                 )}
