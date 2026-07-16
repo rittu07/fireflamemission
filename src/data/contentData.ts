@@ -1069,5 +1069,17 @@ export const contentData = {
       { sNo: 11, location: { en: "Delhi", ta: "டெல்லி" }, pastor: { en: "Pr. Arokia Dass", ta: "Pr. ஆரோக்கிய தாஸ்" } },
       { sNo: 12, location: { en: "Red Hills (Chennai)", ta: "செங்குன்றம் (சென்னை)" }, pastor: { en: "Sis. Yamuna", ta: "Sis. யமுனா" } },
     ]
-  }
+  },
+  missionaries: [
+    { sNo: 1, location: { en: "Uttar Pradesh", ta: "உத்திரபிரதேசம்" }, missionary: { en: "Pr. Sadan Johnson", ta: "Pr. சதன் ஜான்சன்" } },
+    { sNo: 2, location: { en: "Chhattisgarh", ta: "சத்தீஸ்கர்" }, missionary: { en: "Pr. S. Suresh", ta: "Pr. S. சுரேஷ்" } },
+    { sNo: 3, location: { en: "Bihar", ta: "பீகார்" }, missionary: { en: "Pr. Vinoth", ta: "Pr. வினோத்" } },
+    { sNo: 4, location: { en: "Maharashtra", ta: "மகாராஷ்டிரா" }, missionary: { en: "Pr. Joshua", ta: "Pr. யோசுவா" } },
+    { sNo: 5, location: { en: "Kerala", ta: "கேரளா" }, missionary: { en: "Pr. Akhila", ta: "Pr. அகிலா" } },
+    { sNo: 6, location: { en: "Puducherry", ta: "பாண்டி" }, missionary: { en: "Pr. Jeyaraj", ta: "Pr. ஜெயராஜ்" } },
+    { sNo: 7, location: { en: "Vembanur", ta: "வேம்பனூர்" }, missionary: { en: "Child Care Support", ta: "ஒரு குழந்தை பராமரிப்பு" } },
+    { sNo: 8, location: { en: "Mother Teresa Home, Narode", ta: "அன்னை தெரசா இல்லம், நாரோடு" }, missionary: { en: "Sis. Seena", ta: "Sis. சீனா" } },
+    { sNo: 9, location: { en: "Chengalpattu", ta: "செங்கல்பட்டு" }, missionary: { en: "Pr. Abraham", ta: "Pr. ஆபிரகாம்" } },
+    { sNo: 10, location: { en: "Thanjavur", ta: "தஞ்சை" }, missionary: { en: "Pr. Johnson", ta: "Pr. ஜான்சன்" } }
+  ]
 };

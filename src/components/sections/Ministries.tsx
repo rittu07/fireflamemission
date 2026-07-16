@@ -39,6 +39,7 @@ const cardVariants = {
 export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
   const { language, t } = useLanguage();
   const [isChurchModalOpen, setIsChurchModalOpen] = React.useState(false);
+  const [isMissionaryModalOpen, setIsMissionaryModalOpen] = React.useState(false);
 
   // Helper to render lucide icons dynamically
   const renderIcon = (iconName: string) => {
@@ -135,6 +136,16 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
                       className="mt-6 px-5 py-2.5 border border-brand-gold/30 hover:border-brand-gold bg-brand-cream/30 hover:bg-brand-parchment text-xs font-bold uppercase tracking-widest font-serif-cinzel text-brand-brown hover:text-brand-gold transition-all duration-300 shadow-sm hover:shadow cursor-pointer rounded-sm"
                     >
                       {language === "en" ? "View Churches & Pastors" : "மேலும் விவரங்கள் காண்க"}
+                    </button>
+                  )}
+
+                  {/* See More Info Button for Missionary Support */}
+                  {min.id === "missionary-support" && (
+                    <button
+                      onClick={() => setIsMissionaryModalOpen(true)}
+                      className="mt-6 px-5 py-2.5 border border-brand-gold/30 hover:border-brand-gold bg-brand-cream/30 hover:bg-brand-parchment text-xs font-bold uppercase tracking-widest font-serif-cinzel text-brand-brown hover:text-brand-gold transition-all duration-300 shadow-sm hover:shadow cursor-pointer rounded-sm"
+                    >
+                      {language === "en" ? "View Supported Missionaries" : "ஆதரிக்கப்படும் மிஷனரிகள்"}
                     </button>
                   )}
                 </div>
@@ -262,6 +273,76 @@ export const Ministries: React.FC<MinistriesProps> = ({ limit }) => {
               <div className="text-center mt-10">
                 <button
                   onClick={() => setIsChurchModalOpen(false)}
+                  className="px-8 py-3 bg-brand-brown hover:bg-brand-brown/90 text-brand-cream text-xs font-bold uppercase tracking-widest font-serif-cinzel transition-all shadow cursor-pointer rounded-sm hover:shadow-md"
+                >
+                  {language === "en" ? "Close" : "மூடுக"}
+                </button>
+              </div>
+
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Supported Missionaries Modal */}
+      <AnimatePresence>
+        {isMissionaryModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm select-none">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="bg-brand-parchment border-2 border-brand-gold/60 max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl p-6 md:p-10 relative rounded-sm gold-glow"
+            >
+              <div className="absolute inset-[6px] border border-brand-gold/25 pointer-events-none"></div>
+              
+              {/* Close Button */}
+              <button
+                onClick={() => setIsMissionaryModalOpen(false)}
+                className="absolute top-4 right-4 text-brand-muted hover:text-brand-gold transition-colors text-2xl font-bold font-serif-cinzel z-10 cursor-pointer p-2"
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
+
+              {/* Modal Title */}
+              <div className="text-center mb-8 pr-6 pl-6">
+                <span className="text-xs uppercase tracking-[0.25em] font-serif-cinzel text-brand-gold font-semibold block mb-1">
+                  {language === "en" ? "Fire Flame Mission" : "அக்கினி ஜுவாலை ஊழியங்கள்"}
+                </span>
+                <h2 className="text-2xl md:text-3xl font-serif-cinzel text-brand-brown font-bold uppercase leading-tight">
+                  {language === "en" ? "Supported Missionaries" : "தாங்கப்படும் மிஷனரிகள்"}
+                </h2>
+                <div className="w-24 h-[1.5px] bg-brand-gold/40 mx-auto mt-4"></div>
+              </div>
+
+              {/* Table */}
+              <div className="overflow-x-auto border border-brand-gold/15 bg-brand-cream/10 rounded-sm">
+                <table className="w-full border-collapse font-serif-eb text-sm text-brand-muted">
+                  <thead>
+                    <tr className="border-b border-brand-gold/20 text-brand-brown font-serif-cinzel uppercase text-[10px] sm:text-xs tracking-wider text-left bg-brand-cream/50">
+                      <th className="py-2.5 px-3 w-16 text-center">{language === "en" ? "S.No" : "எண்"}</th>
+                      <th className="py-2.5 px-3">{language === "en" ? "State / Place" : "மாநிலம் / இடம்"}</th>
+                      <th className="py-2.5 px-3">{language === "en" ? "Missionary Name" : "மிஷனரி பெயர் / விவரம்"}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-brand-gold/10">
+                    {contentData.missionaries && contentData.missionaries.map((m, idx) => (
+                      <tr key={idx} className="hover:bg-brand-cream/30 transition-colors">
+                        <td className="py-2 px-3 text-center font-mono font-bold text-brand-gold/80">{m.sNo}</td>
+                        <td className="py-2 px-3 font-semibold text-brand-brown">{language === "en" ? m.location.en : m.location.ta}</td>
+                        <td className="py-2 px-3 text-brand-muted">{language === "en" ? m.missionary.en : m.missionary.ta}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Close Action Button */}
+              <div className="text-center mt-8">
+                <button
+                  onClick={() => setIsMissionaryModalOpen(false)}
                   className="px-8 py-3 bg-brand-brown hover:bg-brand-brown/90 text-brand-cream text-xs font-bold uppercase tracking-widest font-serif-cinzel transition-all shadow cursor-pointer rounded-sm hover:shadow-md"
                 >
                   {language === "en" ? "Close" : "மூடுக"}
