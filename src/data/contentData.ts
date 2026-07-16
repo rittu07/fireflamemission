@@ -692,33 +692,39 @@ export const contentData = {
     title: { en: "A Life Journey Dedicated to God's Calling", ta: "தேவ அழைப்பிற்கு அர்ப்பணிக்கப்பட்ட வாழ்க்கைப் பயணம்" },
     subtitle: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
     quote: {
-      en: "To proclaim the love of Jesus Christ to everyone and to expand the Kingdom of God became the purpose of my life.",
-      ta: "இயேசு கிறிஸ்துவின் அன்பை எல்லோருக்கும் அறிவித்து, தேவனுடைய ராஜ்யத்தை விரிவுபடுத்துவதே என் வாழ்க்கையின் நோக்கமாக அமைந்தது."
+      en: "Through God's grace, a deeper understanding of the Scriptures was received, leading to a lifelong commitment to proclaiming the Gospel.",
+      ta: "தேவனுடைய கிருபையால் வேதாகமத்தின் ஆழமான சத்தியங்கள் உணரப்பட்டு, சுவிசேஷப் பணிக்காக வாழ்நாள் முழுவதும் அர்ப்பணிப்பு செய்யப்பட்டுள்ளது."
     },
     paragraphs: [
       {
-        en: "On June 7, 1951, Rev. S. Jerominas was born as the third son of Mr. Krishnan and Mrs. Thangammal in Sakkachimangalam, Madurai district. From his early years, he was raised in an environment of simplicity, hard work, and devotion to God.",
-        ta: "1951 ஆம் ஆண்டு ஜூன் 7 அன்று, மதுரை மாவட்டம் சக்கச்சிமங்கலத்தில் திரு. கிருஷ்ணன் மற்றும் திருமதி. தங்கம்மாள் அவர்களுக்கு மூன்றாவது மகனாக அருட்பணி. எஸ். ஜெரோமினாஸ் அவர்கள் பிறந்தார். சிறுவயதிலிருந்தே எளிமை, கடின உழைப்பு மற்றும் இறைபக்தி நிறைந்த சூழலில் வளர்க்கப்பட்டார்."
+        en: "Born on May 7, 1951, in the historic harbor town of Colachel, Kanyakumari District, Rev. Jerominas was raised in a Christian family as the third son of Mr. Viagappar and Mrs. Christinamma. From an early age, he was nurtured with strong Christian values, a heart for community service, and a deep reverence for God.",
+        ta: "1951 ஆம் ஆண்டு மே 7 ஆம் தேதி கன்னியாகுமரி மாவட்டத்தின் வரலாற்றுச் சிறப்புமிக்க துறைமுக நகரமான குளச்சலில் திரு. வியாகப்பர் மற்றும் திருமதி கிறிஸ்டீனம்மாள் தம்பதியரின் மூன்றாவது மகனாக ஜெரோமினாஸ் அவர்கள் பிறந்தார். சிறுவயதிலிருந்தே தேவபக்தி, சமூகப் பணி மற்றும் கிறிஸ்தவ மதிப்புகளுடன் வளர்க்கப்பட்டார்."
       },
       {
-        en: "Even in his childhood, he had a great passion for the Word of God. During his student years, he actively participated in gospel ministries, and the calling to live for God was deeply etched in his heart.",
-        ta: "சிறுவயதிலேயே தேவனுடைய வார்த்தையின் மீது அதிக ஆர்வம் கொண்டிருந்தார். தனது கல்விக் காலத்திலேயே சுவிசேஷ ஊழியங்களில் ஈடுபட்டு, தேவனுக்காக வாழ வேண்டும் என்ற அழைப்பு அவரது இருதயத்தில் ஆழமாக பதிந்தது."
+        heading: { en: "Early Life", ta: "ஆரம்பகால வாழ்க்கை" },
+        en: "Training was completed in Tamil Education, while additional qualifications were obtained in Natural Medicine, Siddha Medicine, and Art Education. Skills in handicrafts were also developed, and active participation was maintained in literary, cultural, and social service activities.",
+        ta: "தமிழ் ஆசிரியர் பயிற்சி, இயற்கை மருத்துவம், சித்த மருத்துவம் மற்றும் ஓவிய ஆசிரியர் பயிற்சிகள் பெறப்பட்டதுடன், கைவினைப் பொருட்கள் தயாரித்தல், இலக்கியம், நாடகம் மற்றும் பல்வேறு சமூகப் பணிகளிலும் ஆர்வமுடன் ஈடுபாடு காட்டப்பட்டது."
       },
       {
-        en: "At the age of 16, he accepted Jesus Christ as his personal Savior. He was baptized at the age of 18. Thereafter, he served in church ministries with truthfulness and dedication. At the age of 30, he joined full-time ministry and at 33, he was ordained and dedicated as a pastor.",
-        ta: "16-வது வயதில் இயேசு கிறிஸ்துவை தனது சொந்த இரட்சகராக ஏற்றுக்கொண்டார். 18-வது வயதில் திருமுழுக்கு பெற்றார். அதன் பின்னர் சபை ஊழியங்களில் உண்மையோடும் அர்ப்பணிப்போடும் சேவை செய்தார். 30-வது வயதில் முழுநேர ஊழியத்தில் இணைந்து, 33-வது வயதில் அருட்பொழிவு பெற்று மேய்ப்பராக அர்ப்பணிக்கப்பட்டார்."
+        en: "At the age of 16, leadership of the Legion of Mary in Colachel was entrusted to him. At 18, eight months of ministry were completed at the Rosary Mission in Vadakkankulam. At 30, he was appointed as the President of the St. Vincent de Paul Society, Kanyakumari Region, while also leading several prayer groups. At 33, the Christian Workers Movement was introduced to Kanyakumari District with the blessing of the Bishop, and district leadership was faithfully carried out for four years.",
+        ta: "16-வது வயதில் குளச்சல் மரியாவின் சேனை தலைவராகப் பொறுப்பு வழங்கப்பட்டது. 18-வது வயதில் வடக்கன்குளம் ஜெபமாலை மாதா சபையில் எட்டு மாதங்கள் ஊழியம் செய்யப்பட்டது. 30-வது வயதில் சேன்ட் வின்சென்ட் டி பவுல் சங்கத்தின் குமரி வட்டார தலைவராகவும் பல ஜெபக் குழுக்களின் தலைவராகவும் சேவை செய்யப்பட்டது. 33-வது வயதில் ஆயரின் அனுமதியுடன் குமரி மாவட்டத்தில் கிறிஸ்தவ தொழிலாளர் இயக்கம் அறிமுகப்படுத்தப்பட்டு, அதன் மாவட்டத் தலைவராக நான்கு ஆண்டுகள் பணியாற்றப்பட்டது."
       },
       {
-        en: "Thereafter, he traveled to many villages and towns, proclaiming the Gospel and leading many into the love of Christ. By God's grace, numerous families were blessed, and many believers experienced spiritual growth.",
-        ta: "அதன்பிறகு கிராமங்கள், நகரங்கள் என பல இடங்களுக்கு சென்று சுவிசேஷத்தை அறிவித்து, அநேகரை கிறிஸ்துவின் அன்பிற்குள் வழிநடத்தினார். தேவனுடைய கிருபையினால் பல குடும்பங்கள் ஆசீர்வதிக்கப்பட்டன; அநேக விசுவாசிகள் ஆன்மீக வளர்ச்சியை அடைந்தனர்."
+        heading: { en: "Spiritual Journey", ta: "ஆவிக்குரிய பயணம்" },
+        en: "At the age of 40, while employed in Bahrain, Rev. Jerominas encountered the Gospel through the testimony of a Hindu Brahmin. During this period, Jesus Christ was accepted as his personal Lord and Savior, and a clear call to full-time ministry was received.",
+        ta: "40-வது வயதில் வேலை நிமித்தமாக பஹ்ரைன் நாட்டில் இருந்தபோது, ஒரு இந்து பிராமணரின் சாட்சியின் மூலம் இயேசு கிறிஸ்துவின் சுவிசேஷம் அறிமுகப்படுத்தப்பட்டது. அதன் மூலம் இயேசு கிறிஸ்து தனிப்பட்ட இரட்சகராக ஏற்றுக்கொள்ளப்பட்டு, தேவனுடைய ஊழிய அழைப்பு தெளிவாக உணரப்பட்டது."
       },
       {
-        en: "At the age of 40, he received a clear divine vision for gospel work and church planting. Based on that vision, the first church was established in the Madurai district in 1992.",
-        ta: "40-வது வயதில், சுவிசேஷப் பணி மற்றும் சபை ஸ்தாபனத்திற்கான தெளிவான தேவ தரிசனம் அவருக்குக் கிடைத்தது. அந்த தரிசனத்தின் அடிப்படையில், 1992 ஆம் ஆண்டு மதுரை மாவட்டத்தில் முதல் சபை நிறுவப்பட்டது."
+        en: "Following God's calling, his employment was resigned from, and he returned to his homeland to dedicate his life to Christian ministry.",
+        ta: "அதனைத் தொடர்ந்து வேலை ராஜினாமா செய்யப்பட்டு, முழுநேர ஊழியத்திற்காக தாய்நாட்டிற்கு திரும்பப்பட்டது."
       },
       {
-        en: "Following that, by the grace of God, several churches were established, and the good news of salvation through Jesus Christ was proclaimed to thousands of people. To this day, the ministry continues to flourish in the fields of gospel preaching, church planting, spiritual growth of believers, and community service.",
-        ta: "அதன் பின்னர் தேவனுடைய கிருபையினால் பல சபைகள் நிறுவப்பட்டு, ஆயிரக்கணக்கான மக்களுக்கு இயேசு கிறிஸ்துவின் இரட்சிப்பின் நற்செய்தி அறிவிக்கப்பட்டது. இன்று வரை அந்த ஊழியம் சுவிசேஷப் பிரசங்கம், சபை ஸ்தாபனம், விசுவாசிகளின் ஆவிக்குரிய வளர்ச்சி மற்றும் சமூக சேவை ஆகிய துறைகளில் தொடர்ந்து சிறப்பாக செயல்பட்டு வருகிறது."
+        en: "Since 1992, prayer meetings have been conducted throughout Kanyakumari District, biblical teachings have been delivered, and believers have been equipped with the truth of God's Word.",
+        ta: "1992 ஆம் ஆண்டு முதல் கன்னியாகுமரி மாவட்டம் முழுவதும் ஜெபக் கூட்டங்கள் நடத்தப்பட்டு, வேதாகம போதனைகள் வழங்கப்பட்டு, விசுவாசிகள் தேவனுடைய வார்த்தையில் வளர்ச்சியடைய வழிநடத்தப்பட்டு வருகின்றனர்."
+      },
+      {
+        en: "Today, the ministry remains devoted to preaching the Gospel, teaching the Word of God, strengthening believers in faith, and leading people into a deeper relationship with Jesus Christ through biblical truth and prayer.",
+        ta: "இன்றளவும், சுவிசேஷத்தை அறிவித்தல், தேவ வார்த்தையை போதித்தல், விசுவாசிகளை பலப்படுத்துதல் மற்றும் மக்களை இயேசு கிறிஸ்துவுடன் நெருக்கமான உறவுக்குள் வழிநடத்துதல் ஆகியவை இவ்வூழியத்தின் முக்கிய நோக்கங்களாக தொடர்கின்றன."
       }
     ]
   },

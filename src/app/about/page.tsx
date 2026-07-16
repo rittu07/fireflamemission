@@ -120,19 +120,24 @@ export default function AboutPage() {
           <div className="text-center py-8 px-4 max-w-2xl mx-auto space-y-4">
             <span className="text-4xl text-brand-gold font-serif-cormorant select-none block leading-none">❝</span>
             <blockquote className="text-2xl md:text-3xl font-serif-cormorant italic text-brand-gold leading-relaxed">
-              {language === "en" 
-                ? "His passion for evangelism, prayer, and teaching became the foundation upon which the ministry was established."
-                : "அவரது சுவிசேஷ வாஞ்சை, ஜெபம் மற்றும் போதகம் ஆகியவையே இந்த ஊழியம் நிறுவப்பட்டதின் ஆணிவேராக அமைந்தது."}
+              {language === "en" ? founder.quote.en : founder.quote.ta}
             </blockquote>
             <span className="text-4xl text-brand-gold font-serif-cormorant select-none block leading-none">❞</span>
           </div>
 
           {/* Editorial Story */}
           <div className="space-y-10 text-[22px] text-brand-muted leading-[1.9] tracking-[0.01em] font-serif-eb">
-            {founder.paragraphs.slice(1).map((para, idx) => (
-              <p key={idx}>
-                {language === "en" ? para.en : para.ta}
-              </p>
+            {founder.paragraphs.slice(1).map((para: any, idx) => (
+              <div key={idx} className="space-y-6">
+                {para.heading && (
+                  <h3 className="text-2xl md:text-3xl font-serif-cinzel font-bold text-brand-brown mt-12 mb-6 border-b border-brand-gold/20 pb-2">
+                    {language === "en" ? para.heading.en : para.heading.ta}
+                  </h3>
+                )}
+                <p>
+                  {language === "en" ? para.en : para.ta}
+                </p>
+              </div>
             ))}
           </div>
 
