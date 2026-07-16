@@ -15,10 +15,10 @@ function generateHTML(lang: Lang): string {
   const isEn = lang === 'en';
   
   // Document Title
-  const docTitle = isEn ? 'Fire Flame Mission - Website Content Directory' : 'அக்கினி ஜீவாலை ஊழியம் - இணையதள உள்ளடக்கக் கோப்பு';
+  const docTitle = isEn ? 'Fire Flame Mission - Website Content Directory' : 'அக்கினி ஜுவாலை ஊழியம் - இணையதள உள்ளடக்கக் கோப்பு';
   
   // Main title headers
-  const mainTitle = isEn ? 'FIRE FLAME MISSION' : 'அக்கினி ஜீவாலை ஊழியம்';
+  const mainTitle = isEn ? 'FIRE FLAME MISSION' : 'அக்கினி ஜுவாலை ஊழியம்';
   const subtitle = t(contentData.general.motto, lang);
   
   // Headings

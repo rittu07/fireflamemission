@@ -59,7 +59,7 @@ export default function AboutPage() {
             {language === "en" ? "About Our Ministry" : "எங்கள் ஊழியம் பற்றி"}
           </h1>
           <p className="text-xs uppercase tracking-[0.25em] font-serif-cormorant text-brand-gold max-w-md mx-auto">
-            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜீவாலை ஊழியங்கள் • துவக்கம் 1996"}
+            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜுவாலை ஊழியங்கள் • துவக்கம் 1996"}
           </p>
         </div>
       </div>
