@@ -618,6 +618,27 @@ export const FeaturedPublications: React.FC<FeaturedPublicationsProps> = ({
 
         </div>
 
+        {/* Copyright Notice */}
+        <div className="mt-16 md:mt-24 pt-8 border-t border-brand-gold/20 text-center max-w-3xl mx-auto">
+          <p className="text-sm md:text-base font-serif-eb leading-relaxed text-brand-muted italic">
+            {language === "en" ? (
+              <>
+                <strong className="font-serif-cinzel font-bold text-brand-gold not-italic block mb-2 text-sm md:text-base uppercase tracking-wider">
+                  Copyright Notice
+                </strong>
+                All books available on this website are protected by copyright. Unauthorized copying, reproduction, distribution, or sharing of these books, in whole or in part, without prior written permission from the copyright owner is strictly prohibited.
+              </>
+            ) : (
+              <>
+                <strong className="font-serif-cinzel font-bold text-brand-gold not-italic block mb-2 text-sm md:text-base uppercase tracking-wider">
+                  பதிப்புரிமை அறிவிப்பு
+                </strong>
+                இந்த இணையதளத்தில் கிடைக்கும் அனைத்து புத்தகங்களும் பதிப்புரிமைச் சட்டத்தின்படி பாதுகாக்கப்பட்டவை. பதிப்புரிமை பெற்றவரின் முன் அனுமதியின்றி இந்த புத்தகங்களை முழுமையாகவோ அல்லது பகுதியாகவோ நகலெடுப்பது, மறுபிரசுரம் செய்வது, விநியோகிப்பது அல்லது பகிர்வது முற்றிலும் தடைசெய்யப்பட்டுள்ளது.
+              </>
+            )}
+          </p>
+        </div>
+
       </div>
 
       {/* 2. IMMERSIVE 3D BOOK READER OVERLAY */}
