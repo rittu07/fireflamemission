@@ -56,14 +56,14 @@ export const About: React.FC<AboutProps> = ({ showReadMoreButton = false }) => {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={getAssetPath("/assets/founder.jpg")}
-                  alt="Rev. S. Jerominas Portrait"
+                  alt="Pastor. V. Jeremias Portrait"
                   className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
                 />
                 
                 {/* Title overlay board */}
                 <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-3 border border-brand-gold/25 text-center leading-none shadow-md">
                   <div className="font-accent-great text-2xl text-brand-gold mb-1">
-                    {language === "en" ? "Rev. S. Jerominas" : "அருட்பணி. எஸ். ஜெரோமினாஸ்"}
+                    {language === "en" ? "Pastor. V. Jeremias" : "பாஸ்டர் வி ஜெரோமியாஸ்"}
                   </div>
                   <div className="font-serif-cinzel text-[9px] tracking-[0.2em] text-brand-muted uppercase font-bold">
                     {language === "en" ? "Founder & Chief Pastor" : "நிறுவனர் & தலைமை போதகர்"}

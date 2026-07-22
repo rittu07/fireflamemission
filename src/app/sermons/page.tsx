@@ -1,7 +1,33 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import { LatestSermons } from "@/components/sections/LatestSermons";
+
+export const metadata: Metadata = {
+  title: "Tamil Video & Audio Sermons | Fire Flame Mission",
+  description: "Listen to Tamil video and audio sermons, prophetic messages, and biblical expositions by Pastor. V. Jeremias and Fire Flame Mission leaders.",
+  keywords: [
+    "Tamil Sermons",
+    "Tamil Christian Messages",
+    "Pastor. V. Jeremias Sermons",
+    "Bible Teaching Videos",
+    "Prophetic Messages Tamil",
+    "Fire Flame Mission Sermons"
+  ],
+  alternates: {
+    canonical: "https://fireflamemission.org/sermons",
+  },
+  openGraph: {
+    title: "Tamil Video & Audio Sermons | Fire Flame Mission",
+    description: "Listen to Tamil video and audio sermons, prophetic messages, and biblical expositions by Pastor. V. Jeremias.",
+    url: "https://fireflamemission.org/sermons",
+    siteName: "Fire Flame Mission",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tamil Video & Audio Sermons | Fire Flame Mission",
+    description: "Listen to Tamil video and audio sermons, prophetic messages, and biblical expositions by Pastor. V. Jeremias.",
+  },
+};
 
 export default function SermonsPage() {
   return (

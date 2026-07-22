@@ -32,10 +32,10 @@ export const Gallery: React.FC<GalleryProps> = ({
   const galleryItems = [
     {
       id: 1,
-      titleEN: "Ministry Team Fellowship",
-      titleTA: "ஊழியக் குழு ஐக்கியம்",
-      descEN: "Pastors and team members gathered for fellowship and strategic planning.",
-      descTA: "ஐக்கியத்திற்காகவும் திட்டமிடலுக்காகவும் கூடிய போதகர்களும் ஊழியக் குழுவினரும்.",
+      titleEN: "Ministers' Fellowship",
+      titleTA: "ஊழியர்களின் ஐக்கியம்",
+      descEN: "A fellowship ministry coordinating contemporary needs, churches, and pastors.",
+      descTA: "இக்காலத் தேவைகளையும், திருச்சபைகளையும், ஊழியப் போதகர்களையும் ஒருங்கிணைக்கும் ஐக்கிய ஊழியமாகும்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002341.png",
       span: "md:col-span-2 md:row-span-2"
     },
@@ -70,8 +70,8 @@ export const Gallery: React.FC<GalleryProps> = ({
       id: 5,
       titleEN: "Prayer and Revival Assembly",
       titleTA: "ஜெப மற்றும் எழுப்புதல் கூட்டம்",
-      descEN: "Believers gathered together in faith under the leadership of the ministry.",
-      descTA: "மிஷன் தலைமையின் கீழ் விசுவாசிகள் கூடிய ஜெபக் கூட்டம்.",
+      descEN: "Prayer meeting held with church believers gathered together.",
+      descTA: "திருச்சபை விசுவாசிகள் ஒன்றுகூடி நடைபெறும் ஜெபக் கூட்டம்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002458.png",
       span: "md:col-span-2 md:row-span-1"
     },
@@ -122,10 +122,10 @@ export const Gallery: React.FC<GalleryProps> = ({
     },
     {
       id: 11,
-      titleEN: "House Prayer Gathering",
-      titleTA: "வீட்டு ஜெபக் கூடுகை",
-      descEN: "Small group fellowships praying for families and communities.",
-      descTA: "குடும்பங்களுக்காகவும் சமூகங்களுக்காகவும் ஜெபிக்கும் சிறிய குழு ஐக்கியம்.",
+      titleEN: "House Prayer Group Gathering",
+      titleTA: "வீட்டு ஜெபக் குழு கூடுகை",
+      descEN: "House prayer group meetings held for the spiritual growth of families.",
+      descTA: "குடும்பங்களின் ஆவிக்குரிய வளர்ச்சிக்காக வீடுகளில் நடைபெறும் ஜெபக் குழு கூடுகை",
       imageUrl: "/gallery/Screenshot 2026-06-22 002601.png",
       span: "md:col-span-1 md:row-span-2"
     },
@@ -151,8 +151,8 @@ export const Gallery: React.FC<GalleryProps> = ({
       id: 14,
       titleEN: "Bible Distribution Drive",
       titleTA: "வேதாகம விநியோக இயக்கம்",
-      descEN: "Providing copies of God's Word to seekers in remote villages.",
-      descTA: "தொலைதூர கிராமங்களில் உள்ள தேடுபவர்களுக்கு தேவனுடைய வார்த்தையின் பிரதிகளை வழங்குதல்.",
+      descEN: "Providing literature of God's Word to those in need in remote villages.",
+      descTA: "தொலைதூர கிராமங்களில் தேவையுள்ளவர்களுக்கு தேவனுடைய வார்த்தையின் பிரசுரங்களை வழங்குதல்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002625.png",
       span: "md:col-span-1 md:row-span-1"
     },
@@ -167,8 +167,8 @@ export const Gallery: React.FC<GalleryProps> = ({
     },
     {
       id: 16,
-      titleEN: "Gospel Preaching Campaign",
-      titleTA: "சுவிசேஷப் பிரசங்க இயக்கம்",
+      titleEN: "Gospel Campaign",
+      titleTA: "சுவிசேஷ இயக்கம்",
       descEN: "Proclaiming the good news in public squares and streets.",
       descTA: "பொது சதுக்கங்களிலும் தெருக்களிலும் நற்செய்தியை அறிவித்தல்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002646.png",
@@ -239,10 +239,10 @@ export const Gallery: React.FC<GalleryProps> = ({
     },
     {
       id: 24,
-      titleEN: "Holy Scripture Reading",
-      titleTA: "திருமறை வாசிப்பு",
-      descEN: "Deep study and reflection on God's holy word.",
-      descTA: "தேவனுடைய பரிசுத்த வார்த்தையைப் பற்றிய ஆழமான ஆய்வு மற்றும் தியானம்.",
+      titleEN: "State Assembly and Bible Distribution",
+      titleTA: "மாநிலக் கூடுகை மற்றும் வேத தானம்",
+      descEN: "Ministry conducting state-level believers' assemblies and distributing Holy Bibles to those in need.",
+      descTA: "மாநில அளவிலான விசுவாசிகள் கூடுகைகளை நடத்தி, தேவையுள்ளவர்களுக்கு பரிசுத்த வேதாகமங்களை வழங்கும் ஊழியம்",
       imageUrl: "/gallery/Screenshot 2026-06-22 002741.png",
       span: "md:col-span-1 md:row-span-2"
     },
@@ -292,15 +292,6 @@ export const Gallery: React.FC<GalleryProps> = ({
       span: "md:col-span-2 md:row-span-1"
     },
     {
-      id: 30,
-      titleEN: "Devotional Music Service",
-      titleTA: "பக்தி பாடல் ஆராதனை",
-      descEN: "Singing traditional hymns and praises together.",
-      descTA: "பாரம்பரிய கீர்த்தனைகள் மற்றும் துதிகளை இணைந்து பாடுதல்.",
-      imageUrl: "/gallery/Screenshot 2026-06-22 002837.png",
-      span: "md:col-span-1 md:row-span-1"
-    },
-    {
       id: 31,
       titleEN: "Gospel Tracts Distribution",
       titleTA: "சுவிசேஷப் பத்திரிக்கை விநியோகம்",
@@ -308,15 +299,6 @@ export const Gallery: React.FC<GalleryProps> = ({
       descTA: "உள்ளூர் சுற்றுப்புறங்களில் செய்தி தாள்களை விநியோகித்தல்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002845.png",
       span: "md:col-span-1 md:row-span-1"
-    },
-    {
-      id: 32,
-      titleEN: "Annual Thanksgiving Service",
-      titleTA: "வருடாந்திர நன்றி ஆராதனை",
-      descEN: "Giving thanks for another year of blessings and fruitfulness.",
-      descTA: "ஆசீர்வாதங்கள் மற்றும் பலன்களின் மற்றொரு ஆண்டிற்காக நன்றி செலுத்துதல்.",
-      imageUrl: "/gallery/Screenshot 2026-06-22 002852.png",
-      span: "md:col-span-1 md:row-span-2"
     },
     {
       id: 33,

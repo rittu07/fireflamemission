@@ -159,7 +159,7 @@ export const contentData = {
     {
       id: "akkini-mugam",
       title: { en: "Akkini Mugam (Face of Fire)", ta: "அக்கினி முகம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A powerful booklet calling believers to a life of fiery evangelism, spiritual authority, and complete dedication to Christ.",
         ta: "விசுவாசிகளை அக்கினியான சுவிசேஷப் பணிக்கும், ஆவிக்குரிய அதிகாரத்திற்கும், கிறிஸ்துவுக்கான அர்ப்பணிப்பிற்கும் அழைக்கும் வல்லமையான புத்தகம்."
@@ -172,7 +172,7 @@ export const contentData = {
     {
       id: "jeba-mugam",
       title: { en: "Jeba Mugam (Face of Prayer)", ta: "ஜெப முகம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "An exhaustive guide on the apostolic model of house-to-house prayer meetings, intercession, and personal intimacy with God.",
         ta: "வீட்டு ஜெபக்கூட்டங்கள் மற்றும் தேவனுடனான தனிப்பட்ட ஐக்கியத்தின் அப்போஸ்தலிக் மாதிரியைப் பற்றிய விரிவான வழிகாட்டி."
@@ -185,7 +185,7 @@ export const contentData = {
     {
       id: "daily-confession",
       title: { en: "Daily Confession Prayer", ta: "தினசரி அறிக்கை ஜெபங்கள்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Scriptural confessions and prayers to align your daily speech with the victory, protection, and provision of God's Word.",
         ta: "உமது தினசரி வார்த்தைகளை தேவனுடைய வெற்றியோடும், பாதுகாப்போடும், வாக்குத்தத்தங்களோடும் இணைக்கும் வேதப்பூர்வமான அறிக்கை ஜெபங்கள்."
@@ -211,7 +211,7 @@ export const contentData = {
     {
       id: "rebuilding-family-altar",
       title: { en: "Rebuilding the Family Altar", ta: "இல்ல பலிபீடத்தை மீண்டும் கட்டுதல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A spiritual guide detailing the steps to establish family intercession, daily devotion, and spiritual protection for your home.",
         ta: "குடும்ப ஜெபம், தினசரி ஆராதனை மற்றும் உங்கள் வீட்டிற்கான ஆவிக்குரிய பாதுகாப்பை நிறுவுவதற்கான படிகளை விவரிக்கும் ஆவிக்குரிய வழிகாட்டி."
@@ -224,7 +224,7 @@ export const contentData = {
     {
       id: "spiritual-authority",
       title: { en: "Spiritual Authority", ta: "ஆவிக்குரிய அதிகாரம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Understanding the spiritual keys to walk in divine authority, overcome obstacles, and live a victorious life in Christ.",
         ta: "தேவனுடைய அதிகாரத்தில் நடப்பதற்கும், தடைகளை வெல்வதற்கும், கிறிஸ்துவுக்குள் ஜெயமுள்ள வாழ்க்கை வாழ்வதற்கும் ஆவிக்குரிய வழிகள்."
@@ -237,7 +237,7 @@ export const contentData = {
     {
       id: "walking-by-faith",
       title: { en: "Walking by Faith", ta: "விசுவாசத்தினால் நடத்தல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A guide on moving from doubt and fear into absolute trust in God's promises, experiencing miracles through unwavering faith.",
         ta: "சந்தேகத்திலிருந்தும் பயத்திலிருந்தும் தேவ வாக்குத்தத்தங்களின் மீதான முழுமையான விசுவாசத்திற்கு நகர்ந்து, அற்புதங்களை அனுபவிப்பதற்கான ஒரு வழிகாட்டி."
@@ -250,7 +250,7 @@ export const contentData = {
     {
       id: "power-of-fasting",
       title: { en: "The Power of Fasting", ta: "உபவாசத்தின் வல்லமை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Unlocking spiritual breakthroughs, healing, and divine intervention through scriptural fasting and prayer.",
         ta: "வேதப்பூர்வமான உபவாசம் மற்றும் ஜெபத்தின் மூலம் ஆவிக்குரிய உடைப்புகள், சுகமளித்தல் மற்றும் தேவனுடைய தலையீட்டைப் பெறுதல்."
@@ -263,7 +263,7 @@ export const contentData = {
     {
       id: "apostolic-model",
       title: { en: "The Apostolic Model", ta: "அப்போஸ்தலிக் மாதிரி" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Exploring the practices of the early church to establish home fellowships, sound doctrine, and community service.",
         ta: "இல்ல ஐக்கியங்கள், தூய உபதேசங்கள் மற்றும் சமூக ஊழியங்களை நிறுவுவதற்கு ஆதி திருச்சபையின் நடைமுறைகளை ஆராய்தல்."
@@ -276,7 +276,7 @@ export const contentData = {
     {
       id: "shield-of-faith",
       title: { en: "The Shield of Faith", ta: "விசுவாசக் கேடயம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "How to use the shield of faith to quench the fiery darts of the enemy and remain steadfast in trials.",
         ta: "எதிரியின் அக்கினியாஸ்திரங்களை அணைக்கவும், சோதனைகளின் மத்தியில் உறுதியாக நிற்கவும் விசுவாசக் கேடயத்தை எவ்வாறு பயன்படுத்துவது."
@@ -289,7 +289,7 @@ export const contentData = {
     {
       id: "streams-of-blessing",
       title: { en: "Streams of Blessing", ta: "ஆசீர்வாத ஊற்றுகள்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Devotional teachings on the covenants of God, unlocking His favor and spiritual abundance in daily life.",
         ta: "தேவனுடைய உடன்படிக்கைகள் பற்றிய தியானப் போதனைகள், அன்றாட வாழ்வில் அவரது கிருபையையும் ஆவிக்குரிய ஆசீர்வாதத்தையும் வெளிப்படுத்துகிறது."
@@ -302,7 +302,7 @@ export const contentData = {
     {
       id: "preparing-harvest",
       title: { en: "Preparing for the Harvest", ta: "அறுவடைக்கு ஆயத்தப்படுதல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Equipping local congregations for effective evangelism, training soul-winners, and establishing local missions.",
         ta: "உள்ளூர் சபைகளைச் சுவிசேஷப் பணிகளுக்காக ஆயத்தப்படுத்துதல், ஆத்தும ஆதாயம் செய்பவர்களுக்குப் பயிற்சி அளித்தல்."
@@ -315,7 +315,7 @@ export const contentData = {
     {
       id: "voice-of-god",
       title: { en: "The Voice of God", ta: "தேவ சத்தம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Learning to discern the Holy Spirit's guidance from other voices, and walking in obedience to divine directions.",
         ta: "பரிசுத்த ஆவியானவரின் வழிகாட்டுதலைப் பிற சத்தங்களிலிருந்து பிரித்தறியக் கற்றுக்கொள்வது, மற்றும் தேவ கட்டளைகளுக்குக் கீழ்ப்படிந்து நடப்பது."
@@ -328,7 +328,7 @@ export const contentData = {
     {
       id: "prevailing-prayer",
       title: { en: "Prevailing Prayer", ta: "ஜெய ஜெபம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Deep intercessory prayer principles that move heaven and earth, bringing answers to complex situations.",
         ta: "பரலோகத்தையும் பூமியையும் அசைக்கும் ஆழமான பரிந்துரை ஜெபக் கொள்கைகள், கடினமான சூழ்நிலைகளுக்கு பதிலைக் கொண்டுவருகிறது."
@@ -341,7 +341,7 @@ export const contentData = {
     {
       id: "walking-holiness",
       title: { en: "Walking in Holiness", ta: "பரிசுத்த வாழ்க்கை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A call to spiritual purity, separating oneself from worldly influences and growing in Christ-like character.",
         ta: "ஆவிக்குரிய தூய்மைக்கான அழைப்பு, உலக செல்வாக்குகளிலிருந்து உங்களைப் பிரித்து கிறிஸ்துவைப் போன்ற குணத்தில் வளர்தல்."
@@ -354,7 +354,7 @@ export const contentData = {
     {
       id: "armor-of-light",
       title: { en: "The Armor of Light", ta: "ஒளியின் சர்வாயுதவர்க்கம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A study on the armor of light mentioned in Romans 13, walking in righteousness and overcoming darkness.",
         ta: "ரோமர் 13 இல் குறிப்பிடப்பட்டுள்ள ஒளியின் சர்வாயுதத்தைப் பற்றிய ஆய்வு, நீதியில் நடப்பது மற்றும் இருளை வெல்வது."
@@ -367,7 +367,7 @@ export const contentData = {
     {
       id: "overcoming-temptation",
       title: { en: "Overcoming Temptation", ta: "சோதனைகளை வெல்லுதல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Practical and scriptural strategies to guard your heart, resist temptations, and maintain spiritual integrity.",
         ta: "உங்கள் இருதயத்தைக் காக்கவும், சோதனைகளை எதிர்க்கவும், ஆவிக்குரிய நேர்மையைக் காக்கவும் நடைமுறை மற்றும் வேதப்பூர்வமான உத்திகள்."
@@ -380,7 +380,7 @@ export const contentData = {
     {
       id: "sound-doctrine",
       title: { en: "Sound Doctrine", ta: "ஆரோக்கியமான உபதேசம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Guarding the purity of the Gospel, avoiding false teachings, and establishing your faith on solid biblical truth.",
         ta: "சுவிசேஷத்தின் தூய்மையைப் பாதுகாத்தல், தவறான போதனைகளைத் தவிர்த்தல், உங்கள் விசுவாசத்தை வேத சத்தியத்தில் நிலைநிறுத்துதல்."
@@ -393,7 +393,7 @@ export const contentData = {
     {
       id: "joy-of-lord",
       title: { en: "The Joy of the Lord", ta: "கர்த்தருக்குள் மகிழ்ச்சி" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "How to maintain inner joy and peace in times of trouble, finding strength in the presence of God.",
         ta: "துன்ப காலங்களிலும் உள் மகிழ்ச்சியையும் சமாதானத்தையும் எவ்வாறு பராமரிப்பது, தேவனுடைய பிரசன்னத்தில் பெலன் காண்பது."
@@ -406,7 +406,7 @@ export const contentData = {
     {
       id: "standing-gap",
       title: { en: "Standing in the Gap", ta: "திறப்பிலே நிற்றல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "The urgent call for intercessors to stand in the gap for their families, communities, and nations.",
         ta: "குடும்பங்கள், சமுதாயங்கள் மற்றும் தேசங்களுக்காகத் திறப்பிலே நிற்பதற்கான பரிந்துரையாளர்களின் அவசர அழைப்பு."
@@ -419,7 +419,7 @@ export const contentData = {
     {
       id: "call-discipleship",
       title: { en: "The Call to Discipleship", ta: "சீஷத்துவ அழைப்பு" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "What it means to follow Jesus truly, count the cost, and bear fruit in service to God's kingdom.",
         ta: "இயேசுவை மெய்யாகவே பின்பற்றுவது, அதற்கான விலையைக் கொடுப்பது, மற்றும் தேவனுடைய ராஜ்யப் பணியில் கனி கொடுப்பது என்ன என்பதன் அர்த்தம்."
@@ -432,7 +432,7 @@ export const contentData = {
     {
       id: "fire-holy-spirit",
       title: { en: "The Fire of the Holy Spirit", ta: "பரிசுத்த ஆவியின் நெருப்பு" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Experiencing the power, gifts, and fire of the Holy Spirit for effective ministry and personal renewal.",
         ta: "பயனுள்ள ஊழியம் மற்றும் தனிப்பட்ட புதுப்பித்தலுக்காகப் பரிசுத்த ஆவியானவரின் வல்லமை, வரங்கள் மற்றும் நெருப்பை அனுபவித்தல்."
@@ -445,7 +445,7 @@ export const contentData = {
     {
       id: "victory-in-christ",
       title: { en: "Victory in Christ", ta: "கிறிஸ்துவுக்குள் ஜெயம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Living in the finished work of the cross, overcoming defeatism, and walking as overcomers.",
         ta: "சிலுவையின் முற்றுப்பெற்ற பணியில் வாழ்வது, தோல்வி மனப்பான்மையை வெல்வது மற்றும் வெற்றியாளர்களாக நடப்பது."
@@ -458,7 +458,7 @@ export const contentData = {
     {
       id: "good-shepherd",
       title: { en: "The Good Shepherd", ta: "நல்ல மேய்ப்பன்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Meditations on Psalm 23, experiencing the comfort, guidance, and abundance of our Shepherd.",
         ta: "சங்கீதம் 23 பற்றிய தியானங்கள், நமது மேய்ப்பரின் ஆறுதல், நடத்துதல் மற்றும் ஆசீர்வாதங்களை அனுபவித்தல்."
@@ -471,7 +471,7 @@ export const contentData = {
     {
       id: "heavenly-wisdom",
       title: { en: "Heavenly Wisdom", ta: "பரலோக ஞானம்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Seeking the wisdom that comes from above to make righteous decisions and lead a blessed, orderly life.",
         ta: "நீதியான முடிவுகளை எடுக்கவும், ஆசீர்வதிக்கப்பட்ட, ஒழுங்கான வாழ்க்கையை நடத்தவும் பரலோகத்திலிருந்து வரும் ஞானத்தை நாடுதல்."
@@ -484,7 +484,7 @@ export const contentData = {
     {
       id: "reaping-harvest",
       title: { en: "Reaping the Harvest", ta: "அறுவடையைச் சேகரித்தல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Strategies for effective follow-up and discipleship of new converts, ensuring lasting spiritual fruits.",
         ta: "புதிய விசுவாசிகளின் பயனுள்ள தொடர் பராமரிப்பு மற்றும் சீஷத்துவத்திற்கான உத்திகள், நிலையான ஆவிக்குரிய கனிகளை உறுதிப்படுத்துதல்."
@@ -497,7 +497,7 @@ export const contentData = {
     {
       id: "covenant-of-grace",
       title: { en: "The Covenant of Grace", ta: "கிருபையின் உடன்படிக்கை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A deep study on God's grace under the New Covenant, breaking the chains of legalism and condemnation.",
         ta: "புதிய உடன்படிக்கையின் கீழ் தேவனுடைய கிருபையைப் பற்றிய ஆழமான ஆய்வு, நியாயப்பிரமாண மற்றும் குற்றச்சாட்டின் சங்கிலிகளை உடைத்தல்."
@@ -510,7 +510,7 @@ export const contentData = {
     {
       id: "quiet-time",
       title: { en: "Quiet Time with God", ta: "தேவனுடன் தனித்திருத்தல்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "The practice of daily personal devotion, reading scriptures, listening to God, and secret prayer.",
         ta: "தினசரி தனிப்பட்ட தியானம், வேதம் வாசித்தல், தேவனுக்கு செவிகொடுத்தல் மற்றும் தனி ஜெபத்தின் நடைமுறை."
@@ -523,7 +523,7 @@ export const contentData = {
     {
       id: "mind-of-christ",
       title: { en: "The Mind of Christ", ta: "கிறிஸ்துவின் சிந்தை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Walking in humility, love, and unity by aligning our thoughts and attitudes with Christ Jesus.",
         ta: "நமது எண்ணங்களையும் அணுகுமுறைகளையும் கிறிஸ்து இயேசுவுக்குள் இணைப்பதன் மூலம் தாழ்மை, அன்பு மற்றும் ஒற்றுமையில் நடப்பது."
@@ -536,7 +536,7 @@ export const contentData = {
     {
       id: "hope-of-glory",
       title: { en: "The Hope of Glory", ta: "மகிமையின் நம்பிக்கை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "Strengthening our hope in the second coming of Christ, eternal life, and the inheritance of the saints.",
         ta: "கிறிஸ்துவின் இரண்டாம் வருகை, நித்திய ஜீவன் மற்றும் பரிசுத்தவான்களின் சுதந்தரம் ஆகியவற்றின் மீதான நமது நம்பிக்கையை பலப்படுத்துதல்."
@@ -549,7 +549,7 @@ export const contentData = {
     {
       id: "revival",
       title: { en: "Revival (Ezhupputhale Enathu Vaanchai)", ta: "எழுப்புதலே எனது வாஞ்சை" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A powerful Tamil Christian book that explores the biblical foundation of spiritual revival and personal transformation. Through Scripture, inspiring historical revival movements, and practical teachings on prayer, holiness, repentance, and the work of the Holy Spirit, this book encourages believers to deepen their relationship with God and become instruments of revival in their families, churches, and communities. Whether you are seeking spiritual renewal or a greater passion for God's presence, this book serves as a guide toward a vibrant and Christ-centered life.",
         ta: "எழுப்புதல் என்பது ஆவிக்குரிய விழிப்புணர்வு மற்றும் தேவனோடு ஆழமான உறவை உருவாக்கும் நோக்கில் எழுதப்பட்ட தமிழ் கிறிஸ்தவ நூல். வேதாகம அடிப்படைகள், வரலாற்றில் நிகழ்ந்த எழுப்புதல்கள், ஜெபம், பரிசுத்தம், மனந்திரும்புதல் மற்றும் பரிசுத்த ஆவியின் செயல்பாடு ஆகியவற்றை தெளிவாக விளக்கி, ஒவ்வொரு விசுவாசியும் தனிப்பட்ட வாழ்க்கையிலும், குடும்பத்திலும், சமூகத்திலும் தேவனுடைய எழுப்புதலின் கருவியாக மாற ஊக்குவிக்கிறது. கிறிஸ்துவுக்குள் புதிய அர்ப்பணிப்பையும் ஆவிக்குரிய வளர்ச்சியையும் விரும்பும் அனைவருக்கும் இந்நூல் ஒரு மதிப்புமிக்க வழிகாட்டியாகும்."
@@ -563,7 +563,7 @@ export const contentData = {
     {
       id: "valibar",
       title: { en: "Young Man, You Are Born to Win!", ta: "வாலிபனே நீ ஜெயிக்கப் பிறந்தவன்!" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A powerful guidance book for Christian youth, exploring how young men and women can keep their ways pure according to God's Word, overcome temptations, and become victorious instruments for God's kingdom.",
         ta: "கிறிஸ்தவ வாலிபர்களுக்கான ஒரு வழிகாட்டி நூல். வாலிபர்கள் தங்கள் வழிகளை கர்த்தருடைய வார்த்தையின்படி எவ்வாறு சுத்தம் பண்ணலாம், பொல்லாங்கனை எவ்வாறு ஜெயிக்கலாம் மற்றும் தங்களை தேவனுடைய அழைப்பிற்கு எவ்வாறு அர்ப்பணிக்கலாம் என்பதை வேதாகம வெளிச்சத்தில் இந்நூல் விளக்குகிறது."
@@ -576,7 +576,7 @@ export const contentData = {
     {
       id: "chronicles-of-the-redeemed",
       title: { en: "Chronicles of the Redeemed", ta: "பரிசுத்த ஆவியின் வரங்கள்" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A comprehensive guide on the gifts of the Holy Spirit, exploring their biblical foundations, manifestation, and how believers can walk in spiritual power for the edification of the church.",
         ta: "பரிசுத்த ஆவியானவரின் வரங்களைப் பற்றிய விரிவான வழிகாட்டி. அவற்றின் வேதாகம அஸ்திவாரங்கள், வெளிப்பாடுகள் மற்றும் விசுவாசிகள் சபையின் பக்திவிருத்திக்காக எவ்வாறு ஆவிக்குரிய வல்லமையில் நடக்கலாம் என்பதை விளக்குகிறது."
@@ -590,7 +590,7 @@ export const contentData = {
     {
       id: "prayer-is-my-lifebreath",
       title: { en: "Prayer Is My Lifebreath", ta: "ஜெபமே என் சுவாசக்காற்றே" },
-      author: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      author: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       description: {
         en: "A deep spiritual journey into the power of personal prayer, outlining how daily communication with God becomes the lifebreath of a victorious and faithful Christian life.",
         ta: "தனிப்பட்ட ஜெபத்தின் வல்லமையைக் குறிக்கும் ஆழமான ஆவிக்குரிய பயணம். தேவனுடனான தினசரி உரையாடல் எவ்வாறு ஒரு விசுவாசியின் ஜெயம் உள்ள மற்றும் விசுவாசம் உள்ள கிறிஸ்தவ வாழ்க்கையின் சுவாசக்காற்றாக மாறுகிறது என்பதை இது விளக்குகிறது."
@@ -690,41 +690,45 @@ export const contentData = {
 
   founderTestimony: {
     title: { en: "A Life Journey Dedicated to God's Calling", ta: "தேவ அழைப்பிற்கு அர்ப்பணிக்கப்பட்ட வாழ்க்கைப் பயணம்" },
-    subtitle: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+    subtitle: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
     quote: {
       en: "Through God's grace, a deeper understanding of the Scriptures was received, leading to a lifelong commitment to proclaiming the Gospel.",
       ta: "தேவனுடைய கிருபையால் வேதாகமத்தின் ஆழமான சத்தியங்கள் உணரப்பட்டு, சுவிசேஷப் பணிக்காக வாழ்நாள் முழுவதும் அர்ப்பணிப்பு செய்யப்பட்டுள்ளது."
     },
     paragraphs: [
       {
-        en: "Born on May 7, 1951, in the historic harbor town of Colachel, Kanyakumari District, Rev. Jerominas was raised in a Christian family as the third son of Mr. Viagappar and Mrs. Christinamma. From an early age, he was nurtured with strong Christian values, a heart for community service, and a deep reverence for God.",
-        ta: "1951 ஆம் ஆண்டு மே 7 ஆம் தேதி கன்னியாகுமரி மாவட்டத்தின் வரலாற்றுச் சிறப்புமிக்க துறைமுக நகரமான குளச்சலில் திரு. வியாகப்பர் மற்றும் திருமதி கிறிஸ்டீனம்மாள் தம்பதியரின் மூன்றாவது மகனாக ஜெரோமினாஸ் அவர்கள் பிறந்தார். சிறுவயதிலிருந்தே தேவபக்தி, சமூகப் பணி மற்றும் கிறிஸ்தவ மதிப்புகளுடன் வளர்க்கப்பட்டார்."
+        en: "Born on May 7, 1951, in the historic harbor town of Colachel, Kanyakumari District, Pastor. V. Jeremias was raised in a Christian family as the third son of Mr. Viagappar and Mrs. Christinamma. From an early age, he was nurtured with strong Christian values, a heart for community service, and a deep reverence for God.",
+        ta: "1951 ஆம் ஆண்டு மே 7 ஆம் தேதி கன்னியாகுமரி மாவட்டத்தின் வரலாற்றுச் சிறப்புமிக்க துறைமுக நகரமான குளச்சலில் திரு. வியாகப்பர் மற்றும் திருமதி கிறிஸ்டீனம்மாள் தம்பதியரின் மூன்றாவது மகனாக பாஸ்டர் வி ஜெரோமியாஸ் அவர்கள் பிறந்தார். சிறுவயதிலிருந்தே தேவபக்தி, சமூகப் பணி மற்றும் கிறிஸ்தவ மதிப்புகளுடன் வளர்க்கப்பட்டார்."
       },
       {
         heading: { en: "Early Life", ta: "ஆரம்பகால வாழ்க்கை" },
         en: "Training was completed in Tamil Education, while additional qualifications were obtained in Natural Medicine, Siddha Medicine, and Art Education. Skills in handicrafts were also developed, and active participation was maintained in literary, cultural, and social service activities.",
-        ta: "தமிழ் ஆசிரியர் பயிற்சி, இயற்கை மருத்துவம், சித்த மருத்துவம் மற்றும் ஓவிய ஆசிரியர் பயிற்சிகள் பெறப்பட்டதுடன், கைவினைப் பொருட்கள் தயாரித்தல், இலக்கியம், நாடகம் மற்றும் பல்வேறு சமூகப் பணிகளிலும் ஆர்வமுடன் ஈடுபாடு காட்டப்பட்டது."
+        ta: "ஆரம்பக் காலத்திலிருந்தே தமிழ் ஆசிரியர் பயிற்சி, இயற்கை மருத்துவம், சித்த மருத்துவம், ஓவிய ஆசிரியர் பயிற்சி உள்ளிட்ட பல்வேறு துறைகளில் பயிற்சி பெற்றார். அதோடு, கைவினைப் பொருட்கள் தயாரித்தல், இலக்கியம், நாடகம் மற்றும் பல்வேறு சமூகப் பணிகளிலும் மிகுந்த ஆர்வத்துடனும் அர்ப்பணிப்புடனும் ஈடுபட்டார்."
       },
       {
-        en: "At the age of 16, leadership of the Legion of Mary in Colachel was entrusted to him. At 18, eight months of ministry were completed at the Rosary Mission in Vadakkankulam. At 30, he was appointed as the President of the St. Vincent de Paul Society, Kanyakumari Region, while also leading several prayer groups. At 33, the Christian Workers Movement was introduced to Kanyakumari District with the blessing of the Bishop, and district leadership was faithfully carried out for four years.",
-        ta: "16-வது வயதில் குளச்சல் மரியாவின் சேனை தலைவராகப் பொறுப்பு வழங்கப்பட்டது. 18-வது வயதில் வடக்கன்குளம் ஜெபமாலை மாதா சபையில் எட்டு மாதங்கள் ஊழியம் செய்யப்பட்டது. 30-வது வயதில் சேன்ட் வின்சென்ட் டி பவுல் சங்கத்தின் குமரி வட்டார தலைவராகவும் பல ஜெபக் குழுக்களின் தலைவராகவும் சேவை செய்யப்பட்டது. 33-வது வயதில் ஆயரின் அனுமதியுடன் குமரி மாவட்டத்தில் கிறிஸ்தவ தொழிலாளர் இயக்கம் அறிமுகப்படுத்தப்பட்டு, அதன் மாவட்டத் தலைவராக நான்கு ஆண்டுகள் பணியாற்றப்பட்டது."
+        en: "At the age of 16, leadership of the Legion of Mary in Colachel was entrusted to him. At 18, eight months of ministry were completed at the Rosary Mission in Vadakkankulam.",
+        ta: "பதினாறு வயதில் குளச்சல் மரியாவின் சேனை தலைவராகப் பொறுப்பேற்று, இளமையிலேயே தலைமைத்துவப் பணியில் தனது திறமையை வெளிப்படுத்தினார். பதினெட்டு வயதில் வடக்கன்குளம் ஜெபமாலை மாதா சபையில் எட்டு மாதங்கள் அர்ப்பணிப்புடன் ஊழியம் செய்து, ஆன்மிக வாழ்விலும் சமூகச் சேவையிலும் தன்னை முழுமையாக ஈடுபடுத்திக் கொண்டார்."
+      },
+      {
+        en: "At 30, he was appointed as the President of the St. Vincent de Paul Society, Kanyakumari Region, while also leading several prayer groups. At 33, the Christian Workers Movement was introduced to Kanyakumari District with the blessing of the Bishop, and district leadership was faithfully carried out for four years.",
+        ta: "முப்பது வயதில் புனித வின்சென்ட் டி பால் சங்கத்தின் குமரி வட்டாரத் தலைவராகவும், பல ஜெபக் குழுக்களின் தலைவராகவும் பொறுப்பேற்று சிறப்பாக சேவையாற்றினார். தொடர்ந்து, 33-வது வயதில் ஆயரின் அனுமதியுடன் குமரி மாவட்டத்தில் கிறிஸ்துவ தொழிலாளர் இயக்கத்தை அறிமுகப்படுத்தி, அதன் மாவட்டத் தலைவராக நான்கு ஆண்டுகள் திறம்பட பணியாற்றி, திருச்சபை மற்றும் சமூக வளர்ச்சிக்காக குறிப்பிடத்தக்க பங்களிப்பை வழங்கினார்."
       },
       {
         heading: { en: "Spiritual Journey", ta: "ஆவிக்குரிய பயணம்" },
-        en: "At the age of 40, while employed in Bahrain, Rev. Jerominas encountered the Gospel through the testimony of a Hindu Brahmin. During this period, Jesus Christ was accepted as his personal Lord and Savior, and a clear call to full-time ministry was received.",
-        ta: "40-வது வயதில் வேலை நிமித்தமாக பஹ்ரைன் நாட்டில் இருந்தபோது, ஒரு இந்து பிராமணரின் சாட்சியின் மூலம் இயேசு கிறிஸ்துவின் சுவிசேஷம் அறிமுகப்படுத்தப்பட்டது. அதன் மூலம் இயேசு கிறிஸ்து தனிப்பட்ட இரட்சகராக ஏற்றுக்கொள்ளப்பட்டு, தேவனுடைய ஊழிய அழைப்பு தெளிவாக உணரப்பட்டது."
+        en: "At the age of 40, while employed in Bahrain, Pastor. V. Jeremias encountered the Gospel through the testimony of a Hindu Brahmin. During this period, Jesus Christ was accepted as his personal Lord and Savior, and a clear call to full-time ministry was received.",
+        ta: "நாற்பது வயதில், வேலை நிமித்தமாக பஹ்ரைன் நாட்டில் வசித்து வந்தபோது, ஒரு இந்து பிராமணரின் சாட்சியின் மூலம் ஆண்டவர் இயேசு கிறிஸ்துவின் சுவிசேஷம் அவருக்கு அறிமுகமானது. அந்த அனுபவத்தின் மூலம் இயேசு கிறிஸ்துவை தமது தனிப்பட்ட இரட்சகராக ஏற்றுக்கொண்டு, தேவன் தம்மை முழுநேர ஊழியத்திற்கு அழைக்கிறார் என்பதை தெளிவாக உணர்ந்தார்."
       },
       {
         en: "Following God's calling, his employment was resigned from, and he returned to his homeland to dedicate his life to Christian ministry.",
-        ta: "அதனைத் தொடர்ந்து வேலை ராஜினாமா செய்யப்பட்டு, முழுநேர ஊழியத்திற்காக தாய்நாட்டிற்கு திரும்பப்பட்டது."
+        ta: "அதனைத் தொடர்ந்து தனது பணியை ராஜினாமா செய்து, தேவனுடைய அழைப்புக்குக் கீழ்ப்படிந்து முழுநேர ஊழியத்திற்காக தாய்நாட்டிற்கு திரும்பினார்."
       },
       {
         en: "Since 1992, prayer meetings have been conducted throughout Kanyakumari District, biblical teachings have been delivered, and believers have been equipped with the truth of God's Word.",
-        ta: "1992 ஆம் ஆண்டு முதல் கன்னியாகுமரி மாவட்டம் முழுவதும் ஜெபக் கூட்டங்கள் நடத்தப்பட்டு, வேதாகம போதனைகள் வழங்கப்பட்டு, விசுவாசிகள் தேவனுடைய வார்த்தையில் வளர்ச்சியடைய வழிநடத்தப்பட்டு வருகின்றனர்."
+        ta: "1992ஆம் ஆண்டு முதல், கன்னியாகுமரி மாவட்டம் முழுவதும் ஜெபக் கூட்டங்கள் மற்றும் எழுப்புதல் கூட்டங்கள் நடத்தி, தேவனுடைய வார்த்தையை தொடர்ந்து போதித்து வருகிறார். மேலும், வேதாகமப் போதனைகள் மூலம் விசுவாசிகள் ஆவிக்குரிய வளர்ச்சியிலும், விசுவாசத்தின் உறுதியிலும் முன்னேற வழிநடத்தி வருகிறார்."
       },
       {
         en: "Today, the ministry remains devoted to preaching the Gospel, teaching the Word of God, strengthening believers in faith, and leading people into a deeper relationship with Jesus Christ through biblical truth and prayer.",
-        ta: "இன்றளவும், சுவிசேஷத்தை அறிவித்தல், தேவ வார்த்தையை போதித்தல், விசுவாசிகளை பலப்படுத்துதல் மற்றும் மக்களை இயேசு கிறிஸ்துவுடன் நெருக்கமான உறவுக்குள் வழிநடத்துதல் ஆகியவை இவ்வூழியத்தின் முக்கிய நோக்கங்களாக தொடர்கின்றன."
+        ta: "இன்றளவும் சுவிசேஷத்தை அறிவித்தல், தேவனுடைய வார்த்தையை போதித்தல், விசுவாசிகளை பலப்படுத்துதல், மக்களை இயேசு கிறிஸ்துவுடன் நெருக்கமான உறவுக்குள் வழிநடத்துதல் ஆகியவற்றை தனது ஊழியத்தின் முக்கிய நோக்கங்களாகக் கொண்டு அர்ப்பணிப்புடன் சேவையாற்றி வருகிறார்."
       }
     ]
   },
@@ -789,14 +793,26 @@ export const contentData = {
     },
     locations: [
       { en: "Nagercoil", ta: "நாகர்கோவில்" },
+      { en: "Colachel", ta: "குளச்சல்" },
+      { en: "Karungal Paloor", ta: "கருங்கல் பாலூர்" },
       { en: "Kanyakumari", ta: "கன்னியாகுமரி" },
-      { en: "Hosur", ta: "ஓசூர்" },
-      { en: "Kanchipuram", ta: "காஞ்சிபுரம்" },
-      { en: "Chengalpattu", ta: "செங்கல்பட்டு" },
-      { en: "Tirunelveli", ta: "திருநெல்வேலி" },
-      { en: "Tenkasi", ta: "தென்காசி" },
-      { en: "Coimbatore Region", ta: "கோயம்புத்தூர் மற்றும் சுற்றுவட்டாரங்கள்" },
-      { en: "Various Rural Mission Fields", ta: "பல்வேறு கிராமப்புற மிஷனரி தளங்கள்" }
+      { en: "Kollamcode", ta: "கொல்லங்கோடு" },
+      { en: "Midalam", ta: "மிடாலம்" },
+      { en: "Keezh Manakkudy", ta: "கீழ மணக்குடி" },
+      { en: "Kesavanputhenthurai", ta: "கேசவன்புத்தன்துறை" },
+      { en: "Karungal (Junction)", ta: "கருங்கல் (ஜங்ஷன்)" },
+      { en: "Ramanthurai", ta: "இராமந்துறை" },
+      { en: "Tuticorin", ta: "தூத்துக்குடி" },
+      { en: "Alangulam", ta: "ஆலங்குளம்" },
+      { en: "Madurai", ta: "மதுரை" },
+      { en: "Mayiladuthurai", ta: "மயிலாடுதுறை" },
+      { en: "Neyveli", ta: "நெய்வேலி" },
+      { en: "Thondi", ta: "தொண்டி" },
+      { en: "Poompuhar (Nagai)", ta: "பூம்புகார் (நாகை)" },
+      { en: "Parappadi", ta: "பரப்பாடி" },
+      { en: "Chennai (Vadapalani)", ta: "சென்னை (வடபழனி)" },
+      { en: "Delhi", ta: "டெல்லி" },
+      { en: "Red Hills (Chennai)", ta: "செங்குன்றம் (சென்னை)" }
     ],
     focus: [
       { en: "Sunday Worship Services", ta: "ஞாயிறு ஆராதனைகள்" },
@@ -811,7 +827,7 @@ export const contentData = {
 
   leadershipTeam: {
     founder: {
-      name: { en: "Rev. S. Jerominas", ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்" },
+      name: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" },
       role: { en: "Founder & Chief Pastor", ta: "நிறுவனர் & தலைமை போதகர்" }
     },
     intro: {
@@ -868,7 +884,7 @@ export const contentData = {
         en: "Establishing and supporting local churches and missionary centers to build strong faith communities.",
         ta: "உள்ளூர் சபைகள் மற்றும் மிஷனரி மையங்களை நிறுவி, விசுவாசிகளை ஆவிக்குரிய வாழ்வில் வளர்த்தல்."
       },
-      tamilName: "திருச்சபை மற்றும் மிஷனரி ஊழியம்",
+      tamilName: "திருச்சபை ஊழியம்",
       iconName: "Church"
     },
     {
@@ -905,8 +921,8 @@ export const contentData = {
       id: "youth",
       title: { en: "Youth Ministry", ta: "வாலிபர் ஊழியம்" },
       description: {
-        en: "Leadership training, youth conferences, discipleship programs, and spiritual growth initiatives for young people.",
-        ta: "இளைஞர்களுக்கான தலைமைத்துவப் பயிற்சிகள், மாநாடுகள், சீஷத்துவப் பயிற்சி மற்றும் ஆவிக்குரிய வளர்ச்சி திட்டங்கள்."
+        en: "Leadership training, discipleship programs, and spiritual growth initiatives for young people.",
+        ta: "இளைஞர்களுக்கான தலைமைத்துவப் பயிற்சிகள், சீஷத்துவப் பயிற்சி மற்றும் ஆவிக்குரிய வளர்ச்சி திட்டங்கள்."
       },
       tamilName: "அக்கினி ஜுவாலை வாலிபர் ஊழியம்",
       iconName: "Users"
@@ -970,16 +986,6 @@ export const contentData = {
       },
       tamilName: "இலக்கிய சுவிசேஷ விநியோகம்",
       iconName: "Share2"
-    },
-    {
-      id: "church-ministry",
-      title: { en: "Church Ministry", ta: "திருச்சபை ஊழியங்கள்" },
-      description: {
-        en: "Establishing and nurturing local churches, teaching sound biblical doctrines, and building strong spiritual communities.",
-        ta: "உள்ளூர் சபைகளை நிறுவி வளர்த்தல், ஆரோக்கியமான வேத போதனைகளை போதித்தல் மற்றும் வலுவான ஆவிக்குரிய சமூகங்களை உருவாக்குதல்."
-      },
-      tamilName: "திருச்சபை ஊழியங்கள்",
-      iconName: "Church"
     }
   ] as MinistryItem[],
 
@@ -1031,8 +1037,8 @@ export const contentData = {
       ta: "K.R. காம்ப்ளக்ஸ், சிதம்பரநகர், பி.டபிள்யூ.டி. ரோடு, நாகர்கோவில்-2, கன்னியாகுமரி மாவட்டம்"
     },
     founderName: {
-      en: "Rev. S. Jerominas",
-      ta: "அருட்பணி. எஸ். ஜெரோமினாஸ்"
+      en: "Pastor. V. Jeremias",
+      ta: "பாஸ்டர் வி ஜெரோமியாஸ்"
     },
     phone1: "+91 88700 83746",
     phone2: "",
@@ -1044,24 +1050,24 @@ export const contentData = {
   },
   churches: {
     kanyakumari: [
-      { sNo: 1, location: { en: "Nagercoil", ta: "நாகர்கோவில்" }, pastor: { en: "Pr. V. Jerominas", ta: "Pr. V. ஜெரமியா" } },
+      { sNo: 1, location: { en: "Nagercoil", ta: "நாகர்கோவில்" }, pastor: { en: "Pastor. V. Jeremias", ta: "பாஸ்டர் வி ஜெரோமியாஸ்" } },
       { sNo: 2, location: { en: "Colachel", ta: "குளச்சல்" }, pastor: { en: "Pr. Jinoth", ta: "Pr. ஜினோத்" } },
       { sNo: 3, location: { en: "Karungal Paloor", ta: "கருங்கல் பாலூர்" }, pastor: { en: "Pr. Jeba", ta: "Pr. ஜெபா" } },
       { sNo: 4, location: { en: "Kanyakumari", ta: "கன்னியாகுமரி" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
       { sNo: 5, location: { en: "Kollamcode", ta: "கொல்லங்கோடு" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
       { sNo: 6, location: { en: "Midalam", ta: "மிடாலம்" }, pastor: { en: "Pr. Selvam", ta: "Pr. செல்வம்" } },
       { sNo: 7, location: { en: "Keezh Manakkudy", ta: "கீழ மணக்குடி" }, pastor: { en: "Pr. Anthony", ta: "Pr. ஆண்ட்ரனி" } },
-      { sNo: 8, location: { en: "Kesavanputhenthurai", ta: "கேசவன்புத்தன்துறை" }, pastor: { en: "Pr. Jerominas (Stalin)", ta: "Pr. ஜெரமியா (ஸ்டாலின்)" } },
+      { sNo: 8, location: { en: "Kesavanputhenthurai", ta: "கேசவன்புத்தன்துறை" }, pastor: { en: "Pastor Jeremias (Stalin)", ta: "பாஸ்டர் ஜெரோமியாஸ் (ஸ்டாலின்)" } },
       { sNo: 9, location: { en: "Karungal (Junction)", ta: "கருங்கல் (ஜங்ஷன்)" }, pastor: { en: "Pr. Robinson", ta: "Pr. ராபின்சன்" } },
       { sNo: 10, location: { en: "Ramanthurai", ta: "இராமந்துறை" }, pastor: { en: "Bro. Jerome", ta: "Bro. ஜெரோம்" } },
     ],
     other: [
       { sNo: 1, location: { en: "Tuticorin", ta: "தூத்துக்குடி" }, pastor: { en: "Jhansi", ta: "ஜான்சி" } },
-      { sNo: 2, location: { en: "Solaikudiyiruppu", ta: "சோலைக்குடியிருப்பு" }, pastor: { en: "Pr. James", ta: "Pr. ஜேம்ஸ்" } },
+      { sNo: 2, location: { en: "Alangulam", ta: "ஆலங்குளம்" }, pastor: { en: "Pr. James", ta: "Pr. ஜேம்ஸ்" } },
       { sNo: 3, location: { en: "Madurai", ta: "மதுரை" }, pastor: { en: "Paulnesan", ta: "பால்நேசன்" } },
       { sNo: 4, location: { en: "Madurai", ta: "மதுரை" }, pastor: { en: "Pr. Kannan", ta: "Pr. கண்ணன்" } },
-      { sNo: 5, location: { en: "Mangalanathapuram", ta: "மங்களநாதபுரம்" }, pastor: { en: "S.S. Paul", ta: "S.S. பால்" } },
-      { sNo: 6, location: { en: "Sembattivilai", ta: "செம்பட்டிவிளை" }, pastor: { en: "Pr. Duraisingam", ta: "Pr. துரைசிங்கம்" } },
+      { sNo: 5, location: { en: "Mayiladuthurai", ta: "மயிலாடுதுறை" }, pastor: { en: "S.S. Paul", ta: "S.S. பால்" } },
+      { sNo: 6, location: { en: "Neyveli", ta: "நெய்வேலி" }, pastor: { en: "Pr. Duraisingam", ta: "Pr. துரைசிங்கம்" } },
       { sNo: 7, location: { en: "Thondi", ta: "தொண்டி" }, pastor: { en: "Pr. James Jebaraj", ta: "Pr. ஜேம்ஸ் ஜெபராஜ்" } },
       { sNo: 8, location: { en: "Poompuhar (Nagai)", ta: "பூம்புகார் (நாகை)" }, pastor: { en: "Pr. Ambrose", ta: "Pr. அம்புரோஸ்" } },
       { sNo: 9, location: { en: "Parappadi", ta: "பரப்பாடி" }, pastor: { en: "Pr. James", ta: "Pr. ஜேம்ஸ்" } },

@@ -1,0 +1,376 @@
+"use client";
+
+import React from "react";
+import { About } from "@/components/sections/About";
+import { Timeline } from "@/components/sections/Timeline";
+import { Gallery } from "@/components/sections/Gallery";
+import { useLanguage } from "@/components/LanguageContext";
+import { contentData } from "@/data/contentData";
+import { PaperCard } from "@/components/PaperCard";
+import { OrnamentalSeparator } from "@/components/OrnamentalSeparator";
+import { 
+  BookOpen, ShieldCheck, Flame, Compass, Heart, MapPin, 
+  CheckCircle, UserCheck, Shield, Bookmark, Sparkles, Users 
+} from "lucide-react";
+import { getAssetPath } from "@/utils/paths";
+
+export function AboutClientPage() {
+  const { language } = useLanguage();
+  const founder = contentData.founderTestimony;
+  const [showAllLocations, setShowAllLocations] = React.useState(false);
+  const vm = contentData.visionMission;
+  const bc = contentData.branchChurches;
+  const team = contentData.leadershipTeam;
+
+  // Icon mapping for 5 mission pillars
+  const getMissionIcon = (idx: number) => {
+    const classes = "w-6 h-6 text-brand-gold";
+    switch (idx) {
+      case 0: return <Compass className={classes} />; // Evangelism
+      case 1: return <Flame className={classes} />; // Prayer
+      case 2: return <BookOpen className={classes} />; // Publishing
+      case 3: return <ShieldCheck className={classes} />; // Discipleship
+      case 4: return <Heart className={classes} />; // Community Transformation
+      default: return <Compass className={classes} />;
+    }
+  };
+
+  // Icon switcher for the 6 team service roles
+  const getRoleIcon = (idx: number) => {
+    const classes = "w-6 h-6 text-brand-gold";
+    switch (idx) {
+      case 0: return <UserCheck className={classes} />; // Pastors
+      case 1: return <Flame className={classes} />; // Evangelists
+      case 2: return <Sparkles className={classes} />; // Missionaries
+      case 3: return <Shield className={classes} />; // Prayer Coordinators
+      case 4: return <Users className={classes} />; // Youth Leaders
+      case 5: return <Bookmark className={classes} />; // Children's Ministry Workers
+      default: return <UserCheck className={classes} />;
+    }
+  };
+
+  return (
+    <main className="flex-grow flex flex-col bg-brand-cream select-none">
+      
+      {/* 1. Page Header */}
+      <div className="bg-brand-brown py-20 px-6 text-center relative overflow-hidden border-b border-brand-gold/30">
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(176,141,87,0.06)_1px,transparent_0)] [background-size:24px_24px] pointer-events-none opacity-25"></div>
+        <div className="relative z-10 space-y-2">
+          <h1 className="text-4xl md:text-6xl font-serif-cinzel text-brand-cream font-bold tracking-wider">
+            {language === "en" ? "About Our Ministry" : "எங்கள் ஊழியம் பற்றி"}
+          </h1>
+          <p className="text-xs uppercase tracking-[0.25em] font-serif-cormorant text-brand-gold max-w-md mx-auto">
+            {language === "en" ? "Fire Flame Mission • Founded 1996" : "அக்கினி ஜுவாலை ஊழியங்கள் • துவக்கம் 1996"}
+          </p>
+        </div>
+      </div>
+
+      {/* 2. Main Biography Section (Who We Are) */}
+      <About showReadMoreButton={false} />
+
+      {/* 3. Founder's Testimony Section */}
+      <section className="py-36 px-6 border-b border-brand-gold/20 relative bg-brand-parchment/10">
+        <div className="max-w-[850px] mx-auto space-y-10">
+          
+          {/* Chapter Header */}
+          <div className="text-center space-y-4">
+            <span className="text-xs uppercase tracking-[0.25em] font-serif-cinzel text-brand-gold font-semibold block">
+              {language === "en" ? "Founder's Heritage" : "நிறுவனரின் மரபு"}
+            </span>
+            <h2 className="text-4xl md:text-6xl font-serif-cinzel text-brand-brown font-bold tracking-wider leading-tight uppercase">
+              {language === "en" ? founder.title.en : founder.title.ta}
+            </h2>
+            <div className="text-brand-gold text-lg md:text-xl font-serif-cinzel select-none flex items-center justify-center gap-4">
+              <span className="h-[0.5px] w-16 bg-brand-gold/30"></span>
+              <span>❦</span>
+              <span className="h-[0.5px] w-16 bg-brand-gold/30"></span>
+            </div>
+          </div>
+
+          {/* First Paragraph (Drop Cap) */}
+          <p className="text-base sm:text-lg md:text-xl text-brand-muted leading-relaxed tracking-[0.01em] font-serif-eb editorial-dropcap">
+            {language === "en" ? founder.paragraphs[0].en : founder.paragraphs[0].ta}
+          </p>
+
+          {/* Centered Founder Portrait */}
+          <div className="flex flex-col items-center py-6">
+            <div className="relative p-3 border border-brand-gold/40 bg-brand-parchment shadow-2xl max-w-md w-full gold-glow">
+              <div className="absolute inset-[6px] border border-brand-gold/25 pointer-events-none"></div>
+              <div className="relative bg-brand-cream border border-brand-gold/15 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={getAssetPath("/assets/founder.jpg")}
+                  alt="Pastor. V. Jeremias Portrait - Founder of Fire Flame Mission"
+                  className="w-full h-auto filter sepia-[0.05] contrast-[1.02]"
+                />
+                
+                {/* Title overlay board */}
+                <div className="absolute bottom-3 left-3 right-3 z-10 bg-brand-cream/95 p-4 border border-brand-gold/25 text-center leading-none shadow-md">
+                  <div className="font-serif-cinzel text-[10px] tracking-[0.2em] text-brand-muted uppercase font-bold mb-1">
+                    {language === "en" ? "Born June 7, 1951" : "பிறப்பு ஜூன் 7, 1951"}
+                  </div>
+                  <div className="font-accent-great text-xl text-brand-gold">
+                    {language === "en" ? founder.subtitle.en : founder.subtitle.ta}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Large Pull Quote */}
+          <div className="text-center py-8 px-4 max-w-2xl mx-auto space-y-4">
+            <span className="text-4xl text-brand-gold font-serif-cormorant select-none block leading-none">❝</span>
+            <blockquote className="text-2xl md:text-3xl font-serif-cormorant italic text-brand-gold leading-relaxed">
+              {language === "en" ? founder.quote.en : founder.quote.ta}
+            </blockquote>
+            <span className="text-4xl text-brand-gold font-serif-cormorant select-none block leading-none">❞</span>
+          </div>
+
+          {/* Editorial Story */}
+          <div className="space-y-10 text-base sm:text-lg text-brand-muted leading-relaxed tracking-[0.01em] font-serif-eb">
+            {founder.paragraphs.slice(1).map((para: any, idx: number) => (
+              <div key={idx} className="space-y-6">
+                {para.heading && (
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-serif-cinzel font-bold text-brand-brown mt-8 mb-4 border-b border-brand-gold/20 pb-1">
+                    {language === "en" ? para.heading.en : para.heading.ta}
+                  </h3>
+                )}
+                <p>
+                  {language === "en" ? para.en : para.ta}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. Our 25-Year Journey (Timeline) */}
+      <Timeline />
+
+      {/* 5. Vision & Mission Section */}
+      <section className="py-36 px-6 border-b border-brand-gold/20 relative bg-brand-cream">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.25em] font-serif-cinzel text-brand-gold font-semibold block mb-2">
+              {language === "en" ? "Calling" : "நோக்கம்"}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold">
+              {language === "en" ? "Vision & Mission" : "தரிசனம் & நோக்கம்"}
+            </h2>
+            <OrnamentalSeparator />
+          </div>
+
+          {/* Vision card display */}
+          <div className="relative p-8 border border-brand-gold bg-brand-parchment text-center gold-glow max-w-3xl mx-auto">
+            <div className="absolute inset-[5px] border border-brand-gold/20 pointer-events-none"></div>
+            <span className="text-xs md:text-sm uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block mb-2">
+              {language === "en" ? "Our Vision" : "எங்கள் தரிசனம்"}
+            </span>
+            <p className="text-xl md:text-2xl font-serif-cormorant italic text-brand-brown leading-relaxed font-light">
+              "{language === "en" ? vm.vision.en : vm.vision.ta}"
+            </p>
+          </div>
+
+          {/* Mission Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 pt-8">
+            {vm.mission.map((item, idx) => (
+              <PaperCard key={idx} className="p-6 text-center flex flex-col items-center justify-between h-full">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center bg-brand-cream mx-auto gold-glow">
+                    {getMissionIcon(idx)}
+                  </div>
+                  <h3 className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider font-bold text-brand-gold">
+                    {language === "en" ? item.title.en : item.title.ta}
+                  </h3>
+                  <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
+                    {language === "en" ? item.description.en : item.description.ta}
+                  </p>
+                </div>
+                <div className="w-8 h-[0.5px] bg-brand-gold/20 mt-4"></div>
+              </PaperCard>
+            ))}
+          </div>
+
+          {/* Core Values grid */}
+          <div className="space-y-8 pt-8">
+            <h3 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
+              {language === "en" ? "Core Values" : "முக்கிய மதிப்புகள்"}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {vm.coreValues.map((value, idx) => (
+                <div key={idx} className="p-4 border border-brand-gold/15 bg-brand-parchment/30 text-center relative">
+                  <div className="absolute inset-1 border border-brand-gold/5 pointer-events-none"></div>
+                  <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider text-brand-brown font-bold block mb-1">
+                    {language === "en" ? value.en : value.ta}
+                  </span>
+                  <span className="text-[10px] text-brand-gold uppercase font-serif-cormorant italic">
+                    Value 0{idx + 1}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 6. Branch Churches Network */}
+      <section className="py-36 px-6 border-b border-brand-gold/20 relative bg-brand-parchment/10">
+        <div className="max-w-5xl mx-auto space-y-16">
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <span className="text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block">
+              {language === "en" ? "Ministry Network" : "கிளைச் சபைகள்"}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold">
+              {language === "en" ? "Branch Churches" : "சபை மையங்கள்"}
+            </h2>
+            <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
+              {language === "en" ? bc.intro.en : bc.intro.ta}
+            </p>
+            <OrnamentalSeparator />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {(showAllLocations ? bc.locations : bc.locations.slice(0, 9)).map((loc, idx) => (
+              <div 
+                key={idx} 
+                className="flex items-center gap-3 p-4 border border-brand-gold/25 bg-brand-parchment/40 gold-glow-hover relative group transition-all duration-300"
+              >
+                <MapPin className="w-4 h-4 text-brand-gold shrink-0" />
+                <span className="font-serif-cinzel text-xs md:text-sm font-bold tracking-wider text-brand-brown">
+                  {language === "en" ? loc.en : loc.ta}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {bc.locations.length > 9 && (
+            <div className="text-center pt-2">
+              <button
+                onClick={() => setShowAllLocations(!showAllLocations)}
+                aria-label={showAllLocations ? "Show fewer branch church locations" : "View all remaining branch church locations"}
+                className="inline-flex items-center gap-2 px-6 py-2.5 border border-brand-gold/40 bg-brand-cream/60 hover:bg-brand-parchment text-xs font-bold tracking-widest uppercase font-serif-cinzel text-brand-brown hover:text-brand-gold transition-all duration-300 shadow-sm cursor-pointer gold-glow-hover"
+              >
+                {showAllLocations
+                  ? (language === "en" ? "Show Less" : "குறைவாகக் காண்க")
+                  : (language === "en" ? "View Remaining Locations" : "மீதமுள்ள இடங்களைக் காண்க")}
+              </button>
+            </div>
+          )}
+
+          {/* Activities list */}
+          <div className="space-y-8 pt-8">
+            <h3 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
+              {language === "en" ? "Ministry Activities Focus" : "சபையின் பிரதான செயல்பாடுகள்"}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {bc.focus.map((item, idx) => (
+                <PaperCard key={idx} className="p-5 text-center space-y-2 flex flex-col items-center justify-center">
+                  <CheckCircle className="w-5 h-5 text-brand-gold/70" />
+                  <span className="font-serif-cinzel text-xs md:text-sm uppercase tracking-wider text-brand-brown font-bold">
+                    {language === "en" ? item.en : item.ta}
+                  </span>
+                </PaperCard>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Missionaries & Staff */}
+      <section className="py-36 px-6 border-b border-brand-gold/20 relative bg-brand-cream">
+        <div className="max-w-5xl mx-auto space-y-16">
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <span className="text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block">
+              {language === "en" ? "Leadership Structure" : "தலைமை ஒருங்கிணைப்பு"}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-serif-cinzel text-brand-brown font-bold">
+              {language === "en" ? "Missionaries & Staff" : "மிஷனரிகள் & ஊழியர்கள்"}
+            </h2>
+            <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
+              {language === "en" ? team.intro.en : team.intro.ta}
+            </p>
+            <OrnamentalSeparator />
+          </div>
+
+          {/* Service areas grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {team.roles.map((role, idx) => (
+              <PaperCard key={idx} className="p-6 text-center space-y-4 flex flex-col items-center justify-between">
+                <div className="space-y-3">
+                  <div className="w-12 h-12 rounded-full border border-brand-gold/30 flex items-center justify-center bg-brand-cream mx-auto gold-glow">
+                    {getRoleIcon(idx)}
+                  </div>
+                  <h3 className="font-serif-cinzel text-sm md:text-base uppercase tracking-wider font-bold text-brand-brown">
+                    {language === "en" ? role.title.en : role.title.ta}
+                  </h3>
+                  <p className="text-base md:text-lg text-brand-muted leading-relaxed font-serif-eb">
+                    {language === "en" ? role.description.en : role.description.ta}
+                  </p>
+                </div>
+                <div className="w-8 h-[0.5px] bg-brand-gold/15 mt-2"></div>
+              </PaperCard>
+            ))}
+          </div>
+
+          {/* Supported Missionaries Table Section */}
+          <div className="space-y-8 pt-12 border-t border-brand-gold/20">
+            <div className="text-center space-y-2">
+              <span className="text-xs uppercase tracking-[0.2em] font-serif-cinzel text-brand-gold font-bold block">
+                {language === "en" ? "Missionary Support" : "மிஷனரி ஆதரவு"}
+              </span>
+              <h3 className="text-2xl md:text-4xl font-serif-cinzel font-bold text-brand-brown">
+                {language === "en" ? "Supported Missionaries & Workers" : "நாம் தாங்கும் மிஷனரிகள்"}
+              </h3>
+              <div className="w-16 h-[1px] bg-brand-gold/30 mx-auto mt-2"></div>
+            </div>
+
+            <div className="max-w-4xl mx-auto p-3 sm:p-6 border border-brand-gold/30 bg-brand-parchment/60 rounded-lg shadow-sm gold-glow">
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse font-serif-eb text-sm sm:text-base text-brand-muted">
+                  <thead>
+                    <tr className="border-b border-brand-gold/25 text-brand-brown font-serif-cinzel font-bold text-xs sm:text-sm tracking-wider text-left">
+                      <th className="py-3 px-4 sm:px-5">{language === "en" ? "State / Place" : "இடம்"}</th>
+                      <th className="py-3 px-4 sm:px-5">{language === "en" ? "Missionary / Worker" : "ஊழியர்"}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-brand-gold/15">
+                    {contentData.missionaries.map((m, idx) => (
+                      <tr key={idx} className="hover:bg-brand-cream/50 transition-colors">
+                        <td className="py-3.5 px-4 sm:px-5 font-bold text-brand-brown font-serif-cinzel">{language === "en" ? m.location.en : m.location.ta}</td>
+                        <td className="py-3.5 px-4 sm:px-5 text-brand-muted font-serif-eb">{language === "en" ? m.missionary.en : m.missionary.ta}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          {/* Commitments checklist */}
+          <div className="space-y-8 pt-8 border-t border-brand-gold/20">
+            <h3 className="text-center font-serif-cinzel text-sm md:text-base uppercase tracking-widest text-brand-brown font-bold">
+              {language === "en" ? "Ministry Commitments" : "எங்கள் அர்ப்பணிப்புகள்"}
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center max-w-2xl mx-auto">
+              {team.commitments.map((commit, idx) => (
+                <div 
+                  key={idx} 
+                  className="px-5 py-2.5 border border-brand-gold/25 bg-brand-parchment/20 text-xs md:text-sm font-serif-cinzel font-bold tracking-wider text-brand-gold flex items-center gap-2"
+                >
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+                  {language === "en" ? commit.en : commit.ta}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Lightbox Zoom Gallery Section */}
+      <Gallery showViewAllButton={true} />
+
+    </main>
+  );
+}

@@ -1,7 +1,32 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import { Gallery } from "@/components/sections/Gallery";
+
+export const metadata: Metadata = {
+  title: "Ministry Archival Gallery & Field Photos | Fire Flame Mission",
+  description: "Browse photos and visual archives of Fire Flame Mission campaigns, prayer meetings, conventions, and missionary outreaches led by Pastor. V. Jeremias since 1996.",
+  keywords: [
+    "Fire Flame Mission Gallery",
+    "Ministry Photos",
+    "Christian Conventions Tamil Nadu",
+    "Missionary Field Photos",
+    "Pastor. V. Jeremias Gallery"
+  ],
+  alternates: {
+    canonical: "https://fireflamemission.org/gallery",
+  },
+  openGraph: {
+    title: "Ministry Archival Gallery & Field Photos | Fire Flame Mission",
+    description: "Browse photos and visual archives of Fire Flame Mission campaigns, prayer meetings, conventions, and missionary outreaches since 1996.",
+    url: "https://fireflamemission.org/gallery",
+    siteName: "Fire Flame Mission",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ministry Archival Gallery & Field Photos | Fire Flame Mission",
+    description: "Browse photos and visual archives of Fire Flame Mission campaigns, prayer meetings, conventions, and missionary outreaches since 1996.",
+  },
+};
 
 export default function GalleryPage() {
   return (

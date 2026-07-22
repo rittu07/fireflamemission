@@ -1,7 +1,34 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import { FeaturedPublications } from "@/components/sections/FeaturedPublications";
+
+export const metadata: Metadata = {
+  title: "Christian Books & Publications Library | Fire Flame Mission",
+  description: "Explore spiritual books, Bible study literature, and Christian publications authored by Pastor. V. Jeremias since 1996. Free digital archives and spiritual resources.",
+  keywords: [
+    "Christian Books",
+    "Tamil Christian Books",
+    "Pastor. V. Jeremias Books",
+    "Bible Study Literature",
+    "Christian Publications",
+    "Fire Flame Publications",
+    "Christian Digital Archives"
+  ],
+  alternates: {
+    canonical: "https://fireflamemission.org/books",
+  },
+  openGraph: {
+    title: "Christian Books & Publications Library | Fire Flame Mission",
+    description: "Explore spiritual books, Bible study literature, and Christian publications authored by Pastor. V. Jeremias.",
+    url: "https://fireflamemission.org/books",
+    siteName: "Fire Flame Mission",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Christian Books & Publications Library | Fire Flame Mission",
+    description: "Explore spiritual books, Bible study literature, and Christian publications authored by Pastor. V. Jeremias.",
+  },
+};
 
 export default function BooksPage() {
   return (

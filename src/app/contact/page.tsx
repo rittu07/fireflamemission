@@ -1,7 +1,33 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import { Contact } from "@/components/sections/Contact";
+
+export const metadata: Metadata = {
+  title: "Contact Us & Headquarters Location | Fire Flame Mission",
+  description: "Get in touch with Fire Flame Mission sanctuary headquarters in Nagercoil, Kanyakumari District. View map location, telephone numbers (+91 88700 83746), and email address.",
+  keywords: [
+    "Contact Fire Flame Mission",
+    "Nagercoil Church Contact",
+    "Pastor. V. Jeremias Contact",
+    "Fire Flame Mission Address",
+    "Fire Flame Mission Phone Number",
+    "Prayer Helpline Nagercoil"
+  ],
+  alternates: {
+    canonical: "https://fireflamemission.org/contact",
+  },
+  openGraph: {
+    title: "Contact Us & Headquarters Location | Fire Flame Mission",
+    description: "Get in touch with Fire Flame Mission sanctuary headquarters in Nagercoil, Kanyakumari District. View map location, telephone numbers, and email address.",
+    url: "https://fireflamemission.org/contact",
+    siteName: "Fire Flame Mission",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us & Headquarters Location | Fire Flame Mission",
+    description: "Get in touch with Fire Flame Mission sanctuary headquarters in Nagercoil, Kanyakumari District.",
+  },
+};
 
 export default function ContactPage() {
   return (

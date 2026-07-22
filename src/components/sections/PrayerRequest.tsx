@@ -82,11 +82,12 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Name field */}
               <div className="space-y-1.5">
-                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label htmlFor="prayer-name" className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Full Name" : "முழு பெயர்"} *
                 </label>
                 <input
                   type="text"
+                  id="prayer-name"
                   name="name"
                   required
                   value={formData.name}
@@ -98,11 +99,12 @@ export const PrayerRequest: React.FC = () => {
               {/* Grid: Email & Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-1.5">
-                  <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                  <label htmlFor="prayer-email" className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                     {language === "en" ? "Email Address" : "மின்னஞ்சல்"}
                   </label>
                   <input
                     type="email"
+                    id="prayer-email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -111,11 +113,12 @@ export const PrayerRequest: React.FC = () => {
                 </div>
 
                 <div className="space-y-1.5">
-                  <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                  <label htmlFor="prayer-phone" className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                     {language === "en" ? "Phone Number" : "தொலைபேசி எண்"}
                   </label>
                   <input
                     type="tel"
+                    id="prayer-phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
@@ -126,10 +129,11 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Request Type */}
               <div className="space-y-1.5">
-                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label htmlFor="prayer-type" className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Submission Type" : "விண்ணப்ப வகை"}
                 </label>
                 <select
+                  id="prayer-type"
                   name="type"
                   value={formData.type}
                   onChange={handleChange}
@@ -142,10 +146,11 @@ export const PrayerRequest: React.FC = () => {
 
               {/* Message Body */}
               <div className="space-y-1.5">
-                <label className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                <label htmlFor="prayer-message" className="text-xs sm:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                   {language === "en" ? "Petition / Details" : "விண்ணப்ப விவரம்"} *
                 </label>
                 <textarea
+                  id="prayer-message"
                   name="message"
                   required
                   rows={5}

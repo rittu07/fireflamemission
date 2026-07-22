@@ -41,7 +41,7 @@ export const PrayerRequestSection: React.FC = () => {
 
               {/* Content */}
               <h2 className="text-4xl md:text-6xl font-serif-cinzel text-brand-brown font-bold tracking-wide">
-                {language === "en" ? "Need Prayer?" : "ஜெபம் தேவையா?"}
+                {language === "en" ? "Need Prayer?" : "ஜெபத் தேவையா?"}
               </h2>
 
               <p className="text-lg md:text-xl font-serif-cormorant text-brand-muted italic leading-relaxed max-w-lg">

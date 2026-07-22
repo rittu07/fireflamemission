@@ -1,8 +1,34 @@
-"use client";
-
-import React from "react";
+import type { Metadata } from "next";
 import { DailyBiblePromise } from "@/components/sections/DailyBiblePromise";
 import { BiblePromises } from "@/components/sections/BiblePromises";
+
+export const metadata: Metadata = {
+  title: "100 Bible Promises & Daily Scriptures | Fire Flame Mission",
+  description: "Read and meditate on 100 Bible Promises in English and Tamil. Daily scriptural encouragement, divine promises, and spiritual nourishment for your daily walk.",
+  keywords: [
+    "100 Bible Promises",
+    "Tamil Bible Promises",
+    "Daily Bible Promise",
+    "Christian Daily Verse",
+    "Tamil Scripture Promises",
+    "Fire Flame Mission Promises"
+  ],
+  alternates: {
+    canonical: "https://fireflamemission.org/promises",
+  },
+  openGraph: {
+    title: "100 Bible Promises & Daily Scriptures | Fire Flame Mission",
+    description: "Read and meditate on 100 Bible Promises in English and Tamil. Daily scriptural encouragement and divine promises.",
+    url: "https://fireflamemission.org/promises",
+    siteName: "Fire Flame Mission",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "100 Bible Promises & Daily Scriptures | Fire Flame Mission",
+    description: "Read and meditate on 100 Bible Promises in English and Tamil. Daily scriptural encouragement and divine promises.",
+  },
+};
 
 export default function PromisesPage() {
   return (

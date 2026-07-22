@@ -100,12 +100,12 @@ export const LatestSermons: React.FC<LatestSermonsProps> = ({
 
                   {/* Metadata */}
                   <div className="space-y-2">
-                    <span className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold block">
+                    <span className="text-xs md:text-sm tracking-wider font-serif-cinzel text-brand-gold font-bold block">
                       {sermon.type === "video" 
-                        ? (language === "en" ? "Video Sermon" : "வீдео செய்தி")
+                        ? (language === "en" ? "VIDEO SERMON" : "வீடியோ செய்தி")
                         : sermon.type === "audio"
-                        ? (language === "en" ? "Audio Sermon" : "ஆடியோ செய்தி")
-                        : (language === "en" ? "Written Message" : "எழுதப்பட்ட செய்தி")}
+                        ? (language === "en" ? "AUDIO SERMON" : "ஆடியோ செய்தி")
+                        : (language === "en" ? "WRITTEN MESSAGE" : "எழுதப்பட்ட செய்தி")}
                     </span>
                     
                     <span className="text-xs text-brand-muted font-serif-eb uppercase tracking-widest block">

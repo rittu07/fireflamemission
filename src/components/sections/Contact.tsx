@@ -73,11 +73,12 @@ export const Contact: React.FC = () => {
                   
                   {/* Name field */}
                   <div className="space-y-1">
-                    <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                    <label htmlFor="contact-name" className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                       {language === "en" ? "Full Name" : "முழு பெயர்"} *
                     </label>
                     <input
                       type="text"
+                      id="contact-name"
                       name="name"
                       required
                       value={formData.name}
@@ -89,11 +90,12 @@ export const Contact: React.FC = () => {
                   {/* Grid: Email & Phone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                      <label htmlFor="contact-email" className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                         {language === "en" ? "Email Address" : "மின்னஞ்சல்"}
                       </label>
                       <input
                         type="email"
+                        id="contact-email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
@@ -102,11 +104,12 @@ export const Contact: React.FC = () => {
                     </div>
 
                     <div className="space-y-1">
-                      <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                      <label htmlFor="contact-phone" className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                         {language === "en" ? "Phone Number" : "தொலைபேசி எண்"}
                       </label>
                       <input
                         type="tel"
+                        id="contact-phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
@@ -117,10 +120,11 @@ export const Contact: React.FC = () => {
 
                   {/* Message body */}
                   <div className="space-y-1">
-                    <label className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
+                    <label htmlFor="contact-message" className="text-xs md:text-sm uppercase tracking-wider font-serif-cinzel text-brand-gold font-bold">
                       {language === "en" ? "Prayer Request / Message" : "ஜெப விண்ணப்பம் / செய்தி"} *
                     </label>
                     <textarea
+                      id="contact-message"
                       name="message"
                       required
                       rows={5}

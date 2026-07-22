@@ -3,6 +3,7 @@ import { Fraunces, Work_Sans, Great_Vibes, Cinzel, Cormorant_Garamond, EB_Garamo
 import { LanguageProvider } from "@/components/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -44,15 +45,56 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Fire Flame Mission - Timeless Christian Library",
-  description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Rev. S. Jerominas. Read our digital archives and 100 Bible Promises.",
-  keywords: ["Fire Flame Mission", "Rev. S. Jerominas", "Bible Promises", "Christian Publications", "Tamil Christian Ministry", "Prophecy & Prayer Ministry"],
-  authors: [{ name: "Rev. S. Jerominas" }],
+  metadataBase: new URL("https://fireflamemission.org"),
+  title: {
+    default: "Fire Flame Mission - Timeless Christian Library",
+    template: "%s | Fire Flame Mission",
+  },
+  description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias. Read our digital archives, 100 Bible Promises, and listen to sermons.",
+  keywords: [
+    "Fire Flame Mission",
+    "Pastor. V. Jeremias",
+    "பாஸ்டர் வி ஜெரோமியாஸ்",
+    "அக்கினி ஜுவாலை ஊழியம்",
+    "Bible Promises",
+    "Tamil Bible Promises",
+    "Christian Publications",
+    "Tamil Christian Ministry",
+    "Prophecy & Prayer Ministry",
+    "Nagercoil Church",
+    "Prayer Request",
+    "Tamil Sermons"
+  ],
+  authors: [{ name: "Pastor. V. Jeremias" }],
+  creator: "Fire Flame Mission",
+  publisher: "Fire Flame Mission",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Fire Flame Mission",
-    description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996.",
-    type: "website",
+    title: "Fire Flame Mission - Timeless Christian Library",
+    description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias.",
+    url: "https://fireflamemission.org",
+    siteName: "Fire Flame Mission",
     locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fire Flame Mission",
+    description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias.",
+    creator: "@fireflamemission",
+  },
+  alternates: {
+    canonical: "https://fireflamemission.org",
   },
 };
 
@@ -66,6 +108,9 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${workSans.variable} ${greatVibes.variable} ${cinzel.variable} ${cormorant.variable} ${ebGaramond.variable} h-full scroll-smooth`}
     >
+      <head>
+        <JsonLd />
+      </head>
       <body className="min-h-full flex flex-col bg-brand-cream text-brand-brown font-serif-eb antialiased">
         <LanguageProvider>
           <Navbar />
