@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "Nagercoil Church History"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/about",
+    canonical: "https://fireflamemission.in/about",
   },
   openGraph: {
     title: "About Us & Ministry History | Fire Flame Mission",
     description: "Discover the history, vision, and mission of Fire Flame Mission founded in 1996 by Pastor. V. Jeremias.",
-    url: "https://fireflamemission.org/about",
+    url: "https://fireflamemission.in/about",
     siteName: "Fire Flame Mission",
     type: "website",
   },

@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     "Nagercoil Church"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org",
+    canonical: "https://fireflamemission.in",
   },
   openGraph: {
     title: "Fire Flame Mission | Sharing the Gospel of Jesus Christ Since 1996",
     description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias.",
-    url: "https://fireflamemission.org",
+    url: "https://fireflamemission.in",
     siteName: "Fire Flame Mission",
     type: "website",
   },

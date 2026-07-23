@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "Fire Flame Mission Prayer Request"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/prayer-request",
+    canonical: "https://fireflamemission.in/prayer-request",
   },
   openGraph: {
     title: "Submit Prayer Request | Fire Flame Mission 24/7 Intercession",
     description: "Submit your prayer requests to Fire Flame Mission. Our dedicated prayer warriors stand with you in faith.",
-    url: "https://fireflamemission.org/prayer-request",
+    url: "https://fireflamemission.in/prayer-request",
     siteName: "Fire Flame Mission",
     type: "website",
   },

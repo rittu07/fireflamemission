@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "Publishing Ministry"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/ministries",
+    canonical: "https://fireflamemission.in/ministries",
   },
   openGraph: {
     title: "Ministry Arms & Branch Churches | Fire Flame Mission",
     description: "Explore Fire Flame Mission's divisions: Publishing, Prayer, Evangelism, Youth Mobilisation, and supported branch churches across Tamil Nadu and India.",
-    url: "https://fireflamemission.org/ministries",
+    url: "https://fireflamemission.in/ministries",
     siteName: "Fire Flame Mission",
     type: "website",
   },

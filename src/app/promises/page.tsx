@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "Fire Flame Mission Promises"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/promises",
+    canonical: "https://fireflamemission.in/promises",
   },
   openGraph: {
     title: "100 Bible Promises & Daily Scriptures | Fire Flame Mission",
     description: "Read and meditate on 100 Bible Promises in English and Tamil. Daily scriptural encouragement and divine promises.",
-    url: "https://fireflamemission.org/promises",
+    url: "https://fireflamemission.in/promises",
     siteName: "Fire Flame Mission",
     type: "website",
   },

@@ -6,12 +6,12 @@ export const JsonLd: React.FC = () => {
     "@graph": [
       {
         "@type": ["Church", "Organization"],
-        "@id": "https://fireflamemission.org/#organization",
+        "@id": "https://fireflamemission.in/#organization",
         "name": "Fire Flame Mission",
         "alternateName": "அக்கினி ஜுவாலை ஊழியம்",
-        "url": "https://fireflamemission.org",
-        "logo": "https://fireflamemission.org/assets/founder.jpg",
-        "image": "https://fireflamemission.org/assets/founder.jpg",
+        "url": "https://fireflamemission.in",
+        "logo": "https://fireflamemission.in/assets/founder.jpg",
+        "image": "https://fireflamemission.in/assets/founder.jpg",
         "foundingDate": "1996",
         "description": "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias.",
         "founder": {
@@ -41,72 +41,72 @@ export const JsonLd: React.FC = () => {
       },
       {
         "@type": "WebSite",
-        "@id": "https://fireflamemission.org/#website",
-        "url": "https://fireflamemission.org",
+        "@id": "https://fireflamemission.in/#website",
+        "url": "https://fireflamemission.in",
         "name": "Fire Flame Mission",
         "description": "Fire Flame Mission - Timeless Christian Library, Prayer Ministry & Publications.",
         "publisher": {
-          "@id": "https://fireflamemission.org/#organization"
+          "@id": "https://fireflamemission.in/#organization"
         },
         "inLanguage": ["en", "ta"]
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://fireflamemission.org/#breadcrumb",
+        "@id": "https://fireflamemission.in/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://fireflamemission.org"
+            "item": "https://fireflamemission.in"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "About Us",
-            "item": "https://fireflamemission.org/about"
+            "item": "https://fireflamemission.in/about"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Books",
-            "item": "https://fireflamemission.org/books"
+            "item": "https://fireflamemission.in/books"
           },
           {
             "@type": "ListItem",
             "position": 4,
             "name": "Sermons",
-            "item": "https://fireflamemission.org/sermons"
+            "item": "https://fireflamemission.in/sermons"
           },
           {
             "@type": "ListItem",
             "position": 5,
             "name": "Promises",
-            "item": "https://fireflamemission.org/promises"
+            "item": "https://fireflamemission.in/promises"
           },
           {
             "@type": "ListItem",
             "position": 6,
             "name": "Ministries",
-            "item": "https://fireflamemission.org/ministries"
+            "item": "https://fireflamemission.in/ministries"
           },
           {
             "@type": "ListItem",
             "position": 7,
             "name": "Gallery",
-            "item": "https://fireflamemission.org/gallery"
+            "item": "https://fireflamemission.in/gallery"
           },
           {
             "@type": "ListItem",
             "position": 8,
             "name": "Prayer Request",
-            "item": "https://fireflamemission.org/prayer-request"
+            "item": "https://fireflamemission.in/prayer-request"
           },
           {
             "@type": "ListItem",
             "position": 9,
             "name": "Contact",
-            "item": "https://fireflamemission.org/contact"
+            "item": "https://fireflamemission.in/contact"
           }
         ]
       }

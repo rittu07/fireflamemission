@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "Christian Digital Archives"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/books",
+    canonical: "https://fireflamemission.in/books",
   },
   openGraph: {
     title: "Christian Books & Publications Library | Fire Flame Mission",
     description: "Explore spiritual books, Bible study literature, and Christian publications authored by Pastor. V. Jeremias.",
-    url: "https://fireflamemission.org/books",
+    url: "https://fireflamemission.in/books",
     siteName: "Fire Flame Mission",
     type: "website",
   },

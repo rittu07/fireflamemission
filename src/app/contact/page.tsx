@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "Prayer Helpline Nagercoil"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/contact",
+    canonical: "https://fireflamemission.in/contact",
   },
   openGraph: {
     title: "Contact Us & Headquarters Location | Fire Flame Mission",
     description: "Get in touch with Fire Flame Mission sanctuary headquarters in Nagercoil, Kanyakumari District. View map location, telephone numbers, and email address.",
-    url: "https://fireflamemission.org/contact",
+    url: "https://fireflamemission.in/contact",
     siteName: "Fire Flame Mission",
     type: "website",
   },

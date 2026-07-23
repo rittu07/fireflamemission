@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://fireflamemission.org/sitemap.xml',
+    sitemap: 'https://fireflamemission.in/sitemap.xml',
   };
 }

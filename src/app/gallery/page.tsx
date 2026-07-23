@@ -12,12 +12,12 @@ export const metadata: Metadata = {
     "Pastor. V. Jeremias Gallery"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/gallery",
+    canonical: "https://fireflamemission.in/gallery",
   },
   openGraph: {
     title: "Ministry Archival Gallery & Field Photos | Fire Flame Mission",
     description: "Browse photos and visual archives of Fire Flame Mission campaigns, prayer meetings, conventions, and missionary outreaches since 1996.",
-    url: "https://fireflamemission.org/gallery",
+    url: "https://fireflamemission.in/gallery",
     siteName: "Fire Flame Mission",
     type: "website",
   },

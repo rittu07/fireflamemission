@@ -13,12 +13,12 @@ export const metadata: Metadata = {
     "Fire Flame Mission Sermons"
   ],
   alternates: {
-    canonical: "https://fireflamemission.org/sermons",
+    canonical: "https://fireflamemission.in/sermons",
   },
   openGraph: {
     title: "Tamil Video & Audio Sermons | Fire Flame Mission",
     description: "Listen to Tamil video and audio sermons, prophetic messages, and biblical expositions by Pastor. V. Jeremias.",
-    url: "https://fireflamemission.org/sermons",
+    url: "https://fireflamemission.in/sermons",
     siteName: "Fire Flame Mission",
     type: "website",
   },

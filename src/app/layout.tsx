@@ -45,7 +45,7 @@ const ebGaramond = EB_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fireflamemission.org"),
+  metadataBase: new URL("https://fireflamemission.in"),
   title: {
     default: "Fire Flame Mission - Timeless Christian Library",
     template: "%s | Fire Flame Mission",
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fire Flame Mission - Timeless Christian Library",
     description: "Proclaiming Christ Through Prayer, Teaching and Publications Since 1996. Founded by Pastor. V. Jeremias.",
-    url: "https://fireflamemission.org",
+    url: "https://fireflamemission.in",
     siteName: "Fire Flame Mission",
     locale: "en_US",
     type: "website",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     creator: "@fireflamemission",
   },
   alternates: {
-    canonical: "https://fireflamemission.org",
+    canonical: "https://fireflamemission.in",
   },
 };
 
