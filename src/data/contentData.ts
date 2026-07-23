@@ -1081,7 +1081,7 @@ export const contentData = {
     { sNo: 2, location: { en: "Chhattisgarh", ta: "சத்தீஸ்கர்" }, missionary: { en: "Pr. S. Suresh", ta: "Pr. S. சுரேஷ்" } },
     { sNo: 3, location: { en: "Bihar", ta: "பீகார்" }, missionary: { en: "Pr. Vinoth", ta: "Pr. வினோத்" } },
     { sNo: 4, location: { en: "Maharashtra", ta: "மகாராஷ்டிரா" }, missionary: { en: "Pr. Joshua", ta: "Pr. யோசுவா" } },
-    { sNo: 5, location: { en: "Kerala", ta: "கேரளா" }, missionary: { en: "Pr. Akhila", ta: "Pr. அகிலா" } },
+    { sNo: 5, location: { en: "Kerala", ta: "கேரளா" }, missionary: { en: "Pr. Alice", ta: "Pr. ஆலிஸ்" } },
     { sNo: 6, location: { en: "Puducherry", ta: "பாண்டி" }, missionary: { en: "Pr. Jeyaraj", ta: "Pr. ஜெயராஜ்" } },
     { sNo: 7, location: { en: "Vembanur", ta: "வேம்பனூர்" }, missionary: { en: "Child Care Support", ta: "ஒரு குழந்தை பராமரிப்பு" } },
     { sNo: 8, location: { en: "Mother Teresa Home, Narode", ta: "அன்னை தெரசா இல்லம், நாரோடு" }, missionary: { en: "Sis. Seena", ta: "Sis. சீனா" } },

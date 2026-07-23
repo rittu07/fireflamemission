@@ -194,19 +194,19 @@ export const Gallery: React.FC<GalleryProps> = ({
     },
     {
       id: 19,
-      titleEN: "Devotional Worship Gathering",
-      titleTA: "பக்தி ஆராதனை கூடுகை",
-      descEN: "Solemn time of prayer, praise, and sharing the scripture.",
-      descTA: "ஜெபம், துதி மற்றும் வேதத்தைப் பகிர்ந்துகொள்ளும் நேரம்.",
+      titleEN: "Sunday School Gathering",
+      titleTA: "ஞாயிறு பள்ளி கூடுகை",
+      descEN: "Teaching scripture lessons and songs to young kids.",
+      descTA: "சிறு குழந்தைகளுக்கு வேதப் பாடங்களையும் பாடல்களையும் கற்பித்தல்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002710.png",
       span: "md:col-span-1 md:row-span-2"
     },
     {
       id: 20,
-      titleEN: "Sunday School Gathering",
-      titleTA: "ஞாயிறு பள்ளி கூடுகை",
-      descEN: "Teaching scripture lessons and songs to young kids.",
-      descTA: "சிறு குழந்தைகளுக்கு வேதப் பாடங்களையும் பாடல்களையும் கற்பித்தல்.",
+      titleEN: "Devotional Worship Gathering",
+      titleTA: "பக்தி ஆராதனை கூடுகை",
+      descEN: "Solemn time of prayer, praise, and sharing the scripture.",
+      descTA: "ஜெபம், துதி மற்றும் வேதத்தைப் பகிர்ந்துகொள்ளும் நேரம்.",
       imageUrl: "/gallery/Screenshot 2026-06-22 002716.png",
       span: "md:col-span-1 md:row-span-1"
     },

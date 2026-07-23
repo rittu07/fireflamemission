@@ -22,10 +22,14 @@ export const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const formattedMessage = `Hello Fire Flame Mission,\n\nI have sent a message via the website:\n\n*Name:* ${formData.name}\n*Email:* ${formData.email || 'N/A'}\n*Phone:* ${formData.phone || 'N/A'}\n\n*Message:* \n${formData.message}`;
+  const whatsappUrl = `https://wa.me/918870083746?text=${encodeURIComponent(formattedMessage)}`;
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (formData.name && formData.message) {
       setFormSubmitted(true);
+      window.open(whatsappUrl, "_blank");
     }
   };
 
@@ -41,7 +45,7 @@ export const Contact: React.FC = () => {
 
   const phoneHref1 = `tel:${contentData.general.phone1.replace(/\s+/g, "")}`;
   const phoneHref2 = contentData.general.phone2 ? `tel:${contentData.general.phone2.replace(/\s+/g, "")}` : "#";
-  const whatsappHref = `https://wa.me/918870083746?text=Hello%2C%20I%20am%20reaching%20out%20to%20Fire%20Flame%20Mission`;
+  const whatsappHref = whatsappUrl;
 
   return (
     <section id="contact-page" className="py-36 px-6 md:py-36 md:px-24 bg-brand-parchment bg-opacity-10 border-b border-brand-gold/20 relative">

@@ -26,6 +26,7 @@ export const PrayerRequest: React.FC = () => {
     e.preventDefault();
     if (formData.name && formData.message) {
       setFormSubmitted(true);
+      window.open(whatsappUrl, "_blank");
     }
   };
 
